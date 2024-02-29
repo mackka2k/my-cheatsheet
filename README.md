@@ -1,4 +1,4 @@
-[![GitHub LICENSE](https://img.shields.io/badge/license-GNU-blue.svg)](https://github.com/LeCoupa/awesome-cheatsheets/blob/master/LICENSE)
+[![GitHub LICENSE](https://img.shields.io/badge/license-GNU-blue.svg)]
 
 **WEBSITE DIRECTORY**: [Available here](https://lecoupa.github.io/awesome-cheatsheets/).
 
