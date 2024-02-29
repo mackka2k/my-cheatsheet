@@ -1,4 +1,4 @@
-**WEBSITE DIRECTORY**: [Available here](https://lecoupa.github.io/awesome-cheatsheets/).
+**WEBSITE DIRECTORY**: [Available here](https://mackka2k.github.io/index.html).
 
 > 📚 Cheatsheets for popular programming languages, frameworks and development tools. They include everything you should know in one single file.
 
