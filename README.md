@@ -11,8 +11,6 @@
 
 #### Command line interface
 
-- [Bash](languages/bash.sh)
-
 - [HTML/CSS](languages/C.txt) | - | [Tailwind.css](frontend/tailwind.css)
 - [JAVASCRIPT](languages/javascript.js) | - | [TypeScript](frontend/react.js) - [React.js](frontend/react.js) - [Node.js](backend/node.js)
 - [PHP](languages/php.php)
@@ -46,6 +44,7 @@
 
 #### Development
 
+- [Bash](languages/bash.sh)
 - [Emmet](tools/emmet.md)
 - [Git](tools/git.sh)
 - [Visual Studio Code](tools/vscode.md)
