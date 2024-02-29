@@ -13,17 +13,12 @@
 
 - [Bash](languages/bash.sh)
 
-#### Imperative
-
 - [C](languages/C.txt)
 - [C#](languages/C%23.txt)
 - [Go](languages/golang.md)
 - [Java](languages/java.md)
 - [PHP](languages/php.php)
 - [Python](languages/python.md)
-
-#### Functional
-
 - [JavaScript](languages/javascript.js)
 
 </details>
