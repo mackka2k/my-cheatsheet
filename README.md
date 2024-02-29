@@ -32,9 +32,6 @@
 
 - [MySQL](databases/mysql.sh)
 
-#### NoSQL
-
-- [Redis](databases/redis.sh)
   </details>
 
 ### 🔧 Tools
