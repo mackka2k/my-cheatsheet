@@ -11,8 +11,8 @@
 
 #### Command line interface
 
-- [HTML/CSS](languages/C.txt) | --- | [Tailwind.css](frontend/tailwind.css)
-- [JAVASCRIPT](languages/javascript.js) | --- | [TypeScript](frontend/react.js) - [React.js](frontend/react.js) - [Node.js](backend/node.js)
+- [HTML/CSS](languages/C.txt) | -- | [Tailwind.css](frontend/tailwind.css)
+- [JAVASCRIPT](languages/javascript.js) | -- | [TypeScript](frontend/react.js) - [React.js](frontend/react.js) - [Node.js](backend/node.js)
 - [PHP](languages/php.php)
 - [C++](languages/C%23.txt)
 - [C# WINFORMS](languages/golang.md)
