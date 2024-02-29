@@ -41,7 +41,7 @@
 
 #### Development
 
-- [Bash](languages/bash.sh)
+- [Bash]([BASH]/bash.sh)
 - [Emmet](tools/emmet.md)
 - [Git](tools/git.sh)
 - [Visual Studio Code](tools/vscode.md)
