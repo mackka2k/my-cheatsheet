@@ -11,12 +11,12 @@
 
 #### Command line interface
 
-- [HTML/CSS]([HTML+CSS]) | -- | [Tailwind.css](frontend/tailwind.css)
-- [JAVASCRIPT]([JAVASCRIPT]) | -- | [TypeScript](frontend/react.js) - [React.js](frontend/react.js) - [Node.js](backend/node.js)
-- [PHP](languages/php.php)
-- [C++](languages/C%23.txt)
-- [C# WINFORMS](languages/golang.md)
-- [JAVA](languages/golang.md)
+- [HTML/CSS]([HTML+CSS]) | -- | [Tailwind.css]([TAILWIND-CSS])
+- [JAVASCRIPT]([JAVASCRIPT]) | -- | [TypeScript]([TYPESCRIPT]) - [React.js]([REACT]) - [Node.js]([NODEJS])
+- [PHP]([PHP])
+- [C++]([C++])
+- [C# WINFORMS]([C#-WINFORMS])
+- [JAVA]([JAVA])
 
 
 
