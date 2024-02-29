@@ -1,5 +1,3 @@
-![GitHub LICENSE](https://img.shields.io/badge/license-GNU-blue.svg)
-
 **WEBSITE DIRECTORY**: [Available here](https://lecoupa.github.io/awesome-cheatsheets/).
 
 > 📚 Awesome cheatsheets for popular programming languages, frameworks and development tools. They include everything you should know in one single file.
