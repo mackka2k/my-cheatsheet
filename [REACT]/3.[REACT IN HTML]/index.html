@@ -1,0 +1,32 @@
+<!--THIS ALLOWS US TO SIMPLY TEST REACT IN HTML FILE-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>React in HTML</title>
+	<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	
+</head>
+
+<body>
+	<div id="root"></div>
+	<script type="text/babel">
+
+		function App() {
+			return (
+				<div className={`div-element`}> 
+					<h1>Labas</h1>
+					<p>Šis yra React komponentas</p>
+				</div>
+			)
+		}
+
+		const container = document.getElementById('root') 
+		const root = ReactDOM.createRoot(container) 
+		root.render(<App/>)
+	
+	</script> 
+</body>
+</html>

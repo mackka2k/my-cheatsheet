@@ -1,0 +1,21 @@
+[KAS YRA REACT?]
+========================================================================================
+* React yra JavaScript biblioteka.
+* Leidžia kurti efektyvius [web] interfaces.
+* React yra komponentų orientuota biblioteka, leidžianti kurti atskirus modulius ir pernaudoti juos vartotojo sąsajų kūrime.
+* React naudoja JSX, leidžiantį rašyti HTML tipo kodą tiesiogiai JavaScript faile.
+* React naudoja virtualų DOM, kuris pagerina greitį atnaujinant vartotojo sąsajos dalis.
+========================================================================================
+
+
+[REQUIREMENTS TO KNOW]: 
+========================================================================================
+* (JS),(HTML),(CSS)
+* (JS): Classes, Arrow functions, Variables, Array methods, Destructuring, Modules, Ternary Operator, Spread Operator.
+========================================================================================
+
+[KAIP VEIKIA REACT?]: 
+========================================================================================
+* React kūria atmintyje virtualų DOM, kuriame vykdo visus reikalingus manipuliavimus, prieš pritaikant pakeitimus naršyklės DOM.
+* React keičia tik tai, kas turi būti pakeista!.
+========================================================================================

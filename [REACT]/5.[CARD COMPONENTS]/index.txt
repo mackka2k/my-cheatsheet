@@ -1,0 +1,59 @@
+[Card components = typically used to create a reusable and structured UI element for displaying content.]
+
+=========================================
+[Card.jsx]
+
+import profilePic from './assets/diamond.png'
+
+function Card() {
+	return (
+		<div className='card'>
+			<img className='card-image' src={profilePic} alt='profile picture'></img>
+			<h2 className='card-title'>Card Title</h2>
+			<p className='card-text'>Card Description</p>
+		</div>
+	)
+}
+
+export default Card
+=========================================
+[App.tsx]
+
+import Card from './Card.jsx'
+
+function App() {
+	return <Card />
+}
+
+export default App
+=========================================
+[index.css]
+
+.card {
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	box-shadow: 2px 2px 1.5px #ccc;
+	padding: 20px;
+	margin: 10px;
+	text-align: center;
+	max-width: 250px;
+	display: inline-block;
+}
+
+.card .card-image {
+	max-width: 60%;
+	height: auto;
+	border-radius: 50%;
+}
+
+.card .card-title {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	color: #333;
+}
+
+.card .card-text {
+	font-family: Arial, sans-serif;
+	color: #333;
+}
+=========================================

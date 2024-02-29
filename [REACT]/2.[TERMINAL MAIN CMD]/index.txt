@@ -1,0 +1,4 @@
+npm create vite@latest my-react-app 				[CREATES REACT-VITE PROJECT]
+cd my-react-app                    				[PAKEIČIA TERMINAL PATH Į REACT PROJEKTĄ]
+npm install                              			[INSTALLINA PROJEKTĄ]
+npm run dev                              			[STARTS REACT SERVER]
