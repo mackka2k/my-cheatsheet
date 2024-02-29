@@ -47,27 +47,11 @@
 
 #### Development
 
-- [cURL](tools/curl.sh)
-- [Drush](tools/drush.sh)
-- [Elasticsearch](tools/elasticsearch.js)
 - [Emmet](tools/emmet.md)
 - [Git](tools/git.sh)
-- [Puppeteer](tools/puppeteer.js)
-- [Sublime Text](tools/sublime_text.md)
-- [VIM](tools/vim.txt)
 - [Visual Studio Code](tools/vscode.md)
-- [Xcode](tools/xcode.txt)
 
 #### Infrastructure
 
-- [AWS CLI](tools/aws.sh)
 - [Docker](tools/docker.sh)
-- [Heroku CLI](tools/heroku.sh)
-- [Kubernetes](tools/kubernetes.md)
-- [Nanobox Boxfile](tools/nanobox_boxfile.yml)
-- [Nanobox CLI](tools/nanobox_cli.sh)
-- [Nginx](tools/nginx.sh)
-- [PM2](tools/pm2.sh)
-- [Ubuntu](tools/ubuntu.sh)
-- [Firebase CLI](tools/firebase_cli.md)
   </details>
