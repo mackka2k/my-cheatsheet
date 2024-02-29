@@ -13,63 +13,18 @@
 
 - [Bash](languages/bash.sh)
 
-#### Imperative
-
-- [C](languages/C.txt)
+- [HTML/CSS](languages/C.txt) - [Tailwind.css](frontend/tailwind.css)
 - [C#](languages/C%23.txt)
 - [Go](languages/golang.md)
 - [Java](languages/java.md)
 - [PHP](languages/php.php)
 - [Python](languages/python.md)
+- [JavaScript](languages/javascript.js) - [Node.js](backend/node.js) - [React.js](frontend/react.js)
+- [PHP](languages/laravel.php)
 
-#### Functional
-
-- [JavaScript](languages/javascript.js)
 
 </details>
 
-### 📦 Backend
-
-<details>
-<summary>View cheatsheets</summary>
-
-#### PHP
-
-- [Laravel](backend/laravel.php)
-
-#### Python
-
-- [Django](backend/django.py)
-
-#### Javascript
-
-- [Adonis.js](backend/adonis.js)
-- [Express.js](backend/express.js)
-- [Feathers.js](backend/feathers.js)
-- [Moleculer](backend/moleculer.js)
-- [Node.js](backend/node.js)
-- [Sails.js](backend/sails.js)
-  </details>
-
-### 🌐 Frontend
-
-<details>
-<summary>View cheatsheets</summary>
-
-#### Basics
-
-- [HTML5](frontend/html5.html)
-- [CSS3](frontend/css3.css)
-
-#### Frameworks
-
-- [React.js](frontend/react.js)
-- [Vue.js](frontend/vue.js)
-- [Tailwind.css](frontend/tailwind.css)
-- [Ember.js](frontend/ember.js)
-- [Angular (2+)](frontend/angular.js)
-- [AngularJS](frontend/angularjs.js)
-  </details>
 
 ### 🗃️ Databases
 
