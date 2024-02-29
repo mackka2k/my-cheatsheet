@@ -13,12 +13,12 @@
 
 - [Bash](languages/bash.sh)
 
-- [C](languages/C.txt)
-- [C#](languages/C%23.txt)
-- [Go](languages/golang.md)
-- [Java](languages/java.md)
+- [C++](languages/C.txt)
+- [C# WINFORMS](languages/C%23.txt)
+- [PHP](languages/golang.md)
+- [JAVA](languages/java.md)
 - [PHP](languages/php.php)
-- [Python](languages/python.md)
+- [](languages/python.md)
 - [JavaScript](languages/javascript.js)
 
 </details>
