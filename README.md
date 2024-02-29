@@ -14,13 +14,12 @@
 - [Bash](languages/bash.sh)
 
 - [HTML/CSS](languages/C.txt) | - | [Tailwind.css](frontend/tailwind.css)
-- [C#](languages/C%23.txt)
-- [Go](languages/golang.md)
-- [Java](languages/java.md)
+- [JavaScript](languages/javascript.js) | - | [Node.js](backend/node.js) - [React.js](frontend/react.js) - [TypeScript](frontend/react.js)
 - [PHP](languages/php.php)
-- [Python](languages/python.md)
-- [JavaScript](languages/javascript.js) | - | [Node.js](backend/node.js) - [React.js](frontend/react.js)
-- [PHP](languages/laravel.php)
+- [C++](languages/C%23.txt)
+- [C# WINFORMS](languages/golang.md)
+- [JAVA](languages/golang.md)
+
 
 
 </details>
