@@ -14,7 +14,7 @@
 - [Bash](languages/bash.sh)
 
 - [HTML/CSS](languages/C.txt) | - | [Tailwind.css](frontend/tailwind.css)
-- [JavaScript](languages/javascript.js) | - | [Node.js](backend/node.js) - [React.js](frontend/react.js) - [TypeScript](frontend/react.js)
+- [JAVASCRIPT](languages/javascript.js) | - | [TypeScript](frontend/react.js) [Node.js](backend/node.js) - [React.js](frontend/react.js)
 - [PHP](languages/php.php)
 - [C++](languages/C%23.txt)
 - [C# WINFORMS](languages/golang.md)
