@@ -30,7 +30,7 @@
 
 #### SQL
 
-- [MySQL](databases/mysql.sh)
+- [MySQL]([MYSQL])
 
   </details>
 
