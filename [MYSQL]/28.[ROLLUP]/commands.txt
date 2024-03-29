@@ -1,0 +1,28 @@
+-- ROLLUP, extension of the GROUP BY clouse
+-- produces another row and shows the GRAND TOTAL (super-aggregate value)
+======================================================
+-- Create the sales table
+CREATE TABLE sales (
+   transaction_id INT PRIMARY KEY,
+   region VARCHAR(50),
+   product_category VARCHAR(50),
+   sales_amount DECIMAL(10, 2)
+);
+
+-- Insert some sample data into the sales table
+INSERT INTO sales (transaction_id, region, product_category, sales_amount)
+VALUES  (1, 'East', 'Electronics', 500.00),
+        (2, 'East', 'Clothing', 300.00),
+        (3, 'West', 'Electronics', 700.00),
+        (4, 'West', 'Books', 200.00),
+        (5, 'North', 'Clothing', 400.00),
+        (6, 'North', 'Electronics', 600.00);
+
+-- Example query using ROLLUP clause
+-- Calculate subtotals and grand totals for sales by region and product category
+SELECT 
+    region,
+    product_category,
+    SUM(sales_amount) AS total_sales
+FROM sales
+GROUP BY region, product_category WITH ROLLUP;

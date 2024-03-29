@@ -1,0 +1,27 @@
+[PRIMARY KEY] = [UNIQUE + NOT NULL]
+[YOU CAN HAVE ONLY ONE PRIMARY KEY PER TABLE]
+============================================================
+
+===[CREATES TABLE WHERE transaction_id = PRIMARY KEY]=====
+CREATE TABLE transactions (
+   transaction_id INT PRIMARY KEY,
+   amount DECIMAL(5, 2)
+);
+
+SELECT * FROM transactions;
+==========================================================
+
+====[IF U NEED TO ADD DEFAULT TO A TABLE THAT ALEADY EXISTS]=========
+ALTER TABLE transactions
+ADD CONSTRAINT
+PRIMARY KEY(transaction_id)
+
+SELECT * FROM transactions;
+==========================================================
+
+====[TESTING PRIMARY_KEY]====================
+INSERT INTO transactions
+VALUES (1000, 4,99);
+
+SELECT * FROM transactions;
+==========================================================

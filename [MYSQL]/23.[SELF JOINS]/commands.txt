@@ -1,0 +1,19 @@
+[-- Create the employees table]
+CREATE TABLE employees (
+   employee_id INT PRIMARY KEY,
+   employee_name VARCHAR(50),
+   manager_id INT
+);
+
+[-- Insert some sample data into the employees table]
+INSERT INTO employees (employee_id, employee_name, manager_id)
+VALUES  (1, 'John Doe', NULL),    -- CEO, no manager
+        (2, 'Jane Smith', 1),     -- Reports to John Doe (CEO)
+        (3, 'Alice Johnson', 2),  -- Reports to Jane Smith
+        (4, 'Bob Brown', 1),      -- Reports to John Doe (CEO)
+        (5, 'Emily Davis', 4);    -- Reports to Bob Brown
+
+[-- Example query using a self join to retrieve employees and their managers]
+SELECT e.employee_name AS employee, m.employee_name AS manager
+FROM employees e
+LEFT JOIN employees m ON e.manager_id = m.employee_id;
