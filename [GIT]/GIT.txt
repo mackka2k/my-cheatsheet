@@ -1,0 +1,39 @@
+Commands Cheatsheet:
+
+1. mkdir [directory_name]: Creates a new directory with the specified name.
+
+2. cd [directory_name]: Changes the current directory to the specified one.
+
+3. touch [file_name]: Creates a new file with the specified name.
+
+4. git init: Initializes a new Git repository in the current directory.
+
+5. git add . Adds all changes in the current directory to the staging area.
+
+6. git commit -m 'add html and ccs file': Commits the staged changes with the specified commit message.
+
+7. rm [file_name]: Removes a file.
+
+8. ls: Lists the files and directories in the current directory.
+
+9. clear: Clears the terminal screen.
+
+10. git log: Displays the commit history.
+
+11. git checkout [commit_hash]: Moves the HEAD pointer to the specified commit.
+
+12. git branch: Lists all branches in the repository.
+
+13. git remote add origin [remote_repository_url]: Adds a remote repository with the specified URL.
+
+14. git push -u origin [branch_name]: Pushes the commits to the remote repository's master branch.
+
+15. git checkout -b [new_branch_name]: Creates a new branch and switches to it.
+
+16. git push origin [new_branch_name]: Pushes the new branch to the remote repository.
+
+17. git pull origin master: Fetches and merges changes from the remote master branch.
+
+18. git status: Shows the current state of the working directory and staging area.
+
+19. git merge [branch_name]: Merges the specified branch into the current branch.
