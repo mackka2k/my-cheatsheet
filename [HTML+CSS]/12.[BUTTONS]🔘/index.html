@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.custom-button {
+			font-size: 25px;
+			background-color: grey;
+			color: lightblue;
+			border-radius: 25px;
+			border: 2px solid black;
+			padding: 10px 20px;
+			text-decoration: none;
+		}
+	</style>
+</head>
+
+<body>
+	<a href='page2.html' class="custom-button" id="myButton">
+		Hello
+	</a>
+
+	<button onclick="changeText()">Change Text</button>
+
+	<script>
+		function changeText() {
+			var button = document.getElementById("myButton")
+			if (button.innerText === "Hello") {
+				button.innerText = "Goodbye"
+			} else {
+				button.innerText = "Hello"
+			}
+		}
+	</script>
+</body>
+
+</html>

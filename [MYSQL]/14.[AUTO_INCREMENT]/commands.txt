@@ -1,0 +1,23 @@
+[AUTO_INCREMENT] = [INCREMENTS A KEY BY 1 WHATEVER NEW ROW IS CREATED]
+============================================================
+
+===[CREATES TABLE WHERE transaction_id HAS PRIMARY_KEY & AUTO_INCREMENT]=====
+CREATE TABLE transactions (
+   transaction_id INT PRIMARY KEY AUTO_INCREMENT,
+   amount DECIMAL(5, 2)
+);
+
+SELECT * FROM transactions;
+==========================================================
+
+====[IF U NEED TO CHANGE AUTO_INCREMENT DEFAULT VALUE]=========
+ALTER TABLE transactions
+AUTO_INCREMENT = 1000;
+==========================================================
+
+====[TESTING PRIMARY_KEY]====================
+INSERT INTO transactions (amount)
+VALUES (4,99);
+
+SELECT * FROM transactions;
+==========================================================

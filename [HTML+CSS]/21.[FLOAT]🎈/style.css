@@ -1,0 +1,13 @@
+body {
+	border: 3px solid #000000;
+	display: flow-root; // doesn't allow to elements to overlap from the sides
+}
+
+#img1 {
+	float: left;
+	margin-right: 10px;
+}
+#img2 {
+	float: right;
+	margin-left: 10px;
+}

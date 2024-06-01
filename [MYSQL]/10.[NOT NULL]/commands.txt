@@ -1,0 +1,17 @@
+===[CREATES TABLE WHERE price SHOULD BE NOT NULL]=====
+CREATE TABLE products (
+   product_id INT,
+   product_name VARCHAR(25),
+   price DECIMAL(4, 2) NOT NULL
+);
+==========================================================
+
+====[IF U FORGOT TO ADD NOT NULL AFTER CREATING A TABLE]=========
+ALTER TABLE products
+MODIFY price DECIMAL(4, 2) NOT NULL;
+==========================================================
+
+====[TESTING NOT NULL CONSTRAINT]====================
+INSERT INTO products
+VALUES (104, "cookie", NULL);
+==========================================================

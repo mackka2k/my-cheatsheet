@@ -1,0 +1,27 @@
+-- INDEX (BTree data structure)
+-- Indexes are used to find values within a specific column more quicly
+-- MySQL normally searches sequentially through a column
+-- The longer the column, the more expensive the operation is
+-- UPDATE takes more time, SELECT takes less time.
+========================================================================
+[-- Create the customers table]
+CREATE TABLE customers (
+   customer_id INT PRIMARY KEY,
+   first_name VARCHAR(50),
+   last_name VARCHAR(50),
+   email VARCHAR(100)
+);
+
+[-- Insert some sample data into the customers table]
+INSERT INTO customers (customer_id, first_name, last_name, email)
+VALUES  (1, 'John', 'Doe', 'john@example.com'),
+        (2, 'Jane', 'Smith', 'jane@example.com'),
+        (3, 'Alice', 'Johnson', 'alice@example.com'),
+        (4, 'Bob', 'Brown', 'bob@example.com'),
+        (5, 'Emily', 'Davis', 'emily@example.com');
+
+[-- Create an index on the email column]
+CREATE INDEX idx_email ON customers (email);
+
+[-- Query the customers table using the index]
+SELECT * FROM customers WHERE email = 'alice@example.com';
