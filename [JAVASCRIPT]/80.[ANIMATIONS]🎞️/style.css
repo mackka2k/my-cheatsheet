@@ -1,0 +1,58 @@
+#myDiv {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	position: relative;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.animated-div.move-right {
+	animation-name: moveRight;
+}
+
+.animated-div.move-left {
+	animation-name: moveLeft;
+}
+
+.animated-div.reverse {
+	animation-name: reverse;
+}
+
+.animated-div.rotate {
+	animation-name: rotate;
+}
+
+.animated-div.scale {
+	animation-name: scale;
+}
+
+@keyframes moveRight {
+	to {
+		transform: translateX(200px);
+	}
+}
+
+@keyframes moveLeft {
+	to {
+		transform: translateX(-200px);
+	}
+}
+
+@keyframes reverse {
+	to {
+		transform: scaleX(-1);
+	}
+}
+
+@keyframes rotate {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes scale {
+	to {
+		transform: scale(1.5);
+	}
+}

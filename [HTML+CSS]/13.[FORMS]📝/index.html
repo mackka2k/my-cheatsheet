@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<form action='index.php' method='POST' enctype='multipart/form-data'>
+
+		<label for='username'>[USERNAME]:</label>
+		<input type='text' id='username' placeholder='Spongebob' minlength='6' maxlength='15' required><br>
+
+		<label for='password'>[PASSWORD]:</label>
+		<input type='password' id='password' placeholder='********' minlength='6' maxlength='15' required><br>
+
+		<label for='email'>[EMAIL]:</label>
+		<input type='email' id='email' placeholder='evaldas.mackonis@gmail.com'><br>
+
+		<label for='phone'>[PHONE]:</label>
+		<input type='tel' id='phone' placeholder='+370 123 45678'><br>
+
+		<label for='date'>[DATE]:</label>
+		<input type='date' id='date'><br>
+
+		<label for='quantity'>[QUANTITY]:</label>
+		<input type='number' id='quantity' min='1' max='10'><br>
+
+		<label for='title'>[TITLE]:</label>
+		<label for='Mr.'>[MR.]</label>
+		<input type='radio' id='Mr.' name='title' value='Mr.'>
+		<label for='Ms.'>[MS.]</label>
+		<input type='radio' id='Ms.' name='title' value='Ms.'><br>
+
+		<label for='payment'>[PAYMENT]:</label>
+		<select name='payment'>
+			<option value='Visa'>Visa</option>
+			<option value='Mastercard'>Mastercard</option>
+			<option value='Paypal'>Paypal</option>
+		</select><br>
+
+		<label for='subscribe'>[SUBSCRIBE]:</label>
+		<input type='checkbox' id='subscribe' name='subscribe' value='subscribe'><br>
+
+		<label for='comment'>[COMMENT]:</label>
+		<textarea id='comment' cols='30' rows='10'></textarea><br>
+
+		<label for='color'>[COLOR]:</label>
+		<input type='color' id='color' name='color'><br>
+
+		<label for='time-range'>[TIME RANGE]:</label>
+		<input type='time' id='time-start' name='time-start'>
+		<label for='time-range'>to</label>
+		<input type='time' id='time-end' name='time-end'><br>
+
+		<label for='interests'>[INTERESTS]:</label>
+		<input type='checkbox' id='interest1' name='interests[]' value='Interest 1'>
+		<label for='interest1'>Interest 1</label>
+		<input type='checkbox' id='interest2' name='interests[]' value='Interest 2'>
+		<label for='interest2'>Interest 2</label>
+		<input type='checkbox' id='interest3' name='interests[]' value='Interest 3'>
+		<label for='interest3'>Interest 3</label><br>
+
+		<label>[GENDER]:</label>
+		<input type='radio' id='male' name='gender' value='Male'>
+		<label for='male'>Male</label>
+		<input type='radio' id='female' name='gender' value='Female'>
+		<label for='female'>Female</label>
+		<input type='radio' id='other' name='gender' value='Other'>
+		<label for='other'>Other</label><br>
+
+		<label for='color-range'>[COLOR RANGE]:</label>
+		<input type='range' id='color-range' name='color-range' min='0' max='255' step='1'><br>
+
+		<label for='week'>[SELECT WEEK]:</label>
+		<input type='week' id='week' name='week'><br>
+
+		<label for='month'>[SELECT MONTH]:</label>
+		<input type='month' id='month' name='month'><br>
+
+		<label for='datetime-local'>[SELECT DATE AND TIME]:</label>
+		<input type='datetime-local' id='datetime-local' name='datetime-local'><br>
+
+		<label for='files'>[UPLOAD FILES]:</label>
+		<input type='file' id='files' name='files[]' multiple><br>
+
+		<label for='image'>[IMAGE]:</label>
+		<input type='image' id='image'
+			src='https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png' width='100px'
+			height='20px'><br>
+
+		<input type='reset'>
+		<input type='submit'>
+
+	</form>
+</body>
+
+</html>
