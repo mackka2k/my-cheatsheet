@@ -1,0 +1,53 @@
+/* Relative Positioning */
+.relative-box {
+	position: relative;
+	left: 20px;
+	top: 10px;
+	background-color: #ffc107;
+	width: 100px;
+	height: 100px;
+}
+
+/* Absolute Positioning */
+.parent-container {
+	position: relative;
+	width: 300px;
+	height: 200px;
+	border: 1px solid #ccc;
+}
+
+.absolute-box {
+	position: absolute;
+	left: 50px;
+	top: 50px;
+	background-color: #e91e63;
+	width: 100px;
+	height: 100px;
+}
+
+/* Fixed Positioning */
+.fixed-box {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	background-color: #2196f3;
+	width: 100px;
+	height: 100px;
+}
+
+/* Static Positioning (default) */
+.static-box {
+	/* No need to specify position: static; as it's the default */
+	background-color: #4caf50;
+	width: 100px;
+	height: 100px;
+}
+
+/* Sticky Positioning */
+.sticky-box {
+	position: sticky;
+	top: 20px;
+	background-color: #9c27b0;
+	width: 100px;
+	height: 100px;
+}

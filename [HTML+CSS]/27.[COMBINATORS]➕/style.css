@@ -1,0 +1,21 @@
+/* Descendant Selector (Space) */
+#container p {
+	background-color: #f0f0f0;
+	padding: 10px;
+	border: 1px solid black;
+}
+
+/* Child Selector (>) */
+#container > p {
+	background-color: #e0e0e0;
+}
+
+/* General Sibling Selector (~) */
+#container ~ p {
+	font-weight: bold;
+}
+
+/* Adjacent Sibling Selector (+) */
+#container + p {
+	color: blue;
+}

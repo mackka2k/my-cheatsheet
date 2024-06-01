@@ -1,0 +1,41 @@
+#p1 {
+	border: 2px solid #000;
+	height: 75px;
+	overflow: hidden;
+}
+#p2 {
+	border: 2px solid #000;
+	height: 75px;
+	overflow: ;
+	overflow-clip-margin: 13px;
+}
+#p3 {
+	border: 2px solid #000;
+	height: 75px;
+	overflow: scroll;
+}
+#p4 {
+	border: 2px solid #000;
+	height: 75px;
+	overflow: auto;
+}
+#p5 {
+	border: 2px solid #000;
+	height: 75px;
+	overflow: visible;
+}
+#p6 {
+	border: 2px solid #000;
+	height: 75px;
+	overflow: inherit; //
+}
+#p7 {
+	border: 2px solid #000;
+	height: 75px;
+	overflow: initial; // means: visible
+}
+#p8 {
+	border: 2px solid #000;
+	height: 75px;
+	overflow: unset; // means: inherit if parent has overflow, otherwise visible
+}

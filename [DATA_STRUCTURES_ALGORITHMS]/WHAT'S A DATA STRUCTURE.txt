@@ -1,0 +1,13 @@
+[WHAT'S A DATA STRUCTURE]
+
+[Data structure]: a named location that can be used to store and organize data.
+
+[Example]: Family tree
+           
+           A Heirarchy of
+	   family relationships
+==================================
+[Example]: Array
+	   
+	   A collection of elements stored at
+	   contiguous memory locations.

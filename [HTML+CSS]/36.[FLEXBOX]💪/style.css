@@ -1,0 +1,72 @@
+.container {
+	display: flex;
+	border: 10px solid black;
+	height: 90vh;
+	/* 	------------------------------------------------------- */
+	/* column-gap: 1em; */
+	/* row-gap: 1em; */
+	/* 	------------------------------------------------------- */
+	/* align-content: flex-start; */
+	/* align-content: flex-end; */
+	/* align-content: center; */
+	/* align-content: space-around; */
+	/* align-content: space-between; */
+	/* align-content: space-evenly; */
+	/* 	------------------------------------------------------- */
+	/* flex-wrap: wrap; */
+	/* flex-wrap: nowrap; */
+	/* flex-wrap: wrap-reverse; */
+	/* 	------------------------------------------------------- */
+	/* align-items: flex-start; */
+	/* align-items: flex-end; */
+	/* align-items: center; */
+	/* align-items: stretch; */
+	/* align-items: baseline; */
+	/* 	------------------------------------------------------- */
+	/* flex-direction: row-reverse; */
+	/* flex-direction: column-reverse; */
+	/* 	------------------------------------------------------- */
+	/* justify-content: space-around; */
+	/* justify-content: space-between; */
+	/* justify-content: space-evenly; */
+	/* justify-content: center; */
+	/* justify-content: flex-end; */
+	/* justify-content: flex-start; */
+	/* 	------------------------------------------------------- */
+}
+
+.box {
+	width: 150px;
+	height: 150px;
+	font-size: 8em;
+	text-align: center;
+	border-radius: 15px;
+}
+
+#box1 {
+	background-color: tomato;
+	/* 	------------------------------------------------------- */
+	/* align-self: flex-end; */
+	/* align-self: flex-start; */
+	/* align-self: start; */
+	/* align-self: end; */
+	/* align-self: center; */
+	/* align-self: stretch; */
+	/* align-self: baseline; */
+	/* 	------------------------------------------------------- */
+	/* order: 1; */
+	/* order: -1; */
+	/* 	------------------------------------------------------- */
+}
+
+#box2 {
+	background-color: orange;
+}
+
+#box3 {
+	background-color: gold;
+}
+
+#box4 {
+	background-color: yellowgreen;
+}
