@@ -1,0 +1,24 @@
+.item {
+	border: 1px solid gray;
+	margin-bottom: 30px;
+}
+
+.image {
+	width: 100%;
+	height: 300px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.info {
+	margin: 20px;
+}
+
+h2 {
+	margin-bottom: 5px;
+}
+
+p {
+	margin-bottom: 10px;
+}

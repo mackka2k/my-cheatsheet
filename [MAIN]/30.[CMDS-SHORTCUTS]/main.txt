@@ -1,0 +1,13 @@
+npm create vite@latest my-react-app 				[CREATES REACT-VITE PROJECT]
+cd my-react-app                    				  [PAKEIČIA TERMINAL PATH Į REACT PROJEKTĄ]
+npm install                              	  [INSTALLINA PROJEKTĄ]
+npm run dev                              		[STARTS REACT SERVER]
+
+npm i react-router-dom@latest								[INSTALLS REACT ROUTER]
+npm i react-hook-form@latest 			    			[INSTALLS REACT HOOK FORM]
+npm i @tanstack/react-query@latest 				  [INSTALLS REACT QUERY]
+npm install json-server									    [INSTALLS JSON SERVER]
+npx json-server db.json --port 4200				  [STARTS JSON SERVER]
+npm install axios												    [INSTALLS AXIOS]
+
+rafce                                       [CREATES FUNCTIONAL COMPONENT INSTANTLY]
