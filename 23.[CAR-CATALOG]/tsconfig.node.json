@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,     // This makes noImplicitAny as true
+    "lib": [
+      "ES2022",
+      "dom"             // This is important
+    ],
+    "jsx": "preserve"   // This is important
+  }
+}
