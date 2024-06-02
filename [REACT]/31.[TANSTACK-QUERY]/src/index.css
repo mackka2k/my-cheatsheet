@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;700;900&display=swap');
+
+html, body {
+  background-color: #333;
+  color: #fff;
+  font-family: 'Golos Text', sans-serif;
+  font-size: 17px;
+  margin: 40px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #ffcc00;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+input[type='text'] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #555;
+  font-size: 16px;
+  color: #fff;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffcc00;
+  color: #333;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e6b800;
+}
+
+
