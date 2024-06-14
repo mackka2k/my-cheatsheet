@@ -1,0 +1,9 @@
+Next.js: 
+
+Next.js is a React framework that simplifies building 
+server-side rendered (SSR) or statically generated web applications. 
+It provides efficient routing, automatic code splitting, and seamless integration 
+with React components. 
+With features like API routes and static site generation, 
+Next.js offers a versatile toolkit for creating fast, SEO-friendly 
+web experiences.
