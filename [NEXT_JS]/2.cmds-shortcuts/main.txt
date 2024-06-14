@@ -1,0 +1,1 @@
+npx create-next-app@latest my-app              # Create a new Next.js app
