@@ -1,5 +1,0 @@
-=============[MAKE MANUAL SAVE]========================
-SET AUTOCOMMIT = OFF;
-COMMIT;               -------> [SAFE POINT]
-ROLLBACK;             -------> [GET'S TO THE SAFEPOINT]
-=======================================================
