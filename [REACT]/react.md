@@ -91,7 +91,7 @@ function App() {
   return <Greeting name="John" />;
 }
 ```
-![Alt text](images/Preview2.png)
+![Alt text](Preview2.png)
 ---
 
 # 6. [ Conditional Rendering ]
@@ -119,7 +119,7 @@ function ItemList() {
 }
 
 ```
-![Alt text](images/Preview3.png)
+![Alt text](Preview3.png)
 ---
 
 # 8. [ Click Events ]
@@ -151,7 +151,7 @@ function Counter() {
   );
 }
 ```
-![Alt text](images/Preview4.png)
+![Alt text](Preview4.png)
 
 ---
 
@@ -173,7 +173,7 @@ function InputField() {
   );
 }
 ```
-![Alt text](images/Preview5.png)
+![Alt text](Preview5.png)
 ---
 
 # 11. [ Color Picker App ]
@@ -194,7 +194,7 @@ function ColorPicker() {
   );
 }
 ```
-![Alt text](images/Preview6.png)
+![Alt text](Preview6.png)
 ---
 
 # 12. [ Updater Functions ]
@@ -213,7 +213,7 @@ function Counter() {
   );
 }
 ```
-![Alt text](images/Preview7.png)
+![Alt text](Preview7.png)
 ---
 
 # 13. [ Updating Objects in State ]
@@ -234,7 +234,7 @@ function Profile() {
   );
 }
 ```
-![Alt text](images/Preview8.png)
+![Alt text](Preview8.png)
 ---
 
 # 14. [ Updating Arrays in State ]
@@ -258,7 +258,7 @@ function ItemList() {
   );
 }
 ```
-![Alt text](images/Preview9.png)
+![Alt text](Preview9.png)
 ---
 
 # 15. [ Updating Array of Objects in State ]
@@ -291,7 +291,7 @@ function UserList() {
   );
 }
 ```
-![Alt text](images/Preview10.png)
+![Alt text](Preview10.png)
 ---
 
 # 16. [ To-Do List App ]
@@ -323,7 +323,7 @@ function TodoList() {
   );
 }
 ```
-![Alt text](images/Preview11.png)
+![Alt text](Preview11.png)
 ---
 
 # 17. [ useEffect Hook ]
@@ -364,7 +364,7 @@ function Clock() {
   return <p>The time is: {time}</p>;
 }
 ```
-![Alt text](images/Preview12.png)
+![Alt text](Preview12.png)
 ---
 
 # 19. [ useContext Hook ]
@@ -393,7 +393,7 @@ function App() {
     </
 
 ```
-![Alt text](images/Preview13.png)
+![Alt text](Preview13.png)
 ---
 
 # 20. [ useRef Hook ]
@@ -421,7 +421,7 @@ const FocusInput = () => {
 export default FocusInput;
 
 ```
-![Alt text](images/Preview14.png)
+![Alt text](Preview14.png)
 ---
 
 # 21. [ Stopwatch App ]
@@ -455,7 +455,7 @@ const Stopwatch = () => {
 
 export default Stopwatch;
 ```
-![Alt text](images/Preview15.png)
+![Alt text](Preview15.png)
 ---
 
 # 22. [ onSubmit Event Handler ]
@@ -519,7 +519,7 @@ const CarCatalog = () => {
 
 export default CarCatalog;
 ```
-![Alt text](images/Preview16.png)
+![Alt text](Preview16.png)
 ---
 
 # 24. [ Fetch vs Axios ]
@@ -715,7 +715,7 @@ const App = () => {
 
 ReactDOM.render(<App />, document.getElementById('root'));
 ```
-![Alt text](images/Preview18.png)
+![Alt text](Preview18.png)
 ---
 
 # 28. [ TanStack/React Query ]
@@ -776,7 +776,7 @@ ReactDOM.render(
 );
 
 ```
-![Alt text](images/Preview17.png)
+![Alt text](Preview17.png)
 ---
 
 # 29. [ useMutation Hook ]
