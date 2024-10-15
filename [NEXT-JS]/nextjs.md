@@ -145,7 +145,7 @@ export function Products() {
 
 # 8. [ Fonts ]
 
-![Alt text](images/image.png)
+![Alt text](image.png)
 To customize fonts:
 
 - Replace `import { Inter }` with your desired font (e.g., `Metal`).
@@ -158,7 +158,7 @@ To customize fonts:
 
 Create a `404.js` page to handle not-found routes:
 
-![Alt text](images/image-1.png)
+![Alt text](image-1.png)
 
 ---
 
@@ -470,12 +470,12 @@ export default SSGPage;
 ```
 ---
 # 14. [ Correct Project Structure ]
-![Alt text](images/image-3.png)
+![Alt text](image-3.png)
 ---
 
 # 15. [ Package Optimization ]
 
-![Alt text](images/image-4.png)
+![Alt text](image-4.png)
 
 Certainly! Here’s a topic for MDX installation and usage, formatted for Markdown:
 
