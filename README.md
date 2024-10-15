@@ -15,13 +15,6 @@ Welcome to My Cheatsheet! This is a comprehensive collection of programming chea
 - Responsive design for seamless access on various devices
 - Open-source and continuously updated
 
-## 🛠️ Technologies Used
-- **HTML** - Structure and content
-- **CSS** - Styling and layout
-- **JavaScript** - Interactivity and functionality
-- **Tailwind CSS** - Utility-first CSS framework for styling
-- **GitHub Pages** - Hosting the website
-
 ## 📚 How to Use
 1. Navigate to the [Cheatsheet Website](https://mackka2k.github.io).
 2. Click on any language or technology to expand the cheatsheet.
