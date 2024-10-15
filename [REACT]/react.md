@@ -54,7 +54,7 @@ function App() {
 }
 ```
 
-![Alt text](images/Preview1.png)
+![Alt text](Preview1.png)
 ---
 
 # 4. [ Adding CSS Styles ]
