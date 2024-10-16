@@ -2,11 +2,6 @@
 
 Welcome to **My Cheatsheet**! This repository is a collection of concise and organized programming cheatsheets to help developers quickly find essential information and commands for various languages and technologies.
 
-## 🚀 Features
-- Easy-to-navigate structure with categorized cheatsheets
-- Regularly updated and maintained
-- Simple, clear, and to-the-point content
-
 ## 📚 How to Use
 1. Browse through the available topics and select any cheat sheet from the list.
 2. Each file contains quick-access references for commonly used commands, syntax, and more.
