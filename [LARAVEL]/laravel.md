@@ -1374,460 +1374,670 @@ In this example:
 - **`$fillable`** ensures only the allowed fields (like `content`) are mass assigned.
 - **`$validated`** ensures that only clean and valid data is processed.
 ---
-# 21. [REGISTRATION] 🗄️
+Here's a structured overview of using **factories** in Laravel, including how to define them, generate data, and utilize various features such as states and relationships. 
 
-**Registration Form View**
+# 21. [FACTORIES] 🗄️
 
-```php
-@extends('layout.layout')
-@section('content')
-<div class="row justify-content-center">
-    <div class="col-12 col-sm-8 col-md-6">
-        <form class="form mt-5" action="{{ route('register') }}" method="post">
-            @csrf
-            <h3 class="text-center text-dark">Register</h3>
+**FACTORIES**  
+*Tool to generate fake data*  
+*Define how model data should be created*  
+*Quickly generate hundreds of records*  
+*Helpful for testing and data seeding*
 
-            <!-- Name Field -->
-            <div class="form-group">
-                <label for="name" class="text-dark">Name:</label><br>
-                <input type="text" name="name" id="name" class="form-control" required>
-                @error('name')
-                <span class="d-block fs-6 text-danger mt-2">{{ $message }}</span>
-                @enderror
-            </div>
-
-            <!-- Email Field -->
-            <div class="form-group mt-3">
-                <label for="email" class="text-dark">Email:</label><br>
-                <input type="email" name="email" id="email" class="form-control" required>
-                @error('email')
-                <span class="d-block fs-6 text-danger mt-2">{{ $message }}</span>
-                @enderror
-            </div>
-
-            <!-- Password Field -->
-            <div class="form-group mt-3">
-                <label for="password" class="text-dark">Password:</label><br>
-                <input type="password" name="password" id="password" class="form-control" required>
-                @error('password')
-                <span class="d-block fs-6 text-danger mt-2">{{ $message }}</span>
-                @enderror
-            </div>
-
-            <!-- Confirm Password Field -->
-            <div class="form-group mt-3">
-                <label for="confirm-password" class="text-dark">Confirm Password:</label><br>
-                <input type="password" name="password_confirmation" id="confirm-password" class="form-control" required>
-                @error('password_confirmation')
-                <span class="d-block fs-6 text-danger mt-2">{{ $message }}</span>
-                @enderror
-            </div>
-
-            <!-- Submit Button -->
-            <div class="form-group">
-                <input type="submit" name="submit" class="btn btn-dark btn-md" value="Register">
-            </div>
-
-            <!-- Redirect to Login -->
-            <div class="text-right mt-2">
-                <a href="/login" class="text-dark">Already have an account? Login here</a>
-            </div>
-        </form>
-    </div>
-</div>
-@endsection
-```
-
-**AuthController for Registration**
-
-```php
-namespace App\Http\Controllers;
-
-use App\Models\User;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Http\Request;
-
-class AuthController extends Controller
-{
-    // Show the registration form
-    public function register()
-    {
-        return view('auth.register');
-    }
-
-    // Handle registration data submission
-    public function store(Request $request)
-    {
-        // Validate the form data
-        $validated = $request->validate([
-            'name' => 'required|min:3|max:40',
-            'email' => 'required|email|unique:users,email',
-            'password' => 'required|confirmed|min:8',
-        ]);
-
-        // Create a new user with the hashed password
-        User::create([
-            'name' => $validated['name'],
-            'email' => $validated['email'],
-            'password' => Hash::make($validated['password']),
-        ]);
-
-        // Redirect to dashboard with success message
-        return redirect()->route('dashboard')
-            ->with('success', 'User registered successfully');
-    }
-}
-```
-
-**Routes for Registration**
-
-```php
-use App\Http\Controllers\AuthController;
-use Illuminate\Support\Facades\Route;
-
-// Registration routes
-Route::get('/register', [AuthController::class, 'register'])->name('register');
-Route::post('/register', [AuthController::class, 'store']);
-```
-
-**Explanation of Key Elements**
-
-1. **`Hash::make`**:
-   - This function is used to securely hash the user's password before storing it in the database. It's crucial for ensuring password security.
-
-   ```php
-   'password' => Hash::make($validated['password']),
-   ```
-
-2. **`name="password_confirmation"`**:
-   - This field is used to confirm the password. Laravel automatically looks for `password_confirmation` when using the `confirmed` rule in validation.
-
-   ```php
-   <input type="password" name="password_confirmation" id="confirm-password" class="form-control" required>
-   ```
-
-   The `confirmed` rule ensures the `password` and `password_confirmation` fields match:
-
-   ```php
-   'password' => 'required|confirmed|min:8',
-   ```
 ---
-# 22. [AUTHORIZATION BASICS] 🗄️
 
-Authorization ensures that only authenticated users with appropriate permissions can perform specific actions in your application. Below are some fundamental practices for authorizing users based on their ownership of resources or permissions.
+### Generate Factories
 
-1. **Database Structure**
-
-**`ideas` Table Schema**
-
-Each `idea` is associated with a `user` who owns it. The `likes` column tracks how many users like the idea.
-
-```php
-Schema::create('ideas', function (Blueprint $table) {
-    $table->id();
-    $table->foreignId('user_id')->constrained()->cascadeOnDelete(); // Relates to users
-    $table->string('content'); // The idea content
-    $table->unsignedInteger('likes')->default(0); // Likes count
-    $table->timestamps();
-});
-```
-
-**`comments` Table Schema**
-
-Each `comment` is tied to both a `user` (who made the comment) and an `idea` (the idea being commented on).
-
-```php
-Schema::create('comments', function (Blueprint $table) {
-    $table->id();
-    $table->foreignId('user_id')->constrained()->cascadeOnDelete(); // Relates to users
-    $table->foreignId('idea_id')->constrained()->cascadeOnDelete(); // Relates to ideas
-    $table->string('content'); // The comment content
-    $table->timestamps();
-});
-```
-
-2. **Authorization Logic**
-
-**Restricting Access to Resource Owners**
-
-To restrict access so that only the owner of the `idea` can edit or delete it, compare the `user_id` of the resource with the currently authenticated user's ID.
-
-```php
-if (Auth::id() !== $idea->user_id) {
-    abort(404); // Or use a 403 Forbidden response for better clarity
-}
-```
-
-3. **Model Relationships
-
-**User to Idea Relationship**
-
-A `User` can have many `Ideas`.
-
-```php
-public function ideas()
-{
-    return $this->hasMany(Idea::class);
-}
-```
-
-**Idea to User Relationship**
-
-An `Idea` belongs to a `User`.
-
-```php
-public function user()
-{
-    return $this->belongsTo(User::class);
-}
-```
-
-**Idea Deletion Cascade**
-
-When a user is deleted, their associated ideas are also deleted to maintain database integrity.
-
-```php
-$table->foreignId('user_id')->constrained()->cascadeOnDelete();
-```
-
-4. **Database Refresh Command**
-
-To apply the new schema or reset the database, use:
+To create a factory for a model, use the following commands:
 
 ```bash
-php artisan migrate:refresh
+php artisan make:factory MakerFactory
 ```
 
-5. **Routes with Authorization**
+or create a model with a factory at the same time:
 
-Apply the `auth` middleware to routes to ensure only authenticated users can access them. For example:
+```bash
+php artisan make:model Maker -f
+```
+
+### Defining Factory Data
+
+In your factory, you can define how the model data should be generated. For example:
 
 ```php
-Route::get('/ideas/{idea}/edit', [IdeaController::class, 'edit'])->name('ideas.edit')->middleware('auth');
-
-Route::put('/ideas/{idea}', [IdeaController::class, 'update'])->name('ideas.update')->middleware('auth');
-
-Route::delete('/ideas/{idea}', [IdeaController::class, 'destroy'])->name('ideas.destroy')->middleware('auth');
-
-Route::post('/ideas/{idea}/comments', [CommentController::class, 'store'])->name('ideas.comments.store')->middleware('auth');
+'phone' => fake()->numerify('##########')
 ```
 
-**Explanation of Key Elements
+---
 
-1. **Foreign Key Constraints with Cascade**:  
-   Ensures that when a user is deleted, their associated ideas or comments are also removed.
+### Factory Naming Convention
 
-   ```php
-   $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+Laravel automatically associates a factory with its corresponding model based on the naming convention:
+
+1. The factory should have the same name as the model it's associated with, in singular form followed by `Factory`. For example, `MakerFactory` for `Maker` model.
+
+---
+
+### Factories To Generate Data
+
+You can use the factory to create model instances in different ways:
+
+```php
+$makers = Maker::factory()->count(10)->make(); // Creates instances but does not persist to the database
+dd($makers);
+
+$maker = Maker::factory()->create(); // Creates and persists a single instance to the database
+dd($maker);
+
+$maker = Maker::factory()->create([]); // Creates an instance with default values and persists it
+dd($maker);
+
+// Creating multiple users with a specific name
+User::factory()->count(10)->create([
+	'name' => 'Zura'
+]);
+```
+
+---
+
+### Factory Sequences
+
+You can create a sequence of different attributes:
+
+```php
+User::factory()->count(10)->sequence(['name' => 'Zura'], ['name' => 'John']); // Alternates between 'Zura' and 'John'
+
+User::factory()->count(10)
+	->sequence(fn (Sequence $sequence) => ['name' => 'Name ' . $sequence->index]) 
+	->create(); // Generates 'Name 0', 'Name 1', 'Name 2', ...
+```
+
+---
+
+### Factory States
+Define variations in the data generated by the factory using states:
+
+```php
+public function unverified(): static
+{
+	return $this->state(fn(array $attributes) => [
+		'email_verified_at' => null,
+	]);
+}
+
+// Create unverified users
+User::factory()
+	->count(10)
+	->unverified()
+	->create();
+
+// Create trashed users
+User::factory()
+	->count(10)
+	->trashed() // Assuming trashed state is defined in the factory
+	->create();
+```
+
+---
+
+### Factory Callbacks
+
+You can add callbacks to perform actions after creating or making instances:
+
+```php
+User::factory()
+	->afterCreating(function (User $user) {
+		dump($user); // Perform some action after creating
+	})
+	->create();
+
+User::factory()
+	->afterMaking(function (User $user) {
+		dump($user); // Perform some action after making
+	})
+	->make();
+```
+
+---
+
+### Factory Relationships - ONE TO MANY
+
+To define relationships in factories, you can do the following:
+
+```php
+// In the MakerFactory.php
+public function definition()
+{
+    return [
+        'name' => fake()->name(),
+        'phone' => fake()->numerify('##########'),
+        // Other attributes...
+    ];
+}
+
+// For users that belong to makers
+User::factory()
+    ->count(10)
+    ->for(Maker::factory())
+    ->create();
+```
+
+---
+
+### Factory Relationships - BELONGS TO
+
+To create instances that belong to a specific model:
+
+```php
+// In the UserFactory.php
+public function definition()
+{
+    return [
+        'name' => fake()->name(),
+        'maker_id' => Maker::factory(), // Assuming the user belongs to a maker
+        // Other attributes...
+    ];
+}
+
+// Create users that belong to a maker
+User::factory()
+    ->count(10)
+    ->create();
+```
+
+---
+### Factory Relationships - MANY TO MANY
+
+To define many-to-many relationships in your factories, you can use the `attach` method:
+
+```php
+// In IdeaFactory.php
+public function definition()
+{
+    return [
+        'title' => fake()->sentence(),
+        'content' => fake()->paragraph(),
+        // Other attributes...
+    ];
+}
+
+// Creating ideas for multiple users
+$users = User::factory()->count(10)->create();
+
+foreach ($users as $user) {
+    $user->ideas()->attach(Idea::factory()->count(3)->create());
+}
+```
+---
+
+### Define All Factories
+
+To define all your factories in a single file or a centralized location:
+
+```php
+// In DatabaseSeeder.php
+public function run(): void
+{
+    Maker::factory()->count(10)->create();
+    User::factory()->count(50)->create();
+    // Other factories...
+}
+```
+
+---
+Here's a structured overview of using **seeders** in Laravel to populate your database with test data. Seeders allow you to create a consistent environment for testing and development.
+
+# 22. [INTRO TO SEEDERS] 🌱
+
+**SEEDERS**  
+*Populate database with test data*  
+*Create a consistent environment*
+
+---
+
+### Running The Seeder Command
+
+To run the default seeder that populates your database, use:
+
+```bash
+php artisan db:seed
+```
+
+---
+
+### Create & Run Seeders
+
+1. **Create a Seeder:**
+
+   To create a new seeder, use the following command:
+
+   ```bash
+   php artisan make:seeder UsersSeeder
    ```
 
-2. **Auth Middleware**:  
-   Protects routes from unauthorized access by ensuring only logged-in users can perform actions.
+2. **Run a Specific Seeder:**
 
-3. **Owner Verification**:  
-   This block checks whether the current user is the owner of the idea before performing restricted actions like editing or deleting.
+   To run a specific seeder class, execute:
 
-   ```php
-   if (Auth::id() !== $idea->user_id) {
-       abort(404);
-   }
+   ```bash
+   php artisan db:seed --class=UsersSeeder
    ```
----
-# 21. [ROUTE GROUPING] 🗄️
 
-Route grouping helps to organize routes that share common attributes, such as a prefix or middleware. This is particularly useful for maintaining cleaner and more efficient route files in Laravel.
+3. **Force Seed the Database:**
 
-**Example: Grouping Routes for `ideas`**
+   If you need to force seed the database (even in production), you can use:
 
-In the following example, all routes are prefixed with `ideas/` and named with the `ideas.` prefix. Additionally, a nested route group with the `auth` middleware ensures that certain actions (such as creating, editing, updating, and deleting) are only accessible to authenticated users.
+   ```bash
+   php artisan db:seed --force
+   ```
 
-**Code Explanation**
+4. **Migrate and Seed:**
 
-```php
-Route::group(['prefix' => 'ideas/', 'as' => 'ideas.'], function () {
-    // Publicly accessible routes
-    Route::post('', [IdeaController::class, 'store'])->name('store'); // Route for storing new ideas
-    Route::get('/{idea}', [IdeaController::class, 'show'])->name('show'); // Route for viewing a specific idea
+   You can run migrations and seed the database in one command:
 
-    // Routes accessible only to authenticated users
-    Route::group(['middleware' => 'auth'], function () {
-        Route::get('/create', [IdeaController::class, 'create'])->name('create'); // Create form for ideas
-        Route::get('/{idea}/edit', [IdeaController::class, 'edit'])->name('edit'); // Edit form for ideas
-        Route::put('/{idea}', [IdeaController::class, 'update'])->name('update'); // Update an idea
-        Route::delete('/{idea}', [IdeaController::class, 'destroy'])->name('destroy'); // Delete an idea
-        Route::post('/{idea}/comments', [CommentController::class, 'store'])->name('comments.store'); // Add comments to an idea
-    });
-});
-```
+   ```bash
+   php artisan migrate --seed
+   ```
 
-**Breakdown:**
+5. **Fresh Migrate and Seed:**
 
-- **Prefix & Naming Convention**:  
-  The `prefix` is `ideas/`, so all the routes inside the group will be prefixed with `ideas/`. The `as` key sets the route name prefix to `ideas.`, so route names become `ideas.store`, `ideas.show`, etc.
-  
-- **Public Routes**:
-  - `POST /ideas`: Route to create new ideas.
-  - `GET /ideas/{idea}`: Route to view a specific idea.
+   To drop all tables, migrate, and seed the database, use:
 
-- **Protected Routes (with `auth` middleware)**:
-  - `GET /ideas/create`: Only authenticated users can access the form to create a new idea.
-  - `GET /ideas/{idea}/edit`: Only authenticated users can edit their own ideas.
-  - `PUT /ideas/{idea}`: Update the existing idea.
-  - `DELETE /ideas/{idea}`: Delete the idea.
-  - `POST /ideas/{idea}/comments`: Add comments to a specific idea.
+   ```bash
+   php artisan migrate:fresh --seed
+   ```
 
 ---
-# 21. [RESOURCE ROUTING] 🗄️
 
-In Laravel, **resource routing** provides a convenient way to define routes for a controller that handles CRUD (Create, Read, Update, Delete) operations. The `Route::resource` method automatically creates multiple routes to handle a variety of RESTful actions.
+### Calling Seeders in DatabaseSeeder
 
-**Code Explanation**
-
-```php
-Route::resource('ideas', IdeaController::class)->except(['index', 'create', 'show'])->middleware('auth');
-
-Route::resource('ideas', IdeaController::class)->only(['show']);
-
-Route::resource('ideas.comments', CommentController::class)->only(['store'])->middleware('auth');
-```
-
-1. **Authenticated Routes for `ideas`**
+In your `DatabaseSeeder.php`, you can call your seeder classes:
 
 ```php
-Route::resource('ideas', IdeaController::class)
-    ->except(['index', 'create', 'show'])
-    ->middleware('auth');
+$this->call([
+    UsersSeeder::class,
+]);
 ```
-
-- **Purpose**: Defines routes for `ideas` that require user authentication, excluding `index`, `create`, and `show` methods.
-- **Generated Routes**:
-  - `POST /ideas` → `IdeaController@store`
-  - `GET /ideas/{idea}/edit` → `IdeaController@edit`
-  - `PUT/PATCH /ideas/{idea}` → `IdeaController@update`
-  - `DELETE /ideas/{idea}` → `IdeaController@destroy`
-- **Middleware**: Applying `middleware('auth')` ensures that only authenticated users can access these routes.
-
-2. **Public `show` Route for `ideas`**
-
-```php
-Route::resource('ideas', IdeaController::class)
-    ->only(['show']);
-```
-
-- **Purpose**: Defines the `show` route for `ideas`, allowing any user (authenticated or guest) to view individual ideas.
-- **Generated Route**:
-  - `GET /ideas/{idea}` → `IdeaController@show`
-
-3. **Authenticated Routes for `ideas.comments`**
-
-```php
-Route::resource('ideas.comments', CommentController::class)
-    ->only(['store'])
-    ->middleware('auth');
-```
-
-- **Purpose**: Defines the `store` route for adding comments to ideas, requiring user authentication.
-- **Generated Route**:
-  - `POST /ideas/{idea}/comments` → `CommentController@store`
-- **Nested Resource**: The route is nested under `ideas`, indicating that comments belong to specific ideas.
-- **Middleware**: Ensures only authenticated users can post comments.
-
-**Benefits of Using Resource Routing**
-
-- **Simplifies Route Definitions**: Automatically generates standard CRUD routes without manually defining each one.
-- **Consistency**: Adheres to Laravel's conventions, making the codebase more maintainable.
-- **Customization**: Methods like `except()` and `only()` allow you to include or exclude specific routes as needed.
-- **Middleware Integration**: Easily apply middleware to groups of routes for access control.
-
-**Summary**
-
-- **Resource Routes**: Efficiently create multiple routes for a controller using `Route::resource`.
-- **Route Customization**: Use `except()` to exclude routes and `only()` to include specific routes.
-- **Authentication Middleware**: Protect certain routes by applying `middleware('auth')`.
-- **Nested Resources**: Manage related resources (like comments for ideas) using nested resource routes.
 
 ---
-# 21. [FIX PAGINATION NOT HAVING QUERY STRINGS] 🗄️
 
-**Problem**
-When using pagination with a search or filter functionality, query strings like `?search=query` can be lost when navigating through pages. This happens because the pagination links do not automatically retain the query parameters.
+### Create Seed Data For The Project
 
-**Solution**
-To fix this, we use the **`withQueryString()`** method in Laravel pagination, which ensures that all current query string parameters (e.g., search queries or filters) are included when generating pagination links.
-
-1. **Update Pagination Links with Query String**
-
-In your Blade template where pagination is displayed, ensure the `withQueryString()` method is applied:
+You can generate specific test data using factories within your seeder. Here’s an example of how to create car types:
 
 ```php
-<div class="mt-3">
-    {{ $ideas->withQueryString()->links() }}
-</div>
+CarType::factory()
+    ->sequence(
+        ['name' => 'Sedan'],
+        ['name' => 'Hatchback'],
+        ['name' => 'SUV'],
+        ['name' => 'Pickup Truck'],
+        ['name' => 'Minivan'],
+        ['name' => 'Jeep'],
+        ['name' => 'Coupe'],
+        ['name' => 'Crossover'],
+        ['name' => 'Sports Car'],
+    )
+    ->count(9) // Creates a total of 9 records
+    ->create();
 ```
 
-- **`$ideas->withQueryString()`**: This method keeps the current query string parameters (like search terms) in the pagination links. It ensures that when users click on the pagination links, they do not lose the applied filters or search terms.
+---
+Got it! Here’s how you can format your topic on rendering cars on the home page using Markdown with some explanations and examples.
 
-2. **Search Bar Implementation**
+---
 
-Here's how the search form should look to retain the query string when submitting a search request:
+# 23. [RENDER CARS ON HOME PAGE] 🚗
+
+**INTRODUCTION**
+- This section explains how to render a list of cars on the home page of a Laravel application.
+
+**CONTROLLER SETUP**
+To fetch and display cars, ensure your controller method is set up correctly:
 
 ```php
-<div class="card">
-    <div class="card-header pb-0 border-0">
-        <h5 class="">Search</h5>
-    </div>
-    <div class="card-body">
-        <form action="{{ route('dashboard')}}" method="GET">
-            <!-- Retain the search input value with request() helper -->
-            <input value="{{ request('search', '') }}" name="search" placeholder="Search..." class="form-control w-100" type="text">
-            <button class="btn btn-dark mt-2"> Search</button>
-        </form>
-    </div>
-</div>
+public function index() {
+    $cars = Car::where('published_at', '<', now())
+        ->orderBy('published_at', 'desc') // Orders by publication date in descending order
+        ->limit(30) // Limits the results to 30 cars
+        ->get();
+        
+    return view('home.index', ['cars' => $cars]); // Passes the cars to the view
+}
 ```
 
-3. **Full Blade Template Example**
+**BLADE TEMPLATE**
+In your Blade template, loop through the cars and display them:
 
-```php
-@extends('layout.layout')
+```blade
+@extends('layouts.app')
+
 @section('content')
+    <h1>Available Cars</h1>
 
-<div class="row">
-    <div class="col-3">
-        @include('shared.left-sidebar')
+    <div class="car-list">
+        @foreach($cars as $car)
+            <x-car-card :car="$car" /> <!-- Renders each car using a Blade component -->
+        @endforeach
     </div>
-    <div class="col-6">
-        @include('shared.success-message')
-        @include('shared.submit-idea')
-        <hr>
-        @forelse ($ideas as $idea)
-        <div class="mt-3">
-            @include('shared.idea-card')
-        </div>
-        @empty
-        <div class="alert alert-info">
-            No ideas found.
-        </div>
-        @endforelse
-        <div class="mt-3">
-            <!-- Pagination with query string -->
-            {{ $ideas->withQueryString()->links() }}
-        </div>
-    </div>
-
-    <div class="col-3">
-        @include('shared.search-bar')
-        @include('shared.follow-box')
-    </div>
-</div>
-
 @endsection
 ```
 
-**Summary**
+**CAR COMPONENT**
+Create a Blade component to handle the display of each car. For example, create `CarCard.blade.php` in the `resources/views/components` directory:
 
-1. **`withQueryString()`** is used to preserve query parameters when paginating results.
-2. **Search Form**: Retains the previous search input using the `request()` helper so users can see the term they searched for.
-3. **Enhanced User Experience**: The query string (e.g., search term) will be preserved across paginated pages, preventing users from losing their search or filter results when they move between pages.
+```blade
+@props(['car'])
+
+<div class="car-card">
+    <h2>{{ $car->name }}</h2> <!-- Displays the car name -->
+    <p>Published on: {{ $car->published_at->format('d M, Y') }}</p> <!-- Formats and displays the publication date -->
+    <p>Description: {{ $car->description }}</p> <!-- Displays the car description -->
+    <p>Price: {{ $car->price }} €</p> <!-- Displays the car price -->
+</div>
+```
+
+**SUMMARY**
+- **Controller**: Retrieves and orders cars to be displayed.
+- **View**: Loops through the car collection and uses a Blade component to render each car.
+- **Component**: Defines the structure and content for each individual car.
 
 ---
+Here’s how you can format your topic on querying data in Laravel, covering different methods for retrieving records, using Markdown with explanations and examples.
+
+---
+
+Sure! Here’s a more readable version of the **Query Data - Different Methods** section in Laravel, with clearer formatting and explanations.
+
+---
+
+# 24. [QUERY DATA - DIFFERENT METHODS] 📊
+
+**INTRODUCTION**  
+This section outlines various methods to query data in Laravel, showcasing both raw queries and Eloquent model methods.
+
+### Query Data without Model
+```php
+$cars = DB::table('cars')->get(); // Retrieves all records from the cars table
+dd($cars);
+```
+
+### Query Data with Model
+```php
+$query = Car::query(); // Initializes a query builder for the Car model
+// You can use methods like where, orderBy, limit, etc.
+```
+
+### Select All Records
+```php
+$cars = Car::get(); // Fetches all records from the Car model
+```
+
+### Select a Single Value
+```php
+// Get the highest price from the cars
+$highestPrice = Car::orderBy('price', 'desc')->value('price');
+```
+
+### Select List of Values from a Single Column
+```php
+// Get a list of prices sorted in descending order
+$prices = Car::orderBy('price', 'desc')->pluck('price');
+
+// Get an associative array of prices with car ID as the key
+$prices = Car::orderBy('price', 'desc')->pluck('price', 'id');
+```
+
+### Check if Records Exist or Do Not Exist
+```php
+// Check if a specific user has cars
+if (Car::where('user_id', 1)->exists()) {
+    // User has cars
+}
+
+if (Car::where('user_id', 1)->doesntExist()) {
+    // User does not have cars
+}
+```
+
+### Specify Select Columns
+```php
+// Select only VIN code and price of the cars
+$cars = Car::select('vin', 'price as car_price')->get();
+
+// Add more columns later in the query
+$query = Car::select('vin', 'price as car_price');
+
+// Add mileage to the selected columns
+$cars = $query->addSelect('mileage')->get();
+```
+
+### Select Distinct Records
+```php
+// Get distinct maker and models from the cars
+$distinct = Car::select('maker_id', 'model_id')->distinct()->get();
+```
+
+### Limit and Offset
+```php
+// Select 10 cars starting from the 6th
+$cars = Car::limit(10)->offset(5)->get();
+
+// Alternatively, use skip and take
+$cars = Car::skip(5)->take(10)->get();
+```
+
+### Select Record Count
+```php
+// Count the number of published cars
+$carCount = Car::where('published_at', '!=', null)->count();
+```
+
+### Select Minimum, Maximum, and Average Price
+```php
+// Get minimum, maximum, and average price of published cars
+$minPrice = Car::where('published_at', '!=', null)->min('price');
+$maxPrice = Car::where('published_at', '!=', null)->max('price');
+$avgPrice = Car::where('published_at', '!=', null)->avg('price');
+
+dd($minPrice, $maxPrice, $avgPrice);
+```
+
+### Grouping
+```php
+// Get car IDs with the count of images each car has
+$cars = CarImage::selectRaw('car_id, count(*) as image_count')->groupBy('car_id')->get();
+dd($cars[0]);
+```
+
+### Ordering Data
+```php
+// Order by multiple columns
+Car::orderBy('published_at', 'desc')->orderBy('price', 'asc')->get();
+
+// Order by the latest published date
+Car::latest('published_at')->get(); // Descending order
+
+// Order by the oldest published date
+Car::oldest('published_at')->get(); // Ascending order
+```
+
+### Select Records in Random Order
+```php
+// Select cars in random order
+$cars = Car::inRandomOrder()->get();
+```
+
+### Remove Ordering
+```php
+// Reorder results based on price
+$cars = $query->reorder('price')->get();
+```
+
+### Eager Loading Relationships
+```php
+// Select 5 cars with their city and carType relationships
+$cars = Car::with(['city', 'carType'])->limit(5)->get();
+
+foreach ($cars as $car) {
+    echo $car->city->name . '<br>'; // Fetches city name
+    echo $car->carType->name . '<br>'; // Fetches car type name
+}
+
+// Select 5 cars with nested relationships
+$cars = Car::with(['city.state'])->limit(5)->get();
+
+foreach ($cars as $car) {
+    echo $car->city->state->name . '<br>'; // Fetches state name from city
+}
+```
+
+### Eager Loading by Default
+```php
+protected $with = ['city.state', 'carType', 'fuelType']; // Automatically eager loads relationships
+
+$cars = Car::limit(5)->get();
+
+foreach ($cars as $car) {
+    echo $car->city->state->name . '<br>'; // Fetches state name from city
+}
+```
+
+---
+# 25. [DATABASE JOINS] 🔗
+
+Database joins are essential for combining records from two or more tables based on a related column. Laravel provides a fluent interface for working with joins, allowing you to build complex queries effortlessly.
+
+### Basic Join
+To join two tables, you can use the `join` method. Here’s an example of how to join the `cars` table with the `cities` table based on the `city_id`:
+
+```php
+$carsWithCities = DB::table('cars')
+    ->join('cities', 'cities.id', '=', 'cars.city_id')
+    ->select('cars.*', 'cities.name as city_name') // Select car details along with the city name
+    ->get();
+```
+
+### Join with Conditions
+You can also add conditions to your joins. For example, if you want to filter cars based on a specific state:
+
+```php
+$carsInSpecificState = DB::table('cars')
+    ->join('cities', 'cities.id', '=', 'cars.city_id')
+    ->where('cities.state_id', 1) // Only get cars from cities in state with ID 1
+    ->select('cars.*', 'cities.name as city_name')
+    ->get();
+```
+
+### Left Join
+To include all records from the left table (e.g., `cars`) even if there are no matching records in the right table (e.g., `cities`), use `leftJoin`:
+
+```php
+$carsWithOptionalCities = DB::table('cars')
+    ->leftJoin('cities', 'cities.id', '=', 'cars.city_id')
+    ->select('cars.*', 'cities.name as city_name')
+    ->get();
+```
+
+### Right Join
+Similarly, if you want to include all records from the right table regardless of whether there's a match in the left table, you can use `rightJoin`:
+
+```php
+$citiesWithCars = DB::table('cities')
+    ->rightJoin('cars', 'cities.id', '=', 'cars.city_id')
+    ->select('cities.*', 'cars.model as car_model')
+    ->get();
+```
+
+### Cross Join
+A cross join produces a Cartesian product of the two tables. Every row from the first table is combined with every row from the second table:
+
+```php
+$allCombinations = DB::table('cars')
+    ->crossJoin('cities')
+    ->select('cars.model as car_model', 'cities.name as city_name')
+    ->get();
+```
+
+### Joining Multiple Tables
+You can also join multiple tables in a single query:
+
+```php
+$carsWithDetails = DB::table('cars')
+    ->join('cities', 'cities.id', '=', 'cars.city_id')
+    ->join('car_types', 'car_types.id', '=', 'cars.car_type_id')
+    ->select('cars.*', 'cities.name as city_name', 'car_types.type as car_type')
+    ->get();
+```
+---
+# 26. [BASIC WHERE CLAUSES] 🔍
+
+Where clauses are essential for filtering records in your database queries. Laravel provides a fluent interface for building these conditions. Below are some examples to help you understand how to use where clauses effectively.
+
+### Simple Where Clauses
+You can chain multiple `where` methods to apply various conditions. For example, to get cars from the year 2020 with a price greater than 10,000 and an address containing "York":
+
+```php
+$cars = Car::where('year', '=', 2020) // Year is 2020
+    ->where('price', '>', 10000) // Price is greater than 10,000
+    ->where('address', 'like', '%york%') // Address contains 'york'
+    ->get();
+```
+
+Alternatively, you can use an array format:
+
+```php
+$cars = Car::where([
+    ['year', '=', 2020],
+    ['price', '>', 10000],
+    ['address', 'like', '%york%'],
+])->get();
+```
+
+### OR Where Clauses
+Use `orWhere` to specify alternative conditions. For instance, to select very old cars or very new ones:
+
+```php
+$cars = Car::where('year', '<', 1970) // Year is less than 1970
+    ->orWhere('year', '>', 2022) // Or year is greater than 2022
+    ->get();
+```
+
+### WHERE NOT Clauses
+To filter out records that meet a specific condition, use `whereNot`. For example, to get cars with mileage not greater than 100,000:
+
+```php
+$cars = Car::whereNot('mileage', '>', 100000) // Mileage is not greater than 100,000
+    ->get();
+```
+
+### WHERE ANY Clause
+To check if any of the specified columns meet a condition, use `whereAny`. For example, to find cars where either the address or description contains "York":
+
+```php
+$cars = Car::whereAny(['address', 'description'], 'like', '%York%')
+    ->get();
+```
+
+### WHERE ALL Clause
+If you want to ensure all specified columns meet a condition, use `whereAll`. For instance, to get cars where both the address and description contain "York":
+
+```php
+$cars = Car::whereAll(['address', 'description'], 'like', '%York%')
+    ->get();
+```
+
+### Additional WHERE Clauses
+You can also use `whereBetween` to select records where a column's value falls within a specified range. For example, to get cars manufactured between the years 2000 and 2020:
+
+```php
+$cars = Car::whereBetween('year', [2000, 2020]) // Year is between 2000 and 2020
+    ->get();
+```
+---
+	
+
+
+
+
+
