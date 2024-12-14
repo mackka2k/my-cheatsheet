@@ -13,7 +13,7 @@ Here are the current cheatsheets available:
 - **JavaScript**: [Link](https://github.com/mackka2k/my-cheatsheet/blob/main/%5BJAVASCRIPT%5D/js.md)
 - **TypeScript**: [Link](https://github.com/mackka2k/my-cheatsheet/blob/main/%5BTYPESCRIPT%5D/ts.md)
 - **ReactJS**: [Link](https://github.com/mackka2k/my-cheatsheet/blob/main/%5BREACT-NATIVE%5D/index.md)
-- **ReactNative**: [Link](https://github.com/mackka2k/my-cheatsheet/blob/main/%5BDATA_STRUCTURES_ALGORITHMS%5D/data.md)
+- **ReactNative**: [Link](https://github.com/mackka2k/my-cheatsheet/blob/main/%5BREACT-NATIVE%5D/index.md)
 - **NodeJS**: [Link](https://github.com/mackka2k/my-cheatsheet/blob/main/%5BNODEJS%5D/node.md)
 - **PHP**: [Link](https://github.com/mackka2k/my-cheatsheet/blob/main/%5BPHP%5D/index.md)
 - **HTML/CSS**: [Link](https://github.com/mackka2k/my-cheatsheet/blob/main/%5BHTML%2BCSS%5D/html.md)
