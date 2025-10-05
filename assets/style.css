@@ -557,22 +557,38 @@ body {
   color: var(--text-secondary);
 }
 
-/* Theme Toggle */
-.theme-toggle {
+/* Button Row */
+.button-row {
   position: fixed;
   top: 20px;
-  right: 80px;
+  right: 20px;
   z-index: 1000;
+  display: flex;
+  gap: 8px;
+  align-items: center;
   background: var(--surface);
-  color: var(--text);
   border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 12px;
-  cursor: pointer;
+  border-radius: var(--radius);
+  padding: 8px;
   box-shadow: var(--shadow);
   transition: all 0.2s ease;
-  width: 44px;
-  height: 44px;
+}
+
+.button-row:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  background: transparent;
+  color: var(--text);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -581,7 +597,6 @@ body {
 .theme-toggle:hover {
   background: var(--accent);
   color: white;
-  border-color: var(--accent);
   transform: scale(1.05);
 }
 
@@ -610,6 +625,9 @@ body {
   box-shadow: var(--shadow);
   transition: all 0.2s ease;
 }
+
+/* Hide standalone mobile menu button when button row is present */
+/* The mobile menu button should be hidden when it appears in the button row */
 
 .mobile-menu-toggle:hover {
   background: var(--accent-hover);
@@ -752,21 +770,18 @@ body {
 .toc-link.h6 { padding-left: 48px; }
 
 .edit-button {
-  position: fixed;
-  top: 20px;
-  right: 140px;
-  background: var(--surface);
+  background: transparent;
   color: var(--text);
-  border: 1px solid var(--border);
+  border: none;
   border-radius: var(--radius-sm);
-  padding: 12px;
+  padding: 8px;
   cursor: pointer;
-  box-shadow: var(--shadow);
-  z-index: 1000;
   transition: all 0.2s ease;
-  width: 44px;
-  height: 44px;
-  display: flex;
+  width: 36px;
+  height: 36px;
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
   align-items: center;
   justify-content: center;
 }
@@ -774,7 +789,6 @@ body {
 .edit-button:hover {
   background: var(--accent);
   color: white;
-  border-color: var(--accent);
   transform: scale(1.05);
 }
 
@@ -788,20 +802,15 @@ body {
 }
 
 .sync-button {
-  position: fixed;
-  top: 20px;
-  right: 200px;
-  background: var(--surface);
+  background: transparent;
   color: var(--text);
-  border: 1px solid var(--border);
+  border: none;
   border-radius: var(--radius-sm);
-  padding: 12px;
+  padding: 8px;
   cursor: pointer;
-  box-shadow: var(--shadow);
-  z-index: 1000;
   transition: all 0.2s ease;
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -810,7 +819,6 @@ body {
 .sync-button:hover {
   background: var(--accent);
   color: white;
-  border-color: var(--accent);
 }
 
 .sync-button.syncing {
@@ -823,20 +831,15 @@ body {
 }
 
 .logout-main-button {
-  position: fixed;
-  top: 20px;
-  right: 140px;
-  background: var(--surface);
+  background: transparent;
   color: var(--text);
-  border: 1px solid var(--border);
+  border: none;
   border-radius: var(--radius-sm);
-  padding: 12px;
+  padding: 8px;
   cursor: pointer;
-  box-shadow: var(--shadow);
-  z-index: 1000;
   transition: all 0.2s ease;
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -845,7 +848,6 @@ body {
 .logout-main-button:hover {
   background: #dc2626;
   color: white;
-  border-color: #dc2626;
   transform: scale(1.05);
 }
 
@@ -859,20 +861,15 @@ body {
 }
 
 .toc-toggle {
-  position: fixed;
-  top: 20px;
-  right: 80px;
-  background: var(--surface);
+  background: transparent;
   color: var(--text);
-  border: 1px solid var(--border);
+  border: none;
   border-radius: var(--radius-sm);
-  padding: 12px;
+  padding: 8px;
   cursor: pointer;
-  box-shadow: var(--shadow);
-  z-index: 1000;
   transition: all 0.2s ease;
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -881,7 +878,6 @@ body {
 .toc-toggle:hover {
   background: var(--accent);
   color: white;
-  border-color: var(--accent);
   transform: scale(1.05);
 }
 
@@ -896,20 +892,15 @@ body {
 
 /* Print Button */
 .print-button {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: var(--surface);
+  background: transparent;
   color: var(--text);
-  border: 1px solid var(--border);
+  border: none;
   border-radius: var(--radius-sm);
-  padding: 12px;
+  padding: 8px;
   cursor: pointer;
-  box-shadow: var(--shadow);
   transition: all 0.2s ease;
-  z-index: 1000;
-  width: 44px;
-  height: 44px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -918,7 +909,6 @@ body {
 .print-button:hover {
   background: var(--accent);
   color: white;
-  border-color: var(--accent);
   transform: scale(1.05);
 }
 
@@ -1309,11 +1299,10 @@ pre:hover .copy-button {
   .sidebar,
   .mobile-menu-toggle,
   .mobile-overlay,
-  .theme-toggle,
+  .button-row,
   .toc-toggle,
   .toc,
   .back-to-top,
-  .print-button,
   .reading-progress {
     display: none !important;
   }
@@ -1424,86 +1413,31 @@ pre:hover .copy-button {
     max-height: 50vh;
   }
   
-  .edit-button {
-    right: 140px;
-    width: 40px;
-    height: 40px;
-    padding: 10px;
+  .button-row {
+    top: 15px;
+    right: 15px;
+    padding: 6px;
+    gap: 6px;
   }
   
-  .edit-button svg {
-    width: 16px;
-    height: 16px;
+  .button-row button {
+    width: 32px;
+    height: 32px;
+    padding: 6px;
   }
   
-  .sync-button {
-    right: 140px;
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-  }
-  
-  .sync-button svg {
-    width: 16px;
-    height: 16px;
-  }
-  
-  .logout-main-button {
-    right: 80px;
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-  }
-  
-  .logout-main-button svg {
-    width: 16px;
-    height: 16px;
-  }
-  
-  .edit-button {
-    right: 80px;
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-  }
-  
-  .edit-button svg {
+  .button-row button svg {
     width: 16px;
     height: 16px;
   }
   
   .toc-toggle {
-    right: 50px;
-    width: 40px;
-    height: 40px;
-    padding: 10px;
+    width: 32px;
+    height: 32px;
+    padding: 6px;
   }
   
   .toc-toggle svg {
-    width: 16px;
-    height: 16px;
-  }
-  
-  .theme-toggle {
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-  }
-  
-  .theme-toggle svg {
-    width: 16px;
-    height: 16px;
-  }
-  
-  .print-button {
-    right: 10px;
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-  }
-  
-  .print-button svg {
     width: 16px;
     height: 16px;
   }

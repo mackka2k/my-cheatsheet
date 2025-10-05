@@ -692,10 +692,19 @@ const cancelSyncButton = document.getElementById('cancelSyncButton');
 
   function updateEditButtonVisibility() {
     // Always show edit button since user is already authenticated to access the site
-    editButton.style.display = 'flex';
+    if (editButton) {
+      editButton.style.display = 'flex';
+      editButton.style.visibility = 'visible';
+      editButton.style.opacity = '1';
+      console.log('Edit button visibility updated:', editButton.style.display);
+    } else {
+      console.error('Edit button element not found!');
+    }
     
     // Always show logout button since user is authenticated
-    logoutMainButton.style.display = 'flex';
+    if (logoutMainButton) {
+      logoutMainButton.style.display = 'flex';
+    }
   }
 
   function showLoginModal() {
@@ -1263,6 +1272,16 @@ const cancelSyncButton = document.getElementById('cancelSyncButton');
   buildSearchIndex(); // Build search index in background
   window.addEventListener('hashchange', handleRoute);
   handleRoute();
+  
+  // Force show edit button after a short delay
+  setTimeout(() => {
+    if (editButton) {
+      editButton.style.display = 'flex';
+      editButton.style.visibility = 'visible';
+      editButton.style.opacity = '1';
+      console.log('Edit button forced to show on page load');
+    }
+  }, 1000);
   
   // Save analytics on page unload
   window.addEventListener('beforeunload', saveAnalytics);
