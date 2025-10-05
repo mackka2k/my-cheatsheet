@@ -1,6 +1,3 @@
-
----[JAVA]---
----
 # 1. INTRO
 
 In this section, we will cover the basics of Java programming, including how to print variables and text, comment your code, and use shortcuts to enhance productivity.

@@ -1,6 +1,3 @@
-
----[C++]---
----
 # 1.[BASIC DATA TYPES]👨‍💻
 
 ```cpp
