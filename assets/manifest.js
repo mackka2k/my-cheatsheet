@@ -12,6 +12,8 @@ window.CS_MANIFEST = [
     title: 'Programming Languages', 
     base: '[C++]', 
     files: [ 
+      { name: '🐍 Python Libraries', path: '[PYTHON]/python-libraries.md' },
+      { name: '🐍 Python Concepts', path: '[PYTHON]/python-concepts.md' },
       { name: '⚡ C++', path: '[C++]/cpp.md' },
       { name: '☕ Java', path: '[JAVA]/java.md' },
       { name: '🟨 JavaScript', path: '[JAVASCRIPT]/js.md' },
@@ -50,6 +52,62 @@ window.CS_MANIFEST = [
     base: '[DATA_STRUCTURES_ALGORITHMS]', 
     files: [ 
       { name: '📊 Data Structures Guide', path: '[DATA_STRUCTURES_ALGORITHMS]/data.md' }
+    ] 
+  },
+  { 
+    title: 'Programming Concepts', 
+    base: '[PROGRAMMING_CONCEPTS]', 
+    files: [ 
+      { name: '💻 Programming Concepts', path: '[PROGRAMMING_CONCEPTS]/programming-concepts.md' }
+    ] 
+  },
+  { 
+    title: 'Computer Science Courses', 
+    base: '[CS_COURSES]', 
+    files: [ 
+      { name: '🎓 CS College Courses', path: '[CS_COURSES]/cs-courses.md' }
+    ] 
+  },
+  { 
+    title: 'Linux Distributions', 
+    base: '[LINUX_DISTROS]', 
+    files: [ 
+      { name: '🐧 Linux Distros', path: '[LINUX_DISTROS]/linux-distros.md' }
+    ] 
+  },
+  { 
+    title: 'Mathematics', 
+    base: '[MATH]', 
+    files: [ 
+      { name: '📐 Calculus (5th Grade Level)', path: '[MATH]/calculus-simple.md' }
+    ] 
+  },
+  { 
+    title: 'APIs & Web Services', 
+    base: '[APIS]', 
+    files: [ 
+      { name: '🔌 API Types Explained', path: '[APIS]/api-types.md' }
+    ] 
+  },
+  { 
+    title: 'File Formats', 
+    base: '[FILE_FORMATS]', 
+    files: [ 
+      { name: '📁 File Formats Explained', path: '[FILE_FORMATS]/file-formats.md' }
+    ] 
+  },
+  { 
+    title: 'Cloud Services', 
+    base: '[CLOUD_SERVICES]', 
+    files: [ 
+      { name: '☁️ Cloud Service Types', path: '[CLOUD_SERVICES]/cloud-services.md' }
+    ] 
+  },
+  { 
+    title: 'QR Codes & Barcodes', 
+    base: '[CODES]', 
+    files: [ 
+      { name: '📱 QR Codes & Barcodes', path: '[CODES]/qr-barcodes.md' }
     ] 
   },
   { 
