@@ -17,6 +17,12 @@ const editMode = document.getElementById('editMode');
 const editTextarea = document.getElementById('editTextarea');
 const saveButton = document.getElementById('saveButton');
 const cancelButton = document.getElementById('cancelButton');
+const logoutButton = document.getElementById('logoutButton');
+const logoutMainButton = document.getElementById('logoutMainButton');
+const loginModal = document.getElementById('loginModal');
+const passwordInput = document.getElementById('passwordInput');
+const loginButton = document.getElementById('loginButton');
+const cancelLoginButton = document.getElementById('cancelLoginButton');
 const syncButton = document.getElementById('syncButton');
 const syncModal = document.getElementById('syncModal');
 const syncRepo = document.getElementById('syncRepo');
@@ -44,6 +50,7 @@ const cancelSyncButton = document.getElementById('cancelSyncButton');
   let isEditMode = false;
   let currentEditPath = null;
   let originalContent = '';
+  let isAuthenticated = false;
 
   function createNav(manifest){
     navEl.innerHTML='';
@@ -57,7 +64,7 @@ const cancelSyncButton = document.getElementById('cancelSyncButton');
       titleEl.className = 'group-title';
       titleEl.innerHTML = `
         <span>${group.title}</span>
-        <span class="group-toggle" aria-hidden="true">▶</span>
+        <span class="group-toggle" aria-hidden="true">▼</span>
       `;
       titleEl.style.cursor = 'pointer';
       titleEl.style.display = 'flex';
@@ -65,13 +72,13 @@ const cancelSyncButton = document.getElementById('cancelSyncButton');
       titleEl.style.alignItems = 'center';
       titleEl.setAttribute('role', 'button');
       titleEl.setAttribute('tabindex', '0');
-      titleEl.setAttribute('aria-expanded', 'false');
+      titleEl.setAttribute('aria-expanded', 'true');
       titleEl.setAttribute('aria-label', `Toggle ${group.title} section`);
       groupEl.appendChild(titleEl);
 
       const filesEl = document.createElement('div');
       filesEl.className = 'group-files';
-      filesEl.style.display = 'none';
+      filesEl.style.display = 'block';
 
       if(typeof group.base === 'string'){
         const bracketed = group.base;
@@ -611,6 +618,104 @@ const cancelSyncButton = document.getElementById('cancelSyncButton');
     }
   }
 
+  // Authentication functions
+  async function checkAuthStatus() {
+    try {
+      const response = await fetch('/api/auth/status', { credentials: 'include' });
+      const data = await response.json();
+      isAuthenticated = data.authenticated;
+      updateEditButtonVisibility();
+      return isAuthenticated;
+    } catch (error) {
+      console.error('Failed to check auth status:', error);
+      isAuthenticated = false;
+      updateEditButtonVisibility();
+      return false;
+    }
+  }
+
+  async function login(password) {
+    try {
+      const response = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ password })
+      });
+      
+      const data = await response.json();
+      if (data.success) {
+        isAuthenticated = true;
+        updateEditButtonVisibility();
+        hideLoginModal();
+        
+        // Show welcome page after successful login
+        const article = document.getElementById('article');
+        article.innerHTML = `
+          <div style="text-align: center; padding: 60px 20px; color: var(--text-muted);">
+            <h2 style="margin: 0 0 16px 0; font-size: 24px;">Welcome to Senior Dev Cheatsheet</h2>
+            <p style="margin: 0 0 24px 0; font-size: 16px;">You're logged in as admin. Select a technology from the sidebar to get started.</p>
+            <p style="margin: 0; font-size: 14px; color: var(--text-secondary);">
+              Click the edit button to modify any cheatsheet.
+            </p>
+          </div>
+        `;
+        
+        showMessage('Login successful!', 'success');
+        return true;
+      } else {
+        showMessage(data.message || 'Login failed', 'error');
+        return false;
+      }
+    } catch (error) {
+      console.error('Login error:', error);
+      showMessage('Login failed. Make sure the server is running.', 'error');
+      return false;
+    }
+  }
+
+  async function logout() {
+    try {
+      await fetch('/api/auth/logout', {
+        method: 'POST',
+        credentials: 'include'
+      });
+      
+      // Redirect to login page
+      window.location.reload();
+    } catch (error) {
+      console.error('Logout error:', error);
+      // Still redirect even if logout fails
+      window.location.reload();
+    }
+  }
+
+  function updateEditButtonVisibility() {
+    // Always show edit button since user is already authenticated to access the site
+    if (editButton) {
+      editButton.style.display = 'flex';
+      editButton.style.visibility = 'visible';
+      editButton.style.opacity = '1';
+      console.log('Edit button visibility updated:', editButton.style.display);
+    } else {
+      console.error('Edit button element not found!');
+    }
+    
+    // Always show logout button since user is authenticated
+    if (logoutMainButton) {
+      logoutMainButton.style.display = 'flex';
+    }
+  }
+
+  function showLoginModal() {
+    loginModal.classList.add('active');
+    passwordInput.focus();
+  }
+
+  function hideLoginModal() {
+    loginModal.classList.remove('active');
+    passwordInput.value = '';
+  }
 
   function showMessage(message, type = 'info') {
     const messageEl = document.createElement('div');
@@ -866,6 +971,26 @@ const cancelSyncButton = document.getElementById('cancelSyncButton');
     
     saveButton.addEventListener('click', saveContent);
     cancelButton.addEventListener('click', exitEditMode);
+    logoutButton.addEventListener('click', logout);
+    logoutMainButton.addEventListener('click', logout);
+    
+    // Login modal handlers
+    loginButton.addEventListener('click', async () => {
+      const password = passwordInput.value.trim();
+      if (password) {
+        await login(password);
+      }
+    });
+    
+    cancelLoginButton.addEventListener('click', hideLoginModal);
+    
+    passwordInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        loginButton.click();
+      } else if (e.key === 'Escape') {
+        hideLoginModal();
+      }
+    });
     
     // Keyboard shortcuts for edit mode
     editTextarea.addEventListener('keydown', (e) => {
@@ -1143,16 +1268,20 @@ const cancelSyncButton = document.getElementById('cancelSyncButton');
   installEditMode();
   installSyncMode(); // Install GitHub sync functionality
   installCopyToClipboard(); // Install copy-to-clipboard functionality
+  checkAuthStatus(); // Check if user is authenticated
   buildSearchIndex(); // Build search index in background
   window.addEventListener('hashchange', handleRoute);
   handleRoute();
   
-  // Show edit button immediately since no authentication is required
-  if (editButton) {
-    editButton.style.display = 'flex';
-    editButton.style.visibility = 'visible';
-    editButton.style.opacity = '1';
-  }
+  // Force show edit button after a short delay
+  setTimeout(() => {
+    if (editButton) {
+      editButton.style.display = 'flex';
+      editButton.style.visibility = 'visible';
+      editButton.style.opacity = '1';
+      console.log('Edit button forced to show on page load');
+    }
+  }, 1000);
   
   // Save analytics on page unload
   window.addEventListener('beforeunload', saveAnalytics);

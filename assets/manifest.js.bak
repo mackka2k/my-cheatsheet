@@ -60,13 +60,6 @@ window.CS_MANIFEST = [
     ] 
   },
   { 
-    title: 'Malware', 
-    base: '[MALWARE]', 
-    files: [ 
-      { name: '⚠️ Malwares', path: '[MALWARE]/malwares.md' }
-    ] 
-  },
-  { 
     title: 'Project Files', 
     base: '.', 
     files: [ 

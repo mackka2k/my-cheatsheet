@@ -1,18 +1,16 @@
 #!/usr/bin/env python3
 """
-Cheatsheet Server - Personal file editing with authentication
-Allows authenticated users to edit cheatsheet files directly
+Cheatsheet Server - Personal file editing
+Allows users to view and edit cheatsheet files directly
 """
 
 import os
 import json
-import hashlib
-import secrets
 import requests
 import threading
 import time
-from datetime import datetime, timedelta
-from flask import Flask, request, jsonify, send_from_directory, session
+from datetime import datetime
+from flask import Flask, request, jsonify, send_from_directory
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
@@ -21,12 +19,9 @@ from flask_cors import CORS
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
-app.secret_key = secrets.token_hex(32)  # Random secret key
 CORS(app, supports_credentials=True)
 
 # Configuration
-ADMIN_PASSWORD = os.environ.get('CHEATSHEET_PASSWORD', 'admin123')  # Change this!
-SESSION_TIMEOUT = timedelta(hours=24)
 ALLOWED_EXTENSIONS = {'.md', '.txt', '.sh', '.js', '.py', '.html', '.css'}
 
 # GitHub Sync Configuration
@@ -45,19 +40,6 @@ sync_status = {
     'auto_sync_enabled': AUTO_SYNC_ENABLED
 }
 
-def is_authenticated():
-    """Check if user is authenticated as admin"""
-    if 'admin' not in session:
-        return False
-    
-    # Check session timeout
-    if 'login_time' in session:
-        login_time = datetime.fromisoformat(session['login_time'])
-        if datetime.now() - login_time > SESSION_TIMEOUT:
-            session.clear()
-            return False
-    
-    return session['admin'] == True
 
 def is_safe_path(basedir, path):
     """Ensure the path is within the allowed directory"""
@@ -213,83 +195,12 @@ def auto_sync_worker():
 
 @app.route('/')
 def serve_index():
-    """Serve the main index.html - requires authentication"""
-    if not is_authenticated():
-        return """
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Login Required - Senior Dev Cheatsheet</title>
-            <style>
-                body { 
-                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-                    background: #0d1117; color: #c9d1d9; margin: 0; padding: 0;
-                    display: flex; align-items: center; justify-content: center; min-height: 100vh;
-                }
-                .login-container { 
-                    background: #161b22; border: 1px solid #30363d; border-radius: 8px;
-                    padding: 32px; max-width: 400px; width: 90%; box-shadow: 0 8px 24px rgba(1,4,9,0.8);
-                }
-                h1 { margin: 0 0 24px 0; text-align: center; color: #f0f6fc; }
-                input { 
-                    width: 100%; padding: 12px 16px; border: 1px solid #30363d; border-radius: 6px;
-                    background: #0d1117; color: #c9d1d9; font-size: 16px; margin-bottom: 16px; box-sizing: border-box;
-                }
-                input:focus { outline: none; border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59,130,246,0.1); }
-                button { 
-                    width: 100%; padding: 12px; background: #3b82f6; color: white; border: none;
-                    border-radius: 6px; font-size: 16px; font-weight: 500; cursor: pointer; transition: background 0.2s;
-                }
-                button:hover { background: #2563eb; }
-                .error { color: #f85149; margin-top: 8px; text-align: center; }
-            </style>
-        </head>
-        <body>
-            <div class="login-container">
-                <h1>🔒 Senior Dev Cheatsheet</h1>
-                <form id="loginForm">
-                    <input type="password" id="password" placeholder="Enter admin password" required>
-                    <button type="submit">Login</button>
-                    <div id="error" class="error"></div>
-                </form>
-            </div>
-            <script>
-                document.getElementById('loginForm').addEventListener('submit', async (e) => {
-                    e.preventDefault();
-                    const password = document.getElementById('password').value;
-                    const errorDiv = document.getElementById('error');
-                    
-                    try {
-                        const response = await fetch('/api/auth/login', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ password })
-                        });
-                        
-                        const data = await response.json();
-                        if (data.success) {
-                            window.location.reload();
-                        } else {
-                            errorDiv.textContent = data.message || 'Invalid password';
-                        }
-                    } catch (error) {
-                        errorDiv.textContent = 'Login failed. Make sure the server is running.';
-                    }
-                });
-            </script>
-        </body>
-        </html>
-        """, 401
+    """Serve the main index.html"""
     return send_from_directory('.', 'index.html')
 
 @app.route('/<path:filename>')
 def serve_static(filename):
-    """Serve static files - requires authentication"""
-    if not is_authenticated():
-        return "Authentication required", 401
-    
+    """Serve static files"""
     # Security: only serve files from current directory and subdirectories
     if not is_safe_path('.', filename):
         return "Access denied", 403
@@ -303,30 +214,6 @@ def serve_static(filename):
         print(f"Error serving file {filename}: {e}")
         return "Error serving file", 500
 
-@app.route('/api/auth/login', methods=['POST'])
-def login():
-    """Authenticate admin user"""
-    data = request.get_json()
-    password = data.get('password', '')
-    
-    # Simple password check (you can make this more secure)
-    if password == ADMIN_PASSWORD:
-        session['admin'] = True
-        session['login_time'] = datetime.now().isoformat()
-        return jsonify({'success': True, 'message': 'Login successful'})
-    else:
-        return jsonify({'success': False, 'message': 'Invalid password'}), 401
-
-@app.route('/api/auth/logout', methods=['POST'])
-def logout():
-    """Logout admin user"""
-    session.clear()
-    return jsonify({'success': True, 'message': 'Logged out'})
-
-@app.route('/api/auth/status', methods=['GET'])
-def auth_status():
-    """Check authentication status"""
-    return jsonify({'authenticated': is_authenticated()})
 
 @app.route('/api/files/read/<path:filepath>', methods=['GET'])
 def read_file(filepath):
@@ -345,10 +232,7 @@ def read_file(filepath):
 
 @app.route('/api/files/write/<path:filepath>', methods=['POST'])
 def write_file(filepath):
-    """Write to a file (admin only)"""
-    if not is_authenticated():
-        return jsonify({'success': False, 'message': 'Authentication required'}), 401
-    
+    """Write to a file"""
     if not is_safe_path('.', filepath):
         return jsonify({'success': False, 'message': 'Access denied'}), 403
     
@@ -399,9 +283,6 @@ def list_files():
 @app.route('/api/sync/status', methods=['GET'])
 def sync_status_endpoint():
     """Get GitHub sync status"""
-    if not is_authenticated():
-        return jsonify({'success': False, 'message': 'Authentication required'}), 401
-    
     return jsonify({
         'success': True,
         'status': sync_status,
@@ -416,9 +297,6 @@ def sync_status_endpoint():
 @app.route('/api/sync/manual', methods=['POST'])
 def manual_sync():
     """Trigger manual GitHub sync"""
-    if not is_authenticated():
-        return jsonify({'success': False, 'message': 'Authentication required'}), 401
-    
     if not GITHUB_REPO:
         return jsonify({'success': False, 'message': 'GitHub repository not configured'}), 400
     
@@ -434,10 +312,7 @@ def manual_sync():
 
 @app.route('/api/sync/config', methods=['POST'])
 def update_sync_config():
-    """Update GitHub sync configuration (admin only)"""
-    if not is_authenticated():
-        return jsonify({'success': False, 'message': 'Authentication required'}), 401
-    
+    """Update GitHub sync configuration"""
     data = request.get_json()
     global GITHUB_REPO, GITHUB_TOKEN, GITHUB_BRANCH, AUTO_SYNC_ENABLED, SYNC_INTERVAL
     
@@ -458,9 +333,8 @@ def update_sync_config():
 
 if __name__ == '__main__':
     print("🚀 Starting Cheatsheet Server...")
-    print(f"📝 Admin password: {ADMIN_PASSWORD}")
-    print("🔒 Change the password by setting CHEATSHEET_PASSWORD environment variable")
     print("🌐 Server will be available at: http://localhost:5000")
+    print("📝 No authentication required - direct access enabled")
     
     # GitHub Sync Configuration
     if GITHUB_REPO:
