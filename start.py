@@ -6,6 +6,10 @@ Quick start script for the Cheatsheet Server
 import os
 import sys
 import subprocess
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 def main():
     print(" Starting Cheatsheet Server...")

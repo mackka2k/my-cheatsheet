@@ -13,6 +13,10 @@ import threading
 import time
 from datetime import datetime, timedelta
 from flask import Flask, request, jsonify, send_from_directory, session
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
 
