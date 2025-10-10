@@ -3,125 +3,125 @@
 window.CS_MANIFEST = [
   { 
     title: 'Shell & Scripting', 
-    base: '[BASH]', 
+    base: 'content/[BASH]', 
     files: [ 
-      { name: '🐚 Bash Commands', path: '[BASH]/bash.sh' } 
+      { name: '🐚 Bash Commands', path: 'content/[BASH]/bash.sh' } 
     ] 
   },
   { 
     title: 'Programming Languages', 
-    base: '[C++]', 
+    base: 'content/[C++]', 
     files: [ 
-      { name: '🐍 Python Libraries', path: '[PYTHON]/python-libraries.md' },
-      { name: '🐍 Python Concepts', path: '[PYTHON]/python-concepts.md' },
-      { name: '⚡ C++', path: '[C++]/cpp.md' },
-      { name: '☕ Java', path: '[JAVA]/java.md' },
-      { name: '🟨 JavaScript', path: '[JAVASCRIPT]/js.md' },
-      { name: '🔷 TypeScript', path: '[TYPESCRIPT]/ts.md' },
-      { name: '🐘 PHP', path: '[PHP]/index.md' }
+      { name: '🐍 Python Libraries', path: 'content/[PYTHON]/python-libraries.md' },
+      { name: '🐍 Python Concepts', path: 'content/[PYTHON]/python-concepts.md' },
+      { name: '⚡ C++', path: 'content/[C++]/cpp.md' },
+      { name: '☕ Java', path: 'content/[JAVA]/java.md' },
+      { name: '🟨 JavaScript', path: 'content/[JAVASCRIPT]/js.md' },
+      { name: '🔷 TypeScript', path: 'content/[TYPESCRIPT]/ts.md' },
+      { name: '🐘 PHP', path: 'content/[PHP]/index.md' }
     ] 
   },
   { 
     title: 'Web Development', 
-    base: '[HTML+CSS]', 
+    base: 'content/[HTML+CSS]', 
     files: [ 
-      { name: '🌐 HTML & CSS', path: '[HTML+CSS]/html.md' },
-      { name: '⚛️ React', path: '[REACT]/react.md' },
-      { name: '📱 React', path: '[REACT-NATIVE]/index.md' },
-      { name: '▲ Next.js', path: '[NEXT-JS]/nextjs.md' },
-      { name: '🎨 Tailwind CSS', path: '[TAILWIND-CSS]/twcss.md' }
+      { name: '🌐 HTML & CSS', path: 'content/[HTML+CSS]/html.md' },
+      { name: '⚛️ React', path: 'content/[REACT]/react.md' },
+      { name: '📱 React Native', path: 'content/[REACT-NATIVE]/index.md' },
+      { name: '▲ Next.js', path: 'content/[NEXT-JS]/nextjs.md' },
+      { name: '🎨 Tailwind CSS', path: 'content/[TAILWIND-CSS]/twcss.md' }
     ] 
   },
   { 
     title: 'Backend & Database', 
-    base: '[LARAVEL]', 
+    base: 'content/[LARAVEL]', 
     files: [ 
-      { name: '🔧 Laravel', path: '[LARAVEL]/laravel.md' },
-      { name: '🗄️ MySQL', path: '[MYSQL]/mysql.md' }
+      { name: '🔧 Laravel', path: 'content/[LARAVEL]/laravel.md' },
+      { name: '🗄️ MySQL', path: 'content/[MYSQL]/mysql.md' }
     ] 
   },
   { 
     title: 'Development Tools', 
-    base: '[GIT]', 
+    base: 'content/[GIT]', 
     files: [ 
-      { name: '📝 Git Commands', path: '[GIT]/git.md' },
+      { name: '📝 Git Commands', path: 'content/[GIT]/git.md' }
     ] 
   },
   { 
     title: 'Algorithms & Data Structures', 
-    base: '[DATA_STRUCTURES_ALGORITHMS]', 
+    base: 'content/[DATA_STRUCTURES_ALGORITHMS]', 
     files: [ 
-      { name: '📊 Data Structures Guide', path: '[DATA_STRUCTURES_ALGORITHMS]/data.md' }
+      { name: '📊 Data Structures Guide', path: 'content/[DATA_STRUCTURES_ALGORITHMS]/data.md' }
     ] 
   },
   { 
     title: 'Programming Concepts', 
-    base: '[PROGRAMMING_CONCEPTS]', 
+    base: 'content/[PROGRAMMING_CONCEPTS]', 
     files: [ 
-      { name: '💻 Programming Concepts', path: '[PROGRAMMING_CONCEPTS]/programming-concepts.md' }
+      { name: '💻 Programming Concepts', path: 'content/[PROGRAMMING_CONCEPTS]/programming-concepts.md' }
     ] 
   },
   { 
     title: 'Computer Science Courses', 
-    base: '[CS_COURSES]', 
+    base: 'content/[CS_COURSES]', 
     files: [ 
-      { name: '🎓 CS College Courses', path: '[CS_COURSES]/cs-courses.md' }
+      { name: '🎓 CS College Courses', path: 'content/[CS_COURSES]/cs-courses.md' }
     ] 
   },
   { 
     title: 'Linux Distributions', 
-    base: '[LINUX_DISTROS]', 
+    base: 'content/[LINUX_DISTROS]', 
     files: [ 
-      { name: '🐧 Linux Distros', path: '[LINUX_DISTROS]/linux-distros.md' }
+      { name: '🐧 Linux Distros', path: 'content/[LINUX_DISTROS]/linux-distros.md' }
     ] 
   },
   { 
     title: 'Mathematics', 
-    base: '[MATH]', 
+    base: 'content/[MATH]', 
     files: [ 
-      { name: '📐 Calculus (5th Grade Level)', path: '[MATH]/calculus-simple.md' }
+      { name: '📐 Calculus (5th Grade Level)', path: 'content/[MATH]/calculus-simple.md' }
     ] 
   },
   { 
     title: 'APIs & Web Services', 
-    base: '[APIS]', 
+    base: 'content/[APIS]', 
     files: [ 
-      { name: '🔌 API Types Explained', path: '[APIS]/api-types.md' }
+      { name: '🔌 API Types Explained', path: 'content/[APIS]/api-types.md' }
     ] 
   },
   { 
     title: 'File Formats', 
-    base: '[FILE_FORMATS]', 
+    base: 'content/[FILE_FORMATS]', 
     files: [ 
-      { name: '📁 File Formats Explained', path: '[FILE_FORMATS]/file-formats.md' }
+      { name: '📁 File Formats Explained', path: 'content/[FILE_FORMATS]/file-formats.md' }
     ] 
   },
   { 
     title: 'Cloud Services', 
-    base: '[CLOUD_SERVICES]', 
+    base: 'content/[CLOUD_SERVICES]', 
     files: [ 
-      { name: '☁️ Cloud Service Types', path: '[CLOUD_SERVICES]/cloud-services.md' }
+      { name: '☁️ Cloud Service Types', path: 'content/[CLOUD_SERVICES]/cloud-services.md' }
     ] 
   },
   { 
     title: 'QR Codes & Barcodes', 
-    base: '[CODES]', 
+    base: 'content/[CODES]', 
     files: [ 
-      { name: '📱 QR Codes & Barcodes', path: '[CODES]/qr-barcodes.md' }
+      { name: '📱 QR Codes & Barcodes', path: 'content/[CODES]/qr-barcodes.md' }
     ] 
   },
   { 
     title: 'Desktop Development', 
-    base: '[WINFORMS]', 
+    base: 'content/[WINFORMS]', 
     files: [ 
-      { name: '🖥️ C# WinForms', path: '[WINFORMS]/C#-WINFORMS.md' }
+      { name: '🖥️ C# WinForms', path: 'content/[WINFORMS]/C#-WINFORMS.md' }
     ] 
   },
   { 
     title: 'Malware', 
-    base: '[MALWARE]', 
+    base: 'content/[MALWARE]', 
     files: [ 
-      { name: '⚠️ Malwares', path: '[MALWARE]/malwares.md' }
+      { name: '⚠️ Malwares', path: 'content/[MALWARE]/malwares.md' }
     ] 
   },
   { 

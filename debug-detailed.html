@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detailed Debug README Loading</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <h1>Detailed Debug README Loading</h1>
+    <div id="status">Testing...</div>
+    <div id="content"></div>
+    
+    <script>
+        // Copy the exact functions from the app
+        function encodePathForFetch(path) {
+            return path.split('/').map(encodeURIComponent).join('/');
+        }
+        
+        function normalizeBaseBrackets(path) {
+            const segments = path.split('/');
+            if(segments.length === 0) return path;
+            const first = segments[0];
+            // For README.md, this should just return the path as-is
+            return path;
+        }
+        
+        async function tryFetch(path) {
+            const normalized = normalizeBaseBrackets(path);
+            const segs = normalized.split('/');
+            const first = segs[0] || '';
+            const unbrFirst = first.replace(/^\[(.*)\]$/, '$1');
+            const unbrPath = (()=>{ const s=[...segs]; s[0]=unbrFirst; return s.join('/'); })();
+            
+            // Try API endpoints first, then fallback to direct file access
+            const apiVariants = [
+                `/api/files/read/${encodeURIComponent(normalized)}`,
+                `/api/files/read/${encodeURIComponent(unbrPath)}`
+            ];
+            
+            console.log('Testing API variants:', apiVariants);
+            
+            for(const url of apiVariants){
+                try{
+                    console.log('Trying API URL:', url);
+                    const res = await fetch(url, { credentials: 'include' });
+                    console.log('API Response status:', res.status);
+                    if(res.ok) {
+                        const data = await res.json();
+                        console.log('API Response data:', data);
+                        if(data.success) {
+                            return {
+                                ok: true,
+                                text: () => Promise.resolve(data.content)
+                            };
+                        }
+                    }
+                }catch(e){
+                    console.log('API Error for', url, ':', e);
+                }
+            }
+            
+            // Fallback to direct file access
+            const directVariants = [normalized, unbrPath];
+            console.log('Testing direct variants:', directVariants);
+            
+            for(const filePath of directVariants){
+                try{
+                    console.log('Trying direct file:', filePath);
+                    const res = await fetch(filePath);
+                    console.log('Direct Response status:', res.status);
+                    if(res.ok) return res;
+                }catch(e){
+                    console.log('Direct Error for', filePath, ':', e);
+                }
+            }
+            
+            throw new Error('All fetch variants failed');
+        }
+        
+        async function testReadmeLoading() {
+            const statusDiv = document.getElementById('status');
+            const contentDiv = document.getElementById('content');
+            
+            try {
+                statusDiv.innerHTML = 'Testing README.md loading with exact app logic...';
+                console.log('Starting README.md test...');
+                
+                const res = await tryFetch('README.md');
+                console.log('Fetch result:', res);
+                
+                const isMarkdown = /\.md$/i.test('README.md');
+                console.log('Is markdown:', isMarkdown);
+                
+                let content = '';
+                
+                if(isMarkdown) {
+                    const raw = await res.text();
+                    console.log('Raw content length:', raw.length);
+                    console.log('First 200 chars:', raw.substring(0, 200));
+                    
+                    content = marked.parse(raw);
+                    console.log('Parsed content length:', content.length);
+                }
+                
+                statusDiv.innerHTML = '✅ README.md loaded and parsed successfully!';
+                contentDiv.innerHTML = '<h2>Parsed Content:</h2>' + content;
+                
+            } catch(e) {
+                console.error('Error loading README.md:', e);
+                statusDiv.innerHTML = '❌ Error loading README.md: ' + e.message;
+                contentDiv.innerHTML = '<pre>' + e.stack + '</pre>';
+            }
+        }
+        
+        // Run test when page loads
+        testReadmeLoading();
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug README Loading</title>
+</head>
+<body>
+    <h1>Debug README Loading</h1>
+    <div id="status">Testing...</div>
+    <div id="content"></div>
+    
+    <script>
+        async function testReadmeLoading() {
+            const statusDiv = document.getElementById('status');
+            const contentDiv = document.getElementById('content');
+            
+            try {
+                // Test API endpoint
+                statusDiv.innerHTML = 'Testing API endpoint...';
+                const apiResponse = await fetch('/api/files/read/README.md');
+                const apiData = await apiResponse.json();
+                
+                if (apiData.success) {
+                    statusDiv.innerHTML = '✅ API endpoint working - README.md loaded successfully';
+                    contentDiv.innerHTML = '<h2>API Response:</h2><pre>' + JSON.stringify(apiData, null, 2) + '</pre>';
+                } else {
+                    statusDiv.innerHTML = '❌ API endpoint failed: ' + apiData.message;
+                }
+            } catch (error) {
+                statusDiv.innerHTML = '❌ API endpoint error: ' + error.message;
+            }
+            
+            // Test direct file access
+            try {
+                statusDiv.innerHTML += '<br>Testing direct file access...';
+                const directResponse = await fetch('/README.md');
+                if (directResponse.ok) {
+                    const directContent = await directResponse.text();
+                    statusDiv.innerHTML += '<br>✅ Direct file access working - README.md loaded successfully';
+                    contentDiv.innerHTML += '<h2>Direct File Content (first 500 chars):</h2><pre>' + directContent.substring(0, 500) + '...</pre>';
+                } else {
+                    statusDiv.innerHTML += '<br>❌ Direct file access failed: ' + directResponse.status;
+                }
+            } catch (error) {
+                statusDiv.innerHTML += '<br>❌ Direct file access error: ' + error.message;
+            }
+        }
+        
+        // Run test when page loads
+        testReadmeLoading();
+    </script>
+</body>
+</html>
