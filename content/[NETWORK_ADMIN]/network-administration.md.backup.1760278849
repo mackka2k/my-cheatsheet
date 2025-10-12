@@ -1,0 +1,86 @@
+# Network Administration
+## 👨‍💼 What is a Network Administrator Role?
+
+**Network Admin** manages and maintains computer networks for organizations.
+
+### Key Responsibilities
+- Design & implement network infrastructure
+- Monitor network performance & security  
+- Troubleshoot network issues
+- Manage network devices & configurations
+- Ensure network availability & reliability
+- Implement security policies & procedures
+- Plan for network growth & scalability
+- Document network configurations
+
+### Required Skills
+- Network protocols (TCP/IP, HTTP, FTP)
+- Routing & switching concepts
+- Firewall & security configurations
+- DNS, DHCP, network services
+- Troubleshooting methodologies
+- Network monitoring tools
+- Scripting & automation
+- Documentation & communication
+---
+## 🔧 What is Cisco Packet Tracer?
+
+**Packet Tracer** - Cisco's network simulation tool for learning & testing network configurations.
+
+### Key Features
+- Network simulation & modeling
+- Device configuration practice
+- Protocol analysis & testing
+- Virtual lab environment
+- Real-time network monitoring
+- Multi-user collaboration
+- Assessment & grading tools
+- Cisco Networking Academy integration
+
+### Use Cases
+- Learning network concepts
+- Practicing device configurations
+- Testing network designs
+- Troubleshooting scenarios
+- Certification preparation (CCNA, CCNP)
+- Teaching & training
+- Network prototyping
+- Skills assessment
+---
+## 📥 How to Download Cisco Packet Tracer
+
+**Requires**: Cisco Networking Academy account (free for students/instructors)
+
+### Download Steps
+1. Visit: https://www.netacad.com/learning-collections/cisco-packet-tracer?courseLang=en-US
+2. Sign in to your account
+3. Navigate to Packet Tracer section
+4. Select appropriate version (Windows/macOS/Linux)
+5. Download installer file
+6. Run installation wizard
+7. Complete setup process
+8. Launch Packet Tracer
+
+---
+
+## 🔧 DHCP Client Lab
+
+**Download Packet Tracer File**: [DHCP+Client.pkt](content/[NETWORK_ADMIN]/DHCP+Client.pkt)
+
+<iframe src="content/[NETWORK_ADMIN]/DHCP+Cheat+Sheet.pdf" width="100%" height="600px" style="border: 1px solid #ccc;">
+  <p>Your browser does not support iframes. <a href="content/[NETWORK_ADMIN]/DHCP+Cheat+Sheet.pdf">Download the DHCP Cheat Sheet PDF</a></p>
+</iframe>
+
+<iframe src="content/[NETWORK_ADMIN]/DHCP+Basics+-+Beginner's+Guide.pdf" width="100%" height="600px" style="border: 1px solid #ccc;">
+  <p>Your browser does not support iframes. <a href="content/[NETWORK_ADMIN]/DHCP+Basics+-+Beginner's+Guide.pdf">Download the DHCP Basics Beginner's Guide PDF</a></p>
+</iframe>
+
+---
+
+## 🖥️ DHCP Server Lab
+
+**Download Packet Tracer File**: [DHCP+Server.pkt](content/[NETWORK_ADMIN]/DHCP+Server.pkt)
+
+*Add your DHCP Server Lab content here*
+
+---

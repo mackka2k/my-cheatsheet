@@ -125,6 +125,13 @@ window.CS_MANIFEST = [
     ] 
   },
   { 
+    title: 'Network Administration', 
+    base: 'content/[NETWORK_ADMIN]', 
+    files: [ 
+      { name: '🌐 Network Administration', path: 'content/[NETWORK_ADMIN]/network-administration.md' }
+    ] 
+  },
+  { 
     title: 'Project Files', 
     base: '.', 
     files: [ 
