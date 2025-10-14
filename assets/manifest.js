@@ -132,6 +132,13 @@ window.CS_MANIFEST = [
     ] 
   },
   { 
+    title: 'System Administration', 
+    base: 'content/[SYSTEM_ADMIN]', 
+    files: [ 
+      { name: '🖥️ System Administration', path: 'content/[SYSTEM_ADMIN]/system-administration.md' }
+    ] 
+  },
+  { 
     title: 'Project Files', 
     base: '.', 
     files: [ 

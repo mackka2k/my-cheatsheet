@@ -1,0 +1,387 @@
+# System Administration
+## Professional IT Infrastructure Management Guide
+
+<div style="display: grid; gap: 15px; margin-bottom: 30px;">
+
+<details style="border: 1px solid #30363d; border-radius: 6px; background: #0d1117;">
+<summary style="background: #21262d; color: #f0f6fc; padding: 12px 16px; cursor: pointer; font-weight: 600; font-size: 1em; border-radius: 6px 6px 0 0; display: flex; align-items: center; gap: 8px; border: none;">
+  <span>📋</span>
+  <span>Section 1: Introduction & Fundamentals</span>
+</summary>
+
+<div style="padding: 16px; background: #161b22; color: #e6edf3; border-radius: 0 0 6px 6px;">
+
+<details style="border: 1px solid #30363d; border-radius: 4px; background: #0d1117; margin-bottom: 10px;">
+<summary style="background: #21262d; color: #f0f6fc; padding: 8px 12px; cursor: pointer; font-weight: 500; font-size: 0.9em; border-radius: 4px 4px 0 0; display: flex; align-items: center; gap: 6px; border: none;">
+  <span>📚</span>
+  <span>1. Introduction to the Ultimate System Administrator Course</span>
+</summary>
+<div style="padding: 12px; background: #161b22; color: #e6edf3; border-radius: 0 0 4px 4px;">
+<div style="color: #58a6ff; font-weight: 600; margin-bottom: 8px;">Course Overview</div>
+Comprehensive guide to becoming a professional System Administrator covering all essential skills, technologies, and real-world scenarios.
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Learning Objectives</div>
+<div style="display: grid; gap: 8px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">▶</span><span>Master core system administration concepts</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">▶</span><span>Gain hands-on experience with enterprise technologies</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">▶</span><span>Develop troubleshooting and problem-solving skills</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">▶</span><span>Learn industry best practices and security protocols</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">▶</span><span>Build a professional homelab environment</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">▶</span><span>Understand Windows Server 2025 and virtualization platforms</span></div>
+</div>
+
+</div>
+</details>
+
+<details style="border: 1px solid #30363d; border-radius: 4px; background: #0d1117; margin-bottom: 10px;">
+<summary style="background: #21262d; color: #f0f6fc; padding: 8px 12px; cursor: pointer; font-weight: 500; font-size: 0.9em; border-radius: 4px 4px 0 0; display: flex; align-items: center; gap: 6px; border: none;">
+  <span>👨‍💼</span>
+  <span>2. What is a System Administrator Role?</span>
+</summary>
+<div style="padding: 12px; background: #161b22; color: #e6edf3; border-radius: 0 0 4px 4px;">
+<div style="color: #58a6ff; font-weight: 600; margin-bottom: 8px;">Primary Function</div>
+Manages and maintains computer systems, servers, and IT infrastructure for organizations.
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Core Responsibilities</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">•</span><span>Operating system installation and configuration</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">•</span><span>User account and permission management</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">•</span><span>System performance monitoring and optimization</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">•</span><span>Backup and disaster recovery planning</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">•</span><span>Software installation and updates</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">•</span><span>Hardware maintenance and troubleshooting</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">•</span><span>Server management and virtualization</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">•</span><span>Security policy implementation and enforcement</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Essential Skills</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Operating Systems</span>: Windows Server, Linux distributions, Unix variants</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Virtualization</span>: VMware, Hyper-V, VirtualBox, Proxmox</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Security</span>: Access control, authentication, encryption</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Backup & Recovery</span>: Data protection strategies and procedures</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Monitoring Tools</span>: Performance analysis and alerting systems</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Scripting & Automation</span>: PowerShell, Bash, Python</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Hardware Knowledge</span>: Server components and troubleshooting</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Documentation</span>: Technical writing and procedure documentation</span></div>
+</div>
+</div>
+</details>
+
+</div>
+</details>
+
+<details style="border: 1px solid #30363d; border-radius: 6px; background: #0d1117;">
+<summary style="background: #21262d; color: #f0f6fc; padding: 12px 16px; cursor: pointer; font-weight: 600; font-size: 1em; border-radius: 6px 6px 0 0; display: flex; align-items: center; gap: 8px; border: none;">
+  <span>🏠</span>
+  <span>Section 2: Homelab Development & Virtualization</span>
+</summary>
+
+<div style="padding: 16px; background: #161b22; color: #e6edf3; border-radius: 0 0 6px 6px;">
+
+<details style="border: 1px solid #30363d; border-radius: 4px; background: #0d1117; margin-bottom: 10px;">
+<summary style="background: #21262d; color: #f0f6fc; padding: 8px 12px; cursor: pointer; font-weight: 500; font-size: 0.9em; border-radius: 4px 4px 0 0; display: flex; align-items: center; gap: 6px; border: none;">
+  <span>🏠</span>
+  <span>1. What is a Homelab?</span>
+</summary>
+<div style="padding: 12px; background: #161b22; color: #e6edf3; border-radius: 0 0 4px 4px;">
+<div style="color: #58a6ff; font-weight: 600; margin-bottom: 8px;">Definition</div>
+Personal IT infrastructure for learning, testing, and practicing system administration skills in a controlled environment.
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Core Components</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔧</span><span><span style="color: #f85149;">Servers</span>: Physical and virtual server infrastructure</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔧</span><span><span style="color: #f85149;">Networking</span>: Switches, routers, and network equipment</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔧</span><span><span style="color: #f85149;">Storage</span>: NAS devices, external drives, and storage solutions</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔧</span><span><span style="color: #f85149;">Operating Systems</span>: Windows Server, Linux distributions</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔧</span><span><span style="color: #f85149;">Virtualization</span>: VMware, VirtualBox, Hyper-V platforms</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔧</span><span><span style="color: #f85149;">Monitoring</span>: System and network monitoring tools</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔧</span><span><span style="color: #f85149;">Backup Systems</span>: Data protection and recovery solutions</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Primary Use Cases</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">•</span><span>Technology learning and skill development</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">•</span><span>Software deployment testing</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">•</span><span>Troubleshooting practice and methodology</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">•</span><span>Automation script development</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">•</span><span>Configuration experimentation</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">•</span><span>Personal service hosting</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">•</span><span>Development environment creation</span></div>
+</div>
+</div>
+</details>
+
+<details style="border: 1px solid #30363d; border-radius: 4px; background: #0d1117; margin-bottom: 10px;">
+<summary style="background: #21262d; color: #f0f6fc; padding: 8px 12px; cursor: pointer; font-weight: 500; font-size: 0.9em; border-radius: 4px 4px 0 0; display: flex; align-items: center; gap: 6px; border: none;">
+  <span>💻</span>
+  <span>2. Virtualization Platforms – Let's Talk About Your Options</span>
+</summary>
+<div style="padding: 12px; background: #161b22; color: #e6edf3; border-radius: 0 0 4px 4px;">
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Cloud Service Providers</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">☁️</span><span><span style="color: #f85149;">Amazon Web Services (AWS)</span> - Comprehensive cloud platform with extensive service offerings</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">☁️</span><span><span style="color: #f85149;">Google Cloud Platform (GCP)</span> - Google's competitive cloud solution with AI/ML integration</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">☁️</span><span><span style="color: #f85149;">Microsoft Azure</span> - Enterprise-focused cloud platform with Windows integration</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">☁️</span><span><span style="color: #f85149;">Azure Marketplace</span> - Pre-configured virtual machine templates and solutions</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Enterprise Virtualization Solutions</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🏢</span><span><span style="color: #f85149;">VMware vSphere</span> - Industry-standard enterprise virtualization platform</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🏢</span><span><span style="color: #f85149;">VMware Workstation</span> - Professional desktop virtualization for developers</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🏢</span><span><span style="color: #f85149;">Microsoft Hyper-V</span> - Native Windows Server virtualization technology</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🏢</span><span><span style="color: #f85149;">Proxmox VE</span> - Open-source hypervisor with web-based management interface</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Desktop Virtualization Tools</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">💻</span><span><span style="color: #f85149;">Oracle VirtualBox</span> - Free, cross-platform desktop virtualization</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">💻</span><span><span style="color: #f85149;">VMware Fusion</span> - macOS-specific virtualization solution</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">💻</span><span><span style="color: #f85149;">Parallels Desktop</span> - Premium macOS virtualization platform</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Supported Operating Systems</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🐧</span><span><span style="color: #f85149;">Linux Distributions</span>: Alma Linux, CentOS, Ubuntu Server, Rocky Linux</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🪟</span><span><span style="color: #f85149;">Windows Platforms</span>: Windows Server, Windows 10/11</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔧</span><span><span style="color: #f85149;">Unix Variants</span>: FreeBSD, OpenBSD</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛡️</span><span><span style="color: #f85149;">Specialized Systems</span>: pfSense, OPNsense for network security</span></div>
+</div>
+</div>
+</details>
+
+<details style="border: 1px solid #30363d; border-radius: 4px; background: #0d1117; margin-bottom: 10px;">
+<summary style="background: #21262d; color: #f0f6fc; padding: 8px 12px; cursor: pointer; font-weight: 500; font-size: 0.9em; border-radius: 4px 4px 0 0; display: flex; align-items: center; gap: 6px; border: none;">
+  <span>🔧</span>
+  <span>3. Setting Up Your Lab Environment</span>
+</summary>
+<div style="padding: 12px; background: #161b22; color: #e6edf3; border-radius: 0 0 4px 4px;">
+<div style="color: #58a6ff; font-weight: 600; margin-bottom: 8px;">VMware Workstation Configuration</div>
+Step-by-step guide to set up Windows Server 2025 in VMware Workstation for your homelab environment.
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Download Windows Server 2025</div>
+<div style="margin-bottom: 12px;">
+<a href="https://www.microsoft.com/en-us/evalcenter/download-windows-server-2025?msockid=1dbd6c8bbd85672a1985788bbc2d66b4" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #0969da 0%, #1a7f37 100%); color: white; padding: 12px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9em; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+<span>📥</span>
+<span>Download Windows Server 2025 Evaluation</span>
+</a>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">VMware Workstation Settings</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌐</span><span><span style="color: #f85149;">Network Connection</span>: Bridged</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚙️</span><span><span style="color: #f85149;">Cores per processor</span>: 8</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">💻</span><span><span style="color: #f85149;">Virtualize Intel VT-x/AMD-V</span>: Enabled</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🧠</span><span><span style="color: #f85149;">RAM</span>: 4 GB</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Installation Steps</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">1.</span><span>Download Windows Server 2025 ISO from Microsoft Evaluation Center</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">2.</span><span>Create new virtual machine in VMware Workstation</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">3.</span><span>Configure network adapter to Bridged mode</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">4.</span><span>Set processor cores to 8 and enable virtualization</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">5.</span><span>Allocate 4 GB RAM to the virtual machine</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">6.</span><span>Boot from Windows Server 2025 ISO and install</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">7.</span><span>Activate evaluation license within 10 days</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Important Notes</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚠️</span><span>Evaluation edition expires in 180 days</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚠️</span><span>Must activate over internet within first 10 days</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚠️</span><span>Run Windows Update after installation</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚠️</span><span>Install latest servicing package post-installation</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Troubleshooting</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">🔧</span><span><span style="color: #f85149;">VT-x Error</span>: Enable virtualization in BIOS (Intel VT-x or AMD-V)</span></div>
+</div>
+</div>
+</details>
+
+</div>
+</details>
+
+<details style="border: 1px solid #30363d; border-radius: 6px; background: #0d1117;">
+<summary style="background: #21262d; color: #f0f6fc; padding: 12px 16px; cursor: pointer; font-weight: 600; font-size: 1em; border-radius: 6px 6px 0 0; display: flex; align-items: center; gap: 8px; border: none;">
+  <span>🖥️</span>
+  <span>Section 3: Windows Server 2025 Enterprise Platform</span>
+</summary>
+
+<div style="padding: 16px; background: #161b22; color: #e6edf3; border-radius: 0 0 6px 6px;">
+
+<details style="border: 1px solid #30363d; border-radius: 4px; background: #0d1117; margin-bottom: 10px;">
+<summary style="background: #21262d; color: #f0f6fc; padding: 8px 12px; cursor: pointer; font-weight: 500; font-size: 0.9em; border-radius: 4px 4px 0 0; display: flex; align-items: center; gap: 6px; border: none;">
+  <span>🖥️</span>
+  <span>1. What is Windows Server 2025? Basic Understanding for IT Beginners</span>
+</summary>
+<div style="padding: 12px; background: #161b22; color: #e6edf3; border-radius: 0 0 4px 4px;">
+<div style="color: #58a6ff; font-weight: 600; margin-bottom: 8px;">Platform Definition</div>
+Microsoft's enterprise-grade server operating system designed for business network infrastructure management.
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Conceptual Framework</div>
+Functions as the central "brain" of business networks, managing all connected computers, users, and services.
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Core Service Capabilities</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📁</span><span><span style="color: #f85149;">File Server Services</span> - Centralized file storage and sharing across organizational networks</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">👥</span><span><span style="color: #f85149;">User Management</span> - Comprehensive access control and permission management systems</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📧</span><span><span style="color: #f85149;">Email Server Operations</span> - Enterprise email system hosting and management</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌐</span><span><span style="color: #f85149;">Web Server Hosting</span> - Corporate website and web application hosting</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🗄️</span><span><span style="color: #f85149;">Database Server Management</span> - Business application and database hosting</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🖨️</span><span><span style="color: #f85149;">Print Server Administration</span> - Network printer management and sharing</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔒</span><span><span style="color: #f85149;">Security Management</span> - Access control and organizational data protection</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Key Technology Components</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Active Directory</span> - Centralized user account and password management</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Hyper-V Virtualization</span> - Virtual machine creation and management</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Internet Information Services (IIS)</span> - Web server hosting platform</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">PowerShell</span> - Advanced command-line automation and scripting</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Group Policy</span> - User and computer configuration management</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Target Market Segments</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">•</span><span><span style="color: #f85149;">Small Business</span> - 1-2 servers for basic file sharing and email services</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">•</span><span><span style="color: #f85149;">Medium Enterprise</span> - Multiple servers for departmental operations</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #f85149;">•</span><span><span style="color: #f85149;">Large Corporation</span> - Extensive server farms in enterprise data centers</span></div>
+</div>
+</div>
+</details>
+
+<details style="border: 1px solid #30363d; border-radius: 4px; background: #0d1117; margin-bottom: 10px;">
+<summary style="background: #21262d; color: #f0f6fc; padding: 8px 12px; cursor: pointer; font-weight: 500; font-size: 0.9em; border-radius: 4px 4px 0 0; display: flex; align-items: center; gap: 6px; border: none;">
+  <span>🆕</span>
+  <span>2. Windows Server 2025 - What's New Compared to Older Versions</span>
+</summary>
+<div style="padding: 12px; background: #161b22; color: #e6edf3; border-radius: 0 0 4px 4px;">
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Security Improvements</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔒</span><span><span style="color: #f85149;">Zero Trust Architecture</span> - Comprehensive security model implementation</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔒</span><span><span style="color: #f85149;">Advanced TPM Support</span> - Enhanced hardware security integration</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔒</span><span><span style="color: #f85149;">Credential Guard 2.0</span> - Improved credential protection mechanisms</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔒</span><span><span style="color: #f85149;">Secured-core Server</span> - Hardware-based security feature integration</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔒</span><span><span style="color: #f85149;">Enhanced Defender</span> - Advanced threat detection and response capabilities</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔒</span><span><span style="color: #f85149;">Certificate Management</span> - Automated certificate lifecycle management</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Performance Optimizations</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">SMB Compression</span> - Improved file transfer performance</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Storage Spaces Direct</span> - Enhanced distributed storage capabilities</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Memory Optimization</span> - Advanced RAM utilization techniques</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Network Stack Improvements</span> - Faster networking performance</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Boot Performance</span> - Reduced system startup times</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Power Management</span> - Improved energy efficiency</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Cloud Integration Features</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">☁️</span><span><span style="color: #f85149;">Azure Arc Integration</span> - Seamless cloud management capabilities</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">☁️</span><span><span style="color: #f85149;">Hybrid Identity</span> - Enhanced Azure Active Directory integration</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">☁️</span><span><span style="color: #f85149;">Cloud Backup Services</span> - Native Azure backup solution integration</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">☁️</span><span><span style="color: #f85149;">Disaster Recovery</span> - Improved Azure Site Recovery functionality</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">☁️</span><span><span style="color: #f85149;">Azure Monitor</span> - Integrated cloud monitoring and analytics</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">☁️</span><span><span style="color: #f85149;">Migration Tools</span> - Streamlined cloud migration pathways</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Management and Administration</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛠️</span><span><span style="color: #f85149;">Windows Admin Center</span> - Modern web-based management interface</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛠️</span><span><span style="color: #f85149;">PowerShell 7</span> - Cross-platform automation and scripting</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛠️</span><span><span style="color: #f85149;">AI-Powered Insights</span> - Intelligent system recommendations</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛠️</span><span><span style="color: #f85149;">Container Support</span> - Enhanced Docker and Kubernetes integration</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛠️</span><span><span style="color: #f85149;">Remote Management</span> - Advanced remote administration capabilities</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛠️</span><span><span style="color: #f85149;">Event Correlation</span> - Intelligent log analysis and correlation</span></div>
+</div>
+</div>
+</details>
+
+<details style="border: 1px solid #30363d; border-radius: 4px; background: #0d1117; margin-bottom: 10px;">
+<summary style="background: #21262d; color: #f0f6fc; padding: 8px 12px; cursor: pointer; font-weight: 500; font-size: 0.9em; border-radius: 4px 4px 0 0; display: flex; align-items: center; gap: 6px; border: none;">
+  <span>📋</span>
+  <span>3. Windows Server 2025 Editions - A Complete Guide to Choosing the Right Edition</span>
+</summary>
+<div style="padding: 12px; background: #161b22; color: #e6edf3; border-radius: 0 0 4px 4px;">
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Edition Comparison</div>
+<div style="overflow-x: auto; margin-bottom: 12px;">
+<table style="width: 100%; border-collapse: collapse; background: #0d1117; border-radius: 6px; overflow: hidden;">
+<thead>
+<tr style="background: #21262d;">
+<th style="padding: 8px; text-align: left; color: #f0f6fc; border-bottom: 1px solid #30363d;">Edition</th>
+<th style="padding: 8px; text-align: left; color: #f0f6fc; border-bottom: 1px solid #30363d;">Target Market</th>
+<th style="padding: 8px; text-align: left; color: #f0f6fc; border-bottom: 1px solid #30363d;">Virtualization Rights</th>
+<th style="padding: 8px; text-align: left; color: #f0f6fc; border-bottom: 1px solid #30363d;">Primary Features</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #30363d;">
+<td style="padding: 8px; color: #f85149; font-weight: 600;">Standard</td>
+<td style="padding: 8px;">Small-Medium Business</td>
+<td style="padding: 8px;">2 VMs + 1 Host</td>
+<td style="padding: 8px;">Basic virtualization, file/print services</td>
+</tr>
+<tr style="border-bottom: 1px solid #30363d;">
+<td style="padding: 8px; color: #f85149; font-weight: 600;">Datacenter</td>
+<td style="padding: 8px;">Enterprise</td>
+<td style="padding: 8px;">Unlimited VMs</td>
+<td style="padding: 8px;">Storage Spaces Direct, SDN, Shielded VMs</td>
+</tr>
+<tr>
+<td style="padding: 8px; color: #f85149; font-weight: 600;">Azure Edition</td>
+<td style="padding: 8px;">Hybrid Cloud</td>
+<td style="padding: 8px;">Unlimited VMs</td>
+<td style="padding: 8px;">Hotpatching, SMB over QUIC, Azure Arc</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Long-Term Servicing Channel (LTSC) Support</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📅</span><span><span style="color: #f85149;">Mainstream Support</span>: 5 years of full support and updates</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📅</span><span><span style="color: #f85149;">Extended Support</span>: 5 years of security updates and patches</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📅</span><span><span style="color: #f85149;">Total Lifecycle</span>: 10 years of comprehensive support coverage</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📅</span><span><span style="color: #f85149;">Update Schedule</span>: Monthly quality updates for security and reliability</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📅</span><span><span style="color: #f85149;">Feature Updates</span>: No feature updates during the servicing lifecycle</span></div>
+</div>
+</div>
+</details>
+
+<details style="border: 1px solid #30363d; border-radius: 4px; background: #0d1117; margin-bottom: 10px;">
+<summary style="background: #21262d; color: #f0f6fc; padding: 8px 12px; cursor: pointer; font-weight: 500; font-size: 0.9em; border-radius: 4px 4px 0 0; display: flex; align-items: center; gap: 6px; border: none;">
+  <span>⚙️</span>
+  <span>4. Windows Server 2025 - Minimal Hardware Requirements</span>
+</summary>
+<div style="padding: 12px; background: #161b22; color: #e6edf3; border-radius: 0 0 4px 4px;">
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Minimum System Requirements</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">💻</span><span><span style="color: #f85149;">Processor</span>: 1.4 GHz 64-bit architecture</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">💻</span><span><span style="color: #f85149;">Memory</span>: 2 GB RAM (4 GB recommended for optimal performance)</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">💻</span><span><span style="color: #f85149;">Storage</span>: 32 GB available disk space</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">💻</span><span><span style="color: #f85149;">Network</span>: Ethernet network adapter</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">💻</span><span><span style="color: #f85149;">Display</span>: 1024x768 resolution minimum</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">Recommended System Specifications</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🚀</span><span><span style="color: #f85149;">Processor</span>: 2.0 GHz 64-bit multi-core processor</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🚀</span><span><span style="color: #f85149;">Memory</span>: 8 GB RAM or higher</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🚀</span><span><span style="color: #f85149;">Storage</span>: 100 GB SSD available space</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🚀</span><span><span style="color: #f85149;">Network</span>: Gigabit Ethernet adapter</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🚀</span><span><span style="color: #f85149;">Display</span>: 1920x1080 resolution or higher</span></div>
+</div>
+</div>
+</details>
+
+</div>
+</details>
+
+</div>
+
+---
