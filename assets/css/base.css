@@ -2,6 +2,9 @@
    BASE STYLES - Variables, Reset, Typography
    ======================================== */
 
+/* Import Google Fonts for better typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
 :root {
   /* Color System */
   --bg: #0a0a0a;
@@ -32,9 +35,10 @@
   --radius-lg: 1rem;
   --radius-xl: 1.5rem;
   
-  /* Typography System */
-  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', monospace;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+  /* Typography System - Enhanced with better web fonts */
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', 'Consolas', monospace;
+  --font-sans: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+  --font-serif: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
   
   /* Spacing System */
   --space-xs: 0.25rem;
@@ -127,15 +131,21 @@ body {
   padding: 0;
   background: var(--gradient-bg);
   color: var(--text);
-  font: 1rem/1.6 var(--font-sans);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "ss01" 1;
   overflow-x: hidden;
-  /* Improved text rendering */
+  /* Enhanced text rendering */
   font-variant-ligatures: common-ligatures;
   font-kerning: normal;
+  font-optical-sizing: auto;
+  font-synthesis: none;
 }
 
 /* Dark Scrollbar Styling */
@@ -173,20 +183,22 @@ body {
   scrollbar-color: var(--surface) var(--bg);
 }
 
-/* Typography System - Improved consistency and hierarchy */
+/* Typography System - Enhanced with better fonts and spacing */
 .article h1 {
-  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-family: var(--font-sans);
+  font-size: clamp(1.875rem, 4.5vw, 2.5rem);
   font-weight: 800;
   color: var(--text);
   margin: 0 0 1.5rem 0;
-  letter-spacing: -0.025em;
-  line-height: 1.2;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
   background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   position: relative;
   padding-bottom: 0.75rem;
+  font-feature-settings: "ss01" 1, "ss02" 1;
 }
 
 .article h1::after {
@@ -201,15 +213,17 @@ body {
 }
 
 .article h2 {
-  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-family: var(--font-sans);
+  font-size: clamp(1.375rem, 3.5vw, 1.625rem);
   font-weight: 700;
   color: var(--text);
   margin: 2rem 0 1rem 0;
-  letter-spacing: -0.02em;
-  line-height: 1.3;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
   position: relative;
   padding-left: 1rem;
   transition: all 0.2s ease;
+  font-feature-settings: "ss01" 1;
 }
 
 .article h2::before {
@@ -231,15 +245,17 @@ body {
 }
 
 .article h3 {
-  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  font-family: var(--font-sans);
+  font-size: clamp(1.125rem, 2.75vw, 1.25rem);
   font-weight: 600;
   color: var(--text);
   margin: 1.5rem 0 0.75rem 0;
-  letter-spacing: -0.01em;
-  line-height: 1.4;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
   position: relative;
   padding-left: 0.75rem;
   transition: all 0.2s ease;
+  font-feature-settings: "ss01" 1;
 }
 
 .article h3::before {
@@ -261,10 +277,14 @@ body {
 }
 
 .article p {
+  font-family: var(--font-sans);
   margin: 0 0 1rem 0;
-  line-height: 1.6;
-  font-size: 0.875rem;
+  line-height: 1.65;
+  font-size: 0.9375rem;
+  font-weight: 400;
   color: var(--text-secondary);
+  letter-spacing: -0.005em;
+  font-feature-settings: "kern" 1, "liga" 1;
 }
 
 .article ul, .article ol {
@@ -273,9 +293,14 @@ body {
 }
 
 .article li {
+  font-family: var(--font-sans);
   margin: 0.25rem 0;
-  line-height: 1.6;
+  line-height: 1.65;
+  font-size: 0.9375rem;
+  font-weight: 400;
   color: var(--text-secondary);
+  letter-spacing: -0.005em;
+  font-feature-settings: "kern" 1, "liga" 1;
 }
 
 /* Article content links */

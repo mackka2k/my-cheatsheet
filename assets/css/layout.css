@@ -56,18 +56,22 @@
 }
 
 .sidebar-header h1 {
+  font-family: var(--font-sans);
   margin: 0 0 16px 0;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 800;
   color: var(--text);
-  letter-spacing: -0.025em;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
   background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-feature-settings: "ss01" 1, "ss02" 1;
 }
 
 #search {
+  font-family: var(--font-sans);
   width: 100%;
   padding: 14px 16px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -76,10 +80,12 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   color: var(--text);
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 500;
+  letter-spacing: -0.005em;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: var(--shadow);
+  font-feature-settings: "kern" 1, "liga" 1;
 }
 
 #search:focus {
