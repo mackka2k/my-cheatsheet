@@ -690,6 +690,99 @@ Functions as the central "brain" of business networks, managing all connected co
 </div>
 </details>
 
+<details style="border: 1px solid #30363d; border-radius: 4px; background: #0d1117; margin-bottom: 10px;">
+<summary style="background: #21262d; color: #f0f6fc; padding: 8px 12px; cursor: pointer; font-weight: 500; font-size: 0.9em; border-radius: 4px 4px 0 0; display: flex; align-items: center; gap: 6px; border: none;">
+  <span>⚙️</span>
+  <span>5. Server Role Explanation - Core Functions and Purposes</span>
+</summary>
+<div style="padding: 12px; background: #161b22; color: #e6edf3; border-radius: 0 0 4px 4px;">
+
+<div style="color: #58a6ff; font-weight: 600; margin-bottom: 8px;">Overview</div>
+Windows Server roles are specialized functions that enable the server to perform specific tasks and provide services to network users and applications.
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🔐 Active Directory Domain Services (AD DS)</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">👥</span><span><span style="color: #f85149;">User Account Management</span> - Centralized user authentication and authorization</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔑</span><span><span style="color: #f85149;">Password Policies</span> - Enforce organizational password requirements and security</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📁</span><span><span style="color: #f85149;">Group Management</span> - Organize users into groups for easier permission management</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛡️</span><span><span style="color: #f85149;">Security Policies</span> - Apply consistent security settings across the organization</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌐</span><span><span style="color: #f85149;">Single Sign-On (SSO)</span> - Users log in once to access all network resources</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🌐 DHCP Server</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📡</span><span><span style="color: #f85149;">Automatic IP Assignment</span> - Automatically assigns IP addresses to network devices</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⏰</span><span><span style="color: #f85149;">Lease Management</span> - Manages IP address leases and renewal periods</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔧</span><span><span style="color: #f85149;">Network Configuration</span> - Provides DNS servers, gateway, and subnet mask information</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📊</span><span><span style="color: #f85149;">Address Pool Management</span> - Manages available IP address ranges and reservations</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛡️</span><span><span style="color: #f85149;">Conflict Prevention</span> - Prevents IP address conflicts on the network</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🔍 DNS Server</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌐</span><span><span style="color: #f85149;">Name Resolution</span> - Converts domain names to IP addresses (e.g., google.com → 142.250.191.14)</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📋</span><span><span style="color: #f85149;">Record Management</span> - Manages A, AAAA, CNAME, MX, and other DNS records</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Caching</span> - Stores frequently requested DNS information for faster responses</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔄</span><span><span style="color: #f85149;">Forwarding</span> - Forwards DNS queries to external DNS servers when needed</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🏢</span><span><span style="color: #f85149;">Internal Domain Resolution</span> - Resolves internal company domain names</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">📁 File and Storage Services</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">💾</span><span><span style="color: #f85149;">Centralized File Storage</span> - Provides shared network drives and folders</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔐</span><span><span style="color: #f85149;">Access Control</span> - Manages file and folder permissions for users and groups</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📊</span><span><span style="color: #f85149;">Storage Management</span> - Monitors disk usage and manages storage quotas</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔄</span><span><span style="color: #f85149;">File Replication</span> - Synchronizes files across multiple servers for redundancy</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📈</span><span><span style="color: #f85149;">Storage Spaces</span> - Creates virtual disks from multiple physical drives</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🌐 Web Server (IIS)</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌍</span><span><span style="color: #f85149;">Website Hosting</span> - Hosts company websites and web applications</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔧</span><span><span style="color: #f85149;">Application Pool Management</span> - Manages web application processes and resources</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔐</span><span><span style="color: #f85149;">SSL Certificate Management</span> - Handles HTTPS encryption and security certificates</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📊</span><span><span style="color: #f85149;">Logging and Monitoring</span> - Tracks website usage and performance metrics</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Load Balancing</span> - Distributes web traffic across multiple servers</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">💻 Hyper-V</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🖥️</span><span><span style="color: #f85149;">Virtual Machine Creation</span> - Creates and manages virtual machines on the server</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Resource Allocation</span> - Allocates CPU, memory, and storage to virtual machines</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔄</span><span><span style="color: #f85149;">Live Migration</span> - Moves virtual machines between physical servers without downtime</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛡️</span><span><span style="color: #f85149;">Backup and Recovery</span> - Provides virtual machine backup and disaster recovery</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌐</span><span><span style="color: #f85149;">Virtual Networking</span> - Creates virtual networks for virtual machines</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🖥️ Remote Desktop Services</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌐</span><span><span style="color: #f85149;">Remote Access</span> - Allows users to access their desktop from anywhere</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🖥️</span><span><span style="color: #f85149;">Virtual Desktop Infrastructure (VDI)</span> - Provides virtual desktops to users</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📱</span><span><span style="color: #f85149;">Multi-Device Support</span> - Works on Windows, Mac, iOS, and Android devices</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔐</span><span><span style="color: #f85149;">Secure Connections</span> - Encrypts remote desktop connections for security</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">👥</span><span><span style="color: #f85149;">Session Management</span> - Manages multiple user sessions on the server</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🌐 Remote Access</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔐</span><span><span style="color: #f85149;">VPN Server</span> - Provides secure remote access to company network</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌍</span><span><span style="color: #f85149;">Site-to-Site VPN</span> - Connects multiple office locations securely</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛡️</span><span><span style="color: #f85149;">Network Policy Server (NPS)</span> - Controls who can access the network</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📊</span><span><span style="color: #f85149;">Connection Monitoring</span> - Monitors and logs remote access connections</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔑</span><span><span style="color: #f85149;">Authentication</span> - Integrates with Active Directory for user authentication</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">💡 Why These Roles Matter</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🏢</span><span><span style="color: #f85149;">Business Continuity</span> - Ensures critical services remain available</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔒</span><span><span style="color: #f85149;">Security</span> - Provides centralized security management</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Efficiency</span> - Automates routine tasks and reduces manual work</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📈</span><span><span style="color: #f85149;">Scalability</span> - Grows with the organization's needs</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">💰</span><span><span style="color: #f85149;">Cost Savings</span> - Reduces need for multiple specialized servers</span></div>
+</div>
+
+</div>
+</details>
 
 </div>
 </details>
