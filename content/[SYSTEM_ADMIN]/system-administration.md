@@ -701,12 +701,15 @@ Functions as the central "brain" of business networks, managing all connected co
 Windows Server roles are specialized functions that enable the server to perform specific tasks and provide services to network users and applications.
 
 <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🔐 Active Directory Domain Services (AD DS)</div>
+<div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+<div style="color: #e6edf3; margin-bottom: 8px;"><span style="color: #58a6ff; font-weight: 600;">Core Functions:</span></div>
 <div style="display: grid; gap: 6px; margin-left: 8px;">
-<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">👥</span><span><span style="color: #f85149;">User Account Management</span> - Centralized user authentication and authorization</span></div>
-<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔑</span><span><span style="color: #f85149;">Password Policies</span> - Enforce organizational password requirements and security</span></div>
-<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📁</span><span><span style="color: #f85149;">Group Management</span> - Organize users into groups for easier permission management</span></div>
-<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛡️</span><span><span style="color: #f85149;">Security Policies</span> - Apply consistent security settings across the organization</span></div>
-<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌐</span><span><span style="color: #f85149;">Single Sign-On (SSO)</span> - Users log in once to access all network resources</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔐</span><span><span style="color: #f85149;">Centralized Authentication & Authorization</span> - Single point of user verification</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">👥</span><span><span style="color: #f85149;">User/Computer Account Management</span> - Complete identity lifecycle management</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📋</span><span><span style="color: #f85149;">Group Policy Implementation</span> - Centralized configuration management</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌐</span><span><span style="color: #f85149;">DNS Integration</span> - Seamless name resolution integration</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🏗️</span><span><span style="color: #f85149;">Forest/Domain Structure</span> - Hierarchical directory organization</span></div>
+</div>
 </div>
 
 <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🌐 DHCP Server</div>
@@ -874,6 +877,166 @@ Windows Server roles are specialized functions that enable the server to perform
 <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔐</span><span><span style="color: #f85149;">Security Updates</span> - Prioritizes and deploys critical security updates</span></div>
 </div>
 
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">📊 Comprehensive Roles Reference Tables</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🌐 Network Services</div>
+<div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0; overflow-x: auto;">
+<table style="width: 100%; border-collapse: collapse; color: #e6edf3;">
+<thead>
+<tr style="background: #21262d;">
+<th style="padding: 8px; text-align: left; border: 1px solid #30363d; color: #f85149;">Role</th>
+<th style="padding: 8px; text-align: left; border: 1px solid #30363d; color: #f85149;">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">DHCP</td>
+<td style="padding: 8px; border: 1px solid #30363d;">IP address assignment</td>
+</tr>
+<tr style="background: #161b22;">
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">DNS</td>
+<td style="padding: 8px; border: 1px solid #30363d;">Name resolution</td>
+</tr>
+<tr>
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">WINS</td>
+<td style="padding: 8px; border: 1px solid #30363d;">NetBIOS name resolution</td>
+</tr>
+<tr style="background: #161b22;">
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">RRAS</td>
+<td style="padding: 8px; border: 1px solid #30363d;">VPN/NAT/Routing</td>
+</tr>
+<tr>
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">NPS</td>
+<td style="padding: 8px; border: 1px solid #30363d;">RADIUS authentication</td>
+</tr>
+<tr style="background: #161b22;">
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">Network Controller</td>
+<td style="padding: 8px; border: 1px solid #30363d;">SDN management</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">📁 File & Storage</div>
+<div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0; overflow-x: auto;">
+<table style="width: 100%; border-collapse: collapse; color: #e6edf3;">
+<thead>
+<tr style="background: #21262d;">
+<th style="padding: 8px; text-align: left; border: 1px solid #30363d; color: #f85149;">Role</th>
+<th style="padding: 8px; text-align: left; border: 1px solid #30363d; color: #f85149;">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">File Services</td>
+<td style="padding: 8px; border: 1px solid #30363d;">File sharing/management</td>
+</tr>
+<tr style="background: #161b22;">
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">Storage Services</td>
+<td style="padding: 8px; border: 1px solid #30363d;">iSCSI/storage management</td>
+</tr>
+<tr>
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">DFS</td>
+<td style="padding: 8px; border: 1px solid #30363d;">Distributed file system</td>
+</tr>
+<tr style="background: #161b22;">
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">FSRM</td>
+<td style="padding: 8px; border: 1px solid #30363d;">File Server Resource Mgr</td>
+</tr>
+<tr>
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">Storage Replica</td>
+<td style="padding: 8px; border: 1px solid #30363d;">Block-level replication</td>
+</tr>
+<tr style="background: #161b22;">
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">Data Deduplication</td>
+<td style="padding: 8px; border: 1px solid #30363d;">Storage optimization</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🌐 Web & Application</div>
+<div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0; overflow-x: auto;">
+<table style="width: 100%; border-collapse: collapse; color: #e6edf3;">
+<thead>
+<tr style="background: #21262d;">
+<th style="padding: 8px; text-align: left; border: 1px solid #30363d; color: #f85149;">Role</th>
+<th style="padding: 8px; text-align: left; border: 1px solid #30363d; color: #f85149;">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">IIS</td>
+<td style="padding: 8px; border: 1px solid #30363d;">Web server/hosting</td>
+</tr>
+<tr style="background: #161b22;">
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">Application Server</td>
+<td style="padding: 8px; border: 1px solid #30363d;">.NET Framework apps</td>
+</tr>
+<tr>
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">WDS</td>
+<td style="padding: 8px; border: 1px solid #30363d;">Windows deployment</td>
+</tr>
+<tr style="background: #161b22;">
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">WSUS</td>
+<td style="padding: 8px; border: 1px solid #30363d;">Windows update management</td>
+</tr>
+<tr>
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">Remote Desktop</td>
+<td style="padding: 8px; border: 1px solid #30363d;">Terminal services</td>
+</tr>
+<tr style="background: #161b22;">
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">Volume Activation</td>
+<td style="padding: 8px; border: 1px solid #30363d;">KMS/MAK licensing</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🔐 Active Directory Roles</div>
+<div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+<div style="color: #e6edf3; margin-bottom: 8px;"><span style="color: #58a6ff; font-weight: 600;">Core AD Services:</span></div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔐</span><span><span style="color: #f85149;">AD DS</span> - Domain Services (core directory)</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📜</span><span><span style="color: #f85149;">AD CS</span> - Certificate Authority (PKI)</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔗</span><span><span style="color: #f85149;">AD FS</span> - Federation Services (SSO)</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📋</span><span><span style="color: #f85149;">AD LDS</span> - Lightweight Directory Services</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛡️</span><span><span style="color: #f85149;">AD RMS</span> - Rights Management Services</span></div>
+</div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">👑 Domain Controller Roles (FSMO)</div>
+<div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+<div style="color: #e6edf3; margin-bottom: 8px;"><span style="color: #58a6ff; font-weight: 600;">Forest-Wide Roles:</span></div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🏗️</span><span><span style="color: #f85149;">Schema Master</span> - Forest-wide schema modifications</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌐</span><span><span style="color: #f85149;">Domain Naming Master</span> - Forest-wide domain operations</span></div>
+</div>
+<div style="color: #e6edf3; margin: 12px 0 8px 0;"><span style="color: #58a6ff; font-weight: 600;">Domain-Wide Roles:</span></div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⏰</span><span><span style="color: #f85149;">PDC Emulator</span> - Time sync and password changes</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔢</span><span><span style="color: #f85149;">RID Master</span> - Security identifier allocation</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔗</span><span><span style="color: #f85149;">Infrastructure Master</span> - Cross-domain object references</span></div>
+</div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">💻 Virtualization & Containers</div>
+<div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🖥️</span><span><span style="color: #f85149;">Hyper-V</span> - Virtual machine hosting</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📦</span><span><span style="color: #f85149;">Containers</span> - Windows/Docker containers</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛡️</span><span><span style="color: #f85149;">Host Guardian Service</span> - Shielded VM security</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">💾</span><span><span style="color: #f85149;">Storage Spaces Direct</span> - Software-defined storage</span></div>
+</div>
+<div style="color: #e6edf3; margin: 12px 0 8px 0;"><span style="color: #58a6ff; font-weight: 600;">Hyper-V Features:</span></div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔄</span><span><span style="color: #f85149;">Live Migration</span> / <span style="color: #f85149;">Failover Clustering</span></span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛡️</span><span><span style="color: #f85149;">Replica</span> / <span style="color: #f85149;">Shielded VMs</span></span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌐</span><span><span style="color: #f85149;">Virtual Switch</span> + <span style="color: #f85149;">Integration Services</span></span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📸</span><span><span style="color: #f85149;">Checkpoints</span> + <span style="color: #f85149;">Dynamic Memory</span></span></div>
+</div>
+</div>
+
 <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">💡 Why These Roles Matter</div>
 <div style="display: grid; gap: 6px; margin-left: 8px;">
 <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🏢</span><span><span style="color: #f85149;">Business Continuity</span> - Ensures critical services remain available</span></div>
@@ -987,6 +1150,73 @@ Windows Server features are additional capabilities and tools that enhance serve
 <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔧</span><span><span style="color: #f85149;">Application Request Routing (ARR)</span> - Load balancing and reverse proxy</span></div>
 <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📊</span><span><span style="color: #f85149;">URL Rewrite</span> - URL manipulation and redirection</span></div>
 <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔐</span><span><span style="color: #f85149;">Request Filtering</span> - Security filtering for web requests</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">📊 Common Features Reference</div>
+<div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0; overflow-x: auto;">
+<table style="width: 100%; border-collapse: collapse; color: #e6edf3;">
+<thead>
+<tr style="background: #21262d;">
+<th style="padding: 8px; text-align: left; border: 1px solid #30363d; color: #f85149;">Feature</th>
+<th style="padding: 8px; text-align: left; border: 1px solid #30363d; color: #f85149;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">.NET Framework</td>
+<td style="padding: 8px; border: 1px solid #30363d;">Application framework</td>
+</tr>
+<tr style="background: #161b22;">
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">BitLocker</td>
+<td style="padding: 8px; border: 1px solid #30363d;">Drive encryption</td>
+</tr>
+<tr>
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">Failover Clustering</td>
+<td style="padding: 8px; border: 1px solid #30363d;">High availability</td>
+</tr>
+<tr style="background: #161b22;">
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">Network Load Balancing</td>
+<td style="padding: 8px; border: 1px solid #30363d;">Load distribution</td>
+</tr>
+<tr>
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">PowerShell ISE</td>
+<td style="padding: 8px; border: 1px solid #30363d;">Scripting environment</td>
+</tr>
+<tr style="background: #161b22;">
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">SNMP Service</td>
+<td style="padding: 8px; border: 1px solid #30363d;">Network monitoring</td>
+</tr>
+<tr>
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">Telnet Client/Server</td>
+<td style="padding: 8px; border: 1px solid #30363d;">Remote terminal</td>
+</tr>
+<tr style="background: #161b22;">
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">TFTP Client</td>
+<td style="padding: 8px; border: 1px solid #30363d;">File transfer</td>
+</tr>
+<tr>
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">Windows Backup</td>
+<td style="padding: 8px; border: 1px solid #30363d;">System backup</td>
+</tr>
+<tr style="background: #161b22;">
+<td style="padding: 8px; border: 1px solid #30363d; font-family: monospace;">WinRM</td>
+<td style="padding: 8px; border: 1px solid #30363d;">Remote management</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">⚡ Quick Tips for Roles & Features</div>
+<div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔄</span><span><span style="color: #f85149;">Some roles require reboot</span> - Plan maintenance windows accordingly</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛠️</span><span><span style="color: #f85149;">Install management tools with roles</span> - Get admin tools automatically</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔒</span><span><span style="color: #f85149;">Use least privilege principle</span> - Only install what you need</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📝</span><span><span style="color: #f85149;">Document installed roles/features</span> - Keep track of server configurations</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🧪</span><span><span style="color: #f85149;">Test in lab before production</span> - Validate configurations first</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛡️</span><span><span style="color: #f85149;">Consider Server Core for security</span> - Reduced attack surface</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Use PowerShell for automation</span> - Automate role/feature installation</span></div>
+</div>
 </div>
 
 <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">💡 Key Differences: Roles vs Features</div>
