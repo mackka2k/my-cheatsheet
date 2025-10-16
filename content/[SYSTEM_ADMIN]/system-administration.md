@@ -1001,6 +1001,127 @@ Windows Server features are additional capabilities and tools that enhance serve
 </div>
 </details>
 
+<details style="border: 1px solid #30363d; border-radius: 4px; background: #0d1117; margin-bottom: 10px;">
+<summary style="background: #21262d; color: #f0f6fc; padding: 8px 12px; cursor: pointer; font-weight: 500; font-size: 0.9em; border-radius: 4px 4px 0 0; display: flex; align-items: center; gap: 6px; border: none;">
+  <span>📝</span>
+  <span>7. Server Naming Conventions - Professional IT Standards</span>
+</summary>
+<div style="padding: 12px; background: #161b22; color: #e6edf3; border-radius: 0 0 4px 4px;">
+
+<div style="color: #58a6ff; font-weight: 600; margin-bottom: 8px;">Overview</div>
+Consistent naming conventions are essential for professional IT environments. They improve documentation, troubleshooting, and system management across teams and organizations.
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🏢 Standard Naming Convention Format</div>
+<div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+<div style="color: #f85149; font-weight: 600; font-family: monospace; font-size: 1.1em;">[COMPANY]-[LOCATION]-[SERVICE][NUMBER]</div>
+<div style="color: #e6edf3; margin-top: 8px; font-size: 0.9em;">Example: <span style="color: #58a6ff;">DMT-ALY-AD01</span> = Dan Mill Training - Alytus - Active Directory 01</div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🏢 Company/Organization Codes</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🏢</span><span><span style="color: #f85149;">DMT</span> - Dan Mill Training</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🏢</span><span><span style="color: #f85149;">ACME</span> - Acme Corporation</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🏢</span><span><span style="color: #f85149;">TECH</span> - Tech Solutions Inc</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🏢</span><span><span style="color: #f85149;">GOV</span> - Government Agency</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🏢</span><span><span style="color: #f85149;">EDU</span> - Educational Institution</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🌍 Location Codes</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌍</span><span><span style="color: #f85149;">ALY</span> - Alytus (Lithuania)</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌍</span><span><span style="color: #f85149;">VIL</span> - Vilnius (Lithuania)</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌍</span><span><span style="color: #f85149;">LON</span> - London (UK)</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌍</span><span><span style="color: #f85149;">NYC</span> - New York City (USA)</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌍</span><span><span style="color: #f85149;">HQ</span> - Headquarters</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌍</span><span><span style="color: #f85149;">DR</span> - Disaster Recovery Site</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">⚙️ Service/Server Type Codes</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔐</span><span><span style="color: #f85149;">AD</span> - Active Directory Domain Controller</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌐</span><span><span style="color: #f85149;">DHCP</span> - DHCP Server</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔍</span><span><span style="color: #f85149;">DNS</span> - DNS Server</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📁</span><span><span style="color: #f85149;">FS</span> - File Server</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌍</span><span><span style="color: #f85149;">WEB</span> - Web Server (IIS)</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">💻</span><span><span style="color: #f85149;">HV</span> - Hyper-V Host</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🖥️</span><span><span style="color: #f85149;">RDS</span> - Remote Desktop Services</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌐</span><span><span style="color: #f85149;">VPN</span> - VPN Server</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📧</span><span><span style="color: #f85149;">EX</span> - Exchange Server</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🗄️</span><span><span style="color: #f85149;">SQL</span> - SQL Server</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🖨️</span><span><span style="color: #f85149;">PRT</span> - Print Server</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔄</span><span><span style="color: #f85149;">WSUS</span> - Windows Server Update Services</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">💾</span><span><span style="color: #f85149;">BAK</span> - Backup Server</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">📊 Numbering System</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔢</span><span><span style="color: #f85149;">01, 02, 03...</span> - Sequential numbering for multiple servers of same type</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔢</span><span><span style="color: #f85149;">PRI</span> - Primary server (instead of 01)</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔢</span><span><span style="color: #f85149;">SEC</span> - Secondary server (instead of 02)</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔢</span><span><span style="color: #f85149;">DR</span> - Disaster Recovery server</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">📋 Real-World Examples</div>
+<div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+<div style="color: #e6edf3; margin-bottom: 8px;"><span style="color: #58a6ff; font-weight: 600;">Active Directory Servers:</span></div>
+<div style="color: #f85149; font-family: monospace; margin: 4px 0;">DMT-ALY-AD01</div>
+<div style="color: #e6edf3; font-size: 0.9em; margin-bottom: 8px;">Dan Mill Training - Alytus - Active Directory Primary</div>
+<div style="color: #f85149; font-family: monospace; margin: 4px 0;">DMT-ALY-AD02</div>
+<div style="color: #e6edf3; font-size: 0.9em; margin-bottom: 8px;">Dan Mill Training - Alytus - Active Directory Secondary</div>
+<div style="color: #f85149; font-family: monospace; margin: 4px 0;">DMT-VIL-AD01</div>
+<div style="color: #e6edf3; font-size: 0.9em; margin-bottom: 8px;">Dan Mill Training - Vilnius - Active Directory Primary</div>
+</div>
+
+<div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+<div style="color: #e6edf3; margin-bottom: 8px;"><span style="color: #58a6ff; font-weight: 600;">Infrastructure Servers:</span></div>
+<div style="color: #f85149; font-family: monospace; margin: 4px 0;">DMT-ALY-DHCP01</div>
+<div style="color: #e6edf3; font-size: 0.9em; margin-bottom: 8px;">Dan Mill Training - Alytus - DHCP Server</div>
+<div style="color: #f85149; font-family: monospace; margin: 4px 0;">DMT-ALY-DNS01</div>
+<div style="color: #e6edf3; font-size: 0.9em; margin-bottom: 8px;">Dan Mill Training - Alytus - DNS Server</div>
+<div style="color: #f85149; font-family: monospace; margin: 4px 0;">DMT-ALY-FS01</div>
+<div style="color: #e6edf3; font-size: 0.9em; margin-bottom: 8px;">Dan Mill Training - Alytus - File Server</div>
+</div>
+
+<div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+<div style="color: #e6edf3; margin-bottom: 8px;"><span style="color: #58a6ff; font-weight: 600;">Application Servers:</span></div>
+<div style="color: #f85149; font-family: monospace; margin: 4px 0;">DMT-ALY-WEB01</div>
+<div style="color: #e6edf3; font-size: 0.9em; margin-bottom: 8px;">Dan Mill Training - Alytus - Web Server</div>
+<div style="color: #f85149; font-family: monospace; margin: 4px 0;">DMT-ALY-SQL01</div>
+<div style="color: #e6edf3; font-size: 0.9em; margin-bottom: 8px;">Dan Mill Training - Alytus - SQL Server</div>
+<div style="color: #f85149; font-family: monospace; margin: 4px 0;">DMT-ALY-EX01</div>
+<div style="color: #e6edf3; font-size: 0.9em; margin-bottom: 8px;">Dan Mill Training - Alytus - Exchange Server</div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🔧 Naming Best Practices</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📏</span><span><span style="color: #f85149;">Keep it Short</span> - Use abbreviations to stay within character limits</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔤</span><span><span style="color: #f85149;">Use Uppercase</span> - Consistent uppercase for better visibility</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🚫</span><span><span style="color: #f85149;">Avoid Special Characters</span> - No spaces, hyphens only for separators</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📝</span><span><span style="color: #f85149;">Document Everything</span> - Maintain a naming convention document</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔄</span><span><span style="color: #f85149;">Be Consistent</span> - Apply the same format across all servers</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">👥</span><span><span style="color: #f85149;">Team Training</span> - Ensure all team members understand the convention</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">📊 Environment-Specific Naming</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🟢</span><span><span style="color: #f85149;">PROD</span> - Production environment (DMT-ALY-AD01)</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🟡</span><span><span style="color: #f85149;">TEST</span> - Test environment (DMT-ALY-AD01-TEST)</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔵</span><span><span style="color: #f85149;">DEV</span> - Development environment (DMT-ALY-AD01-DEV)</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔴</span><span><span style="color: #f85149;">DR</span> - Disaster Recovery environment (DMT-ALY-AD01-DR)</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">💡 Benefits of Proper Naming</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔍</span><span><span style="color: #f85149;">Easy Identification</span> - Quickly identify server purpose and location</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Faster Troubleshooting</span> - Reduce time spent identifying servers</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📚</span><span><span style="color: #f85149;">Better Documentation</span> - Self-documenting server infrastructure</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">👥</span><span><span style="color: #f85149;">Team Efficiency</span> - New team members understand naming quickly</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛡️</span><span><span style="color: #f85149;">Reduced Errors</span> - Less chance of working on wrong server</span></div>
+</div>
+
+</div>
+</details>
+
 </div>
 </details>
 
