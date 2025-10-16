@@ -886,6 +886,121 @@ Windows Server roles are specialized functions that enable the server to perform
 </div>
 </details>
 
+<details style="border: 1px solid #30363d; border-radius: 4px; background: #0d1117; margin-bottom: 10px;">
+<summary style="background: #21262d; color: #f0f6fc; padding: 8px 12px; cursor: pointer; font-weight: 500; font-size: 0.9em; border-radius: 4px 4px 0 0; display: flex; align-items: center; gap: 6px; border: none;">
+  <span>⚙️</span>
+  <span>6. Windows Server Features - Essential Capabilities and Tools</span>
+</summary>
+<div style="padding: 12px; background: #161b22; color: #e6edf3; border-radius: 0 0 4px 4px;">
+
+<div style="color: #58a6ff; font-weight: 600; margin-bottom: 8px;">Overview</div>
+Windows Server features are additional capabilities and tools that enhance server functionality. Unlike roles, features can be installed independently and provide supporting functionality for roles or standalone services.
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🔧 .NET Framework Features</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">💻</span><span><span style="color: #f85149;">.NET Framework 3.5</span> - Required for legacy applications and older software</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">.NET Framework 4.8</span> - Latest version for modern applications and web services</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌐</span><span><span style="color: #f85149;">ASP.NET</span> - Web application development framework</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔧</span><span><span style="color: #f85149;">WCF Services</span> - Windows Communication Foundation for service-oriented applications</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🌐 Internet Information Services (IIS) Features</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌍</span><span><span style="color: #f85149;">Web Server (IIS)</span> - Core web server functionality</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔧</span><span><span style="color: #f85149;">IIS Management Console</span> - Graphical management interface for IIS</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔐</span><span><span style="color: #f85149;">IIS Security</span> - Security features and authentication modules</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📊</span><span><span style="color: #f85149;">IIS Logging</span> - Advanced logging and monitoring capabilities</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">IIS Performance</span> - Caching, compression, and performance optimization</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">💻 Hyper-V Features</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🖥️</span><span><span style="color: #f85149;">Hyper-V Management Tools</span> - Management console and PowerShell modules</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔧</span><span><span style="color: #f85149;">Hyper-V Module for PowerShell</span> - PowerShell cmdlets for Hyper-V management</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌐</span><span><span style="color: #f85149;">Hyper-V GUI Management Tools</span> - Graphical interface for Hyper-V management</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛡️</span><span><span style="color: #f85149;">Hyper-V Shielded VM Tools</span> - Tools for managing shielded virtual machines</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🔐 Security Features</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛡️</span><span><span style="color: #f85149;">Windows Defender Antivirus</span> - Built-in antivirus protection</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔒</span><span><span style="color: #f85149;">BitLocker Drive Encryption</span> - Full disk encryption for data protection</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔑</span><span><span style="color: #f85149;">Credential Guard</span> - Protects credentials from theft attacks</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛡️</span><span><span style="color: #f85149;">Device Guard</span> - Code integrity protection and application control</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔐</span><span><span style="color: #f85149;">Windows Firewall</span> - Network security and traffic filtering</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">📊 Management and Monitoring</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📈</span><span><span style="color: #f85149;">Windows Performance Toolkit</span> - Performance analysis and profiling tools</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📊</span><span><span style="color: #f85149;">System Center Operations Manager</span> - Enterprise monitoring and management</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔍</span><span><span style="color: #f85149;">Event Logging</span> - Advanced event logging and analysis</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📋</span><span><span style="color: #f85149;">Windows Management Instrumentation (WMI)</span> - System management and monitoring</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Performance Counters</span> - System performance monitoring counters</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🌐 Network Features</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌐</span><span><span style="color: #f85149;">Network Load Balancing</span> - Distributes network traffic across multiple servers</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔧</span><span><span style="color: #f85149;">Quality of Service (QoS)</span> - Network traffic prioritization and bandwidth management</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📡</span><span><span style="color: #f85149;">SNMP Service</span> - Simple Network Management Protocol for monitoring</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔐</span><span><span style="color: #f85149;">IP Security (IPsec)</span> - Network security and encryption</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌍</span><span><span style="color: #f85149;">DirectAccess</span> - Seamless remote access without VPN</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">💾 Storage Features</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">💾</span><span><span style="color: #f85149;">Storage Services</span> - Advanced storage management and optimization</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📊</span><span><span style="color: #f85149;">Storage Replica</span> - Synchronous and asynchronous replication</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔧</span><span><span style="color: #f85149;">Storage Spaces Direct</span> - Software-defined storage for hyper-converged infrastructure</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📈</span><span><span style="color: #f85149;">Data Deduplication</span> - Reduces storage space by eliminating duplicate data</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔄</span><span><span style="color: #f85149;">iSCSI Target Server</span> - Provides iSCSI storage to network clients</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🔧 PowerShell and Automation</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Windows PowerShell</span> - Command-line automation and scripting</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔧</span><span><span style="color: #f85149;">PowerShell ISE</span> - Integrated Scripting Environment for PowerShell</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌐</span><span><span style="color: #f85149;">Windows PowerShell Web Access</span> - Web-based PowerShell console</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📊</span><span><span style="color: #f85149;">Windows Management Framework</span> - PowerShell and WMI management tools</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🌐 Remote Management</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🖥️</span><span><span style="color: #f85149;">Remote Server Administration Tools (RSAT)</span> - Remote management tools</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌐</span><span><span style="color: #f85149;">Windows Remote Management (WinRM)</span> - Remote management protocol</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔧</span><span><span style="color: #f85149;">Server Manager</span> - Centralized server management console</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📊</span><span><span style="color: #f85149;">Windows Admin Center</span> - Modern web-based management interface</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🔐 Backup and Recovery</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">💾</span><span><span style="color: #f85149;">Windows Server Backup</span> - Built-in backup and recovery solution</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔄</span><span><span style="color: #f85149;">Volume Shadow Copy Service (VSS)</span> - Creates point-in-time snapshots</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛡️</span><span><span style="color: #f85149;">System State Backup</span> - Backs up critical system components</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📊</span><span><span style="color: #f85149;">Bare Metal Recovery</span> - Complete system recovery from backup</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🌐 Web and Application Features</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌍</span><span><span style="color: #f85149;">Internet Information Services (IIS)</span> - Web server and application hosting</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔧</span><span><span style="color: #f85149;">Application Request Routing (ARR)</span> - Load balancing and reverse proxy</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📊</span><span><span style="color: #f85149;">URL Rewrite</span> - URL manipulation and redirection</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔐</span><span><span style="color: #f85149;">Request Filtering</span> - Security filtering for web requests</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">💡 Key Differences: Roles vs Features</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🎯</span><span><span style="color: #f85149;">Roles</span> - Provide specific services (DHCP, DNS, AD DS)</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔧</span><span><span style="color: #f85149;">Features</span> - Provide supporting functionality and tools</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Independence</span> - Features can be installed without roles</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔗</span><span><span style="color: #f85149;">Dependencies</span> - Some features require specific roles to function</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛠️</span><span><span style="color: #f85149;">Management</span> - Features enhance server management and administration</span></div>
+</div>
+
+</div>
+</details>
+
 </div>
 </details>
 
