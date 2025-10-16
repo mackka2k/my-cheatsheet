@@ -772,6 +772,108 @@ Windows Server roles are specialized functions that enable the server to perform
 <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔑</span><span><span style="color: #f85149;">Authentication</span> - Integrates with Active Directory for user authentication</span></div>
 </div>
 
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🔐 Active Directory Certificate Services</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📜</span><span><span style="color: #f85149;">Digital Certificates</span> - Issues and manages digital certificates for authentication</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔒</span><span><span style="color: #f85149;">Public Key Infrastructure (PKI)</span> - Manages encryption keys and certificates</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛡️</span><span><span style="color: #f85149;">Code Signing</span> - Signs software and applications for security verification</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌐</span><span><span style="color: #f85149;">SSL/TLS Certificates</span> - Provides certificates for secure web communications</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📋</span><span><span style="color: #f85149;">Certificate Lifecycle</span> - Manages certificate enrollment, renewal, and revocation</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🌐 Active Directory Federation Services</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔗</span><span><span style="color: #f85149;">Single Sign-On (SSO)</span> - Enables users to access multiple applications with one login</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌍</span><span><span style="color: #f85149;">Cross-Domain Authentication</span> - Authenticates users across different organizations</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔐</span><span><span style="color: #f85149;">SAML Support</span> - Supports Security Assertion Markup Language for web SSO</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">☁️</span><span><span style="color: #f85149;">Cloud Integration</span> - Integrates with cloud services and applications</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛡️</span><span><span style="color: #f85149;">Trust Relationships</span> - Establishes trust between different domains and forests</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">📋 Active Directory Lightweight Directory Services</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📊</span><span><span style="color: #f85149;">Directory Services</span> - Provides directory services without full domain controller requirements</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔧</span><span><span style="color: #f85149;">Application Integration</span> - Integrates with applications that need directory services</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Lightweight Deployment</span> - Easier to deploy and manage than full AD DS</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔐</span><span><span style="color: #f85149;">Authentication Support</span> - Provides authentication for specific applications</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🔒 Active Directory Rights Management Services</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛡️</span><span><span style="color: #f85149;">Document Protection</span> - Protects sensitive documents with encryption and permissions</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔐</span><span><span style="color: #f85149;">Information Rights Management</span> - Controls who can view, edit, print, or forward documents</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📧</span><span><span style="color: #f85149;">Email Protection</span> - Protects sensitive email communications</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⏰</span><span><span style="color: #f85149;">Expiration Policies</span> - Sets time limits on document access</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📊</span><span><span style="color: #f85149;">Usage Tracking</span> - Tracks who accessed protected content and when</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🏥 Device Health Attestation</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔍</span><span><span style="color: #f85149;">Device Verification</span> - Verifies the health and security status of devices</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛡️</span><span><span style="color: #f85149;">Security Compliance</span> - Ensures devices meet security requirements before network access</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔐</span><span><span style="color: #f85149;">TPM Integration</span> - Uses Trusted Platform Module for device attestation</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📊</span><span><span style="color: #f85149;">Health Monitoring</span> - Monitors device health metrics and compliance status</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">📠 Fax Server</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📄</span><span><span style="color: #f85149;">Fax Services</span> - Provides network faxing capabilities for the organization</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📧</span><span><span style="color: #f85149;">Email Integration</span> - Integrates fax services with email systems</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📊</span><span><span style="color: #f85149;">Fax Management</span> - Manages fax queues, routing, and delivery</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔐</span><span><span style="color: #f85149;">Security Features</span> - Provides secure fax transmission and storage</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🛡️ Host Guardian Service</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔒</span><span><span style="color: #f85149;">Shielded VMs</span> - Protects virtual machines from unauthorized access</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛡️</span><span><span style="color: #f85149;">Attestation Service</span> - Verifies the health and security of Hyper-V hosts</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔐</span><span><span style="color: #f85149;">Key Protection</span> - Protects encryption keys used by shielded VMs</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌐</span><span><span style="color: #f85149;">Cloud Integration</span> - Integrates with Azure for enhanced security</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🌐 Network Policy and Access Services</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔐</span><span><span style="color: #f85149;">Network Access Control</span> - Controls who can access the network and when</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🛡️</span><span><span style="color: #f85149;">RADIUS Server</span> - Provides authentication, authorization, and accounting services</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📊</span><span><span style="color: #f85149;">Health Policies</span> - Enforces health requirements for network access</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔧</span><span><span style="color: #f85149;">VPN Management</span> - Manages VPN connections and policies</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🖨️ Print and Document Services</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🖨️</span><span><span style="color: #f85149;">Print Server</span> - Centralizes printer management and sharing</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📄</span><span><span style="color: #f85149;">Print Spooler</span> - Manages print jobs and queues</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔐</span><span><span style="color: #f85149;">Print Security</span> - Controls access to printers and print jobs</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📊</span><span><span style="color: #f85149;">Usage Tracking</span> - Tracks printer usage and costs</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌐</span><span><span style="color: #f85149;">Web Printing</span> - Enables printing through web browsers</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🔑 Volume Activation Services</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔐</span><span><span style="color: #f85149;">License Management</span> - Manages Windows and Office license activation</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📊</span><span><span style="color: #f85149;">Activation Tracking</span> - Tracks license usage across the organization</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌐</span><span><span style="color: #f85149;">Centralized Activation</span> - Provides centralized license activation service</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">💰</span><span><span style="color: #f85149;">Cost Optimization</span> - Helps optimize software licensing costs</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🚀 Windows Deployment Services</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">💻</span><span><span style="color: #f85149;">OS Deployment</span> - Deploys Windows operating systems to multiple computers</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🖼️</span><span><span style="color: #f85149;">Image Management</span> - Creates and manages Windows installation images</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌐</span><span><span style="color: #f85149;">Network Boot</span> - Enables computers to boot from network images</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">⚡</span><span><span style="color: #f85149;">Mass Deployment</span> - Deploys to multiple computers simultaneously</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔧</span><span><span style="color: #f85149;">Driver Management</span> - Manages device drivers during deployment</span></div>
+</div>
+
+<div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🔄 Windows Server Update Services</div>
+<div style="display: grid; gap: 6px; margin-left: 8px;">
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📥</span><span><span style="color: #f85149;">Update Management</span> - Manages Windows updates for the organization</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🌐</span><span><span style="color: #f85149;">Local Update Server</span> - Hosts updates locally to reduce internet bandwidth</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📊</span><span><span style="color: #f85149;">Update Approval</span> - Controls which updates are deployed to computers</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">📈</span><span><span style="color: #f85149;">Reporting</span> - Reports on update status across the organization</span></div>
+<div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🔐</span><span><span style="color: #f85149;">Security Updates</span> - Prioritizes and deploys critical security updates</span></div>
+</div>
+
 <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">💡 Why These Roles Matter</div>
 <div style="display: grid; gap: 6px; margin-left: 8px;">
 <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">🏢</span><span><span style="color: #f85149;">Business Continuity</span> - Ensures critical services remain available</span></div>
