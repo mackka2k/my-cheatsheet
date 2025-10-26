@@ -1393,16 +1393,269 @@ Active Directory (AD) is Microsoft's directory service that acts like a digital 
 </div>
 </div>
 
-<div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 12px 0; text-align: center;">
-<div style="color: #58a6ff; font-weight: 600; margin-bottom: 8px;">Simple Summary</div>
-<div style="color: #e6edf3; font-size: 0.95em;">Active Directory is like having one master key that controls access to everything in your office. It makes managing users and security much easier for IT and provides a seamless experience for employees.</div>
-</div>
+  <div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 12px 0; text-align: center;">
+  <div style="color: #58a6ff; font-weight: 600; margin-bottom: 8px;">Simple Summary</div>
+  <div style="color: #e6edf3; font-size: 0.95em;">Active Directory is like having one master key that controls access to everything in your office. It makes managing users and security much easier for IT and provides a seamless experience for employees.</div>
+  </div>
+  
+  </div>
+  </details>
 
-</div>
-</details>
+  <details style="border: 1px solid #30363d; border-radius: 4px; background: #0d1117; margin-bottom: 10px;">
+  <summary style="background: #21262d; color: #f0f6fc; padding: 8px 12px; cursor: pointer; font-weight: 500; font-size: 0.9em; border-radius: 4px 4px 0 0; display: flex; align-items: center; gap: 6px; border: none;">
+    <span>🌐</span>
+    <span>12. VM Server Static IP Cheatsheet (Windows Server)</span>
+  </summary>
+  <div style="padding: 12px; background: #161b22; color: #e6edf3; border-radius: 0 0 4px 4px;">
 
-</div>
-</details>
+  <div style="color: #58a6ff; font-weight: 600; margin-bottom: 8px;">Quick Setup Guide</div>
+  Essential steps for configuring static IP on Windows Server VMs in VMware Workstation.
+
+  <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">1️⃣ Check Current Settings</div>
+  <div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">ipconfig</div>
+  <div style="color: #e6edf3; margin: 8px 0;">Note: IPv4, Subnet Mask, Default Gateway</div>
+  </div>
+
+  <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">2️⃣ Pick Static IP</div>
+  <div style="display: grid; gap: 8px; margin-left: 8px;">
+  <div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d;">
+  <div style="color: #f85149; font-weight: 600; margin-bottom: 6px;">NAT Mode (Wi-Fi friendly)</div>
+  <div style="color: #e6edf3; font-size: 0.9em;">IP: 192.168.64.50 | Subnet: 255.255.255.0 | Gateway: 192.168.64.2 | DNS: 192.168.64.2, 8.8.8.8</div>
+  </div>
+  <div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d;">
+  <div style="color: #f85149; font-weight: 600; margin-bottom: 6px;">Bridged Mode (LAN access)</div>
+  <div style="color: #e6edf3; font-size: 0.9em;">IP: 192.168.1.50 | Subnet: 255.255.255.0 | Gateway: 192.168.1.1 | DNS: 192.168.1.50, 8.8.8.8</div>
+  </div>
+  </div>
+
+  <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">3️⃣ Configure in Windows</div>
+  <div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">Run → ncpa.cpl → Right-click adapter → Properties → IPv4 → Use following IP</div>
+  </div>
+
+  <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">4️⃣ Test & Verify</div>
+  <div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">ping &lt;Gateway&gt; && ping 8.8.8.8</div>
+  <div style="color: #e6edf3; margin: 8px 0;">Both should respond without timeouts</div>
+  </div>
+
+  <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">⚡ PowerShell Method</div>
+  <div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">New-NetIPAddress -InterfaceAlias "Ethernet" -IPAddress 192.168.64.50 -PrefixLength 24 -DefaultGateway 192.168.64.2</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses 192.168.64.2,8.8.8.8</div>
+  </div>
+
+  <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🚨 Quick Troubleshooting</div>
+  <div style="display: grid; gap: 6px; margin-left: 8px;">
+  <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">•</span><span><span style="color: #f85149;">No ping?</span> Check VMware adapter is connected</span></div>
+  <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">•</span><span><span style="color: #f85149;">Wi-Fi issues?</span> Use NAT mode instead of Bridged</span></div>
+  <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">•</span><span><span style="color: #f85149;">Domain Controller?</span> Use VM's own IP as preferred DNS</span></div>
+  </div>
+  
+  </div>
+  </details>
+
+  <details style="border: 1px solid #30363d; border-radius: 4px; background: #0d1117; margin-bottom: 10px;">
+  <summary style="background: #21262d; color: #f0f6fc; padding: 8px 12px; cursor: pointer; font-weight: 500; font-size: 0.9em; border-radius: 4px 4px 0 0; display: flex; align-items: center; gap: 6px; border: none;">
+    <span>🌐</span>
+    <span>13. DNS Records Management</span>
+  </summary>
+  <div style="padding: 12px; background: #161b22; color: #e6edf3; border-radius: 0 0 4px 4px;">
+
+  <div style="color: #58a6ff; font-weight: 600; margin-bottom: 8px;">DNS Records Overview</div>
+  Essential guide for managing DNS records in Active Directory environments. Learn how to create and manage different types of DNS records for proper name resolution.
+
+  <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🔧 Access DNS Manager</div>
+  <div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">Server Manager → Tools → DNS → Expand Server Name → Forward Lookup Zones → Your Domain</div>
+  <div style="color: #e6edf3; margin: 8px 0;">Example: corp.mackonis.com - This is your domain file where all DNS records are stored</div>
+  </div>
+
+  <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">📋 DNS Record Types</div>
+  <div style="display: grid; gap: 8px; margin-left: 8px;">
+  <div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d;">
+  <div style="color: #f85149; font-weight: 600; margin-bottom: 6px;">A Record (Host Record)</div>
+  <div style="color: #e6edf3; font-size: 0.9em;">Maps hostname to IP address. Example: server01 → 192.168.1.10</div>
+  <div style="color: #58a6ff; font-size: 0.85em; margin-top: 4px;">Usage: ping server01.corp.mackonis.com</div>
+  </div>
+  <div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d;">
+  <div style="color: #f85149; font-weight: 600; margin-bottom: 6px;">CNAME Record (Alias)</div>
+  <div style="color: #e6edf3; font-size: 0.9em;">Points to another hostname. Example: gateway → router.corp.mackonis.com</div>
+  <div style="color: #58a6ff; font-size: 0.85em; margin-top: 4px;">Usage: User-friendly names for complex hostnames</div>
+  </div>
+  <div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d;">
+  <div style="color: #f85149; font-weight: 600; margin-bottom: 6px;">PTR Record (Pointer)</div>
+  <div style="color: #e6edf3; font-size: 0.9em;">Maps IP address back to hostname. Example: 192.168.1.10 → server01</div>
+  <div style="color: #58a6ff; font-size: 0.85em; margin-top: 4px;">Usage: Reverse DNS lookups</div>
+  </div>
+  </div>
+
+  <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🛠️ Creating A Records</div>
+  <div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+  <div style="color: #e6edf3; margin-bottom: 8px;"><span style="color: #58a6ff; font-weight: 600;">Step-by-Step:</span></div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">1. Right-click domain → New Host (A or AAAA)</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">2. Enter hostname (e.g., "router")</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">3. Enter IP address (e.g., 192.168.1.1)</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">4. Check "Create associated pointer (PTR) record"</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">5. Click "Add Host"</div>
+  <div style="color: #e6edf3; margin: 8px 0;">Now you can ping router.corp.mackonis.com</div>
+  </div>
+
+  <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🔄 Creating CNAME Records</div>
+  <div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+  <div style="color: #e6edf3; margin-bottom: 8px;"><span style="color: #58a6ff; font-weight: 600;">Step-by-Step:</span></div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">1. Right-click domain → New Alias (CNAME)</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">2. Enter alias name (e.g., "gateway")</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">3. Enter target hostname (e.g., "router.corp.mackonis.com")</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">4. Click "OK"</div>
+  <div style="color: #e6edf3; margin: 8px 0;">Now gateway.corp.mackonis.com points to router.corp.mackonis.com</div>
+  </div>
+
+  <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🔄 Creating PTR Records</div>
+  <div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+  <div style="color: #e6edf3; margin-bottom: 8px;"><span style="color: #58a6ff; font-weight: 600;">Step-by-Step:</span></div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">1. Expand "Reverse Lookup Zones"</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">2. Right-click reverse zone → New Pointer (PTR)</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">3. Enter IP address (e.g., 192.168.1.10)</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">4. Enter hostname (e.g., server01.corp.mackonis.com)</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">5. Click "OK"</div>
+  <div style="color: #e6edf3; margin: 8px 0;">Now you can ping IP addresses and get hostname responses</div>
+  </div>
+
+  <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🔍 Testing DNS Records</div>
+  <div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+  <div style="color: #e6edf3; margin-bottom: 8px;"><span style="color: #58a6ff; font-weight: 600;">Test Commands:</span></div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">ping server01.corp.mackonis.com</div>
+  <div style="color: #e6edf3; margin: 4px 0; font-size: 0.9em;">Test A record resolution</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">ping gateway.corp.mackonis.com</div>
+  <div style="color: #e6edf3; margin: 4px 0; font-size: 0.9em;">Test CNAME record resolution</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">nslookup 192.168.1.10</div>
+  <div style="color: #e6edf3; margin: 4px 0; font-size: 0.9em;">Test PTR record resolution</div>
+  </div>
+
+  <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">⚡ Automatic DNS Registration</div>
+  <div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+  <div style="color: #e6edf3; margin-bottom: 8px;"><span style="color: #58a6ff; font-weight: 600;">When devices join domain:</span></div>
+  <div style="color: #e6edf3; margin: 4px 0;">• They automatically get DNS records created</div>
+  <div style="color: #e6edf3; margin: 4px 0;">• A records are registered automatically</div>
+  <div style="color: #e6edf3; margin: 4px 0;">• PTR records can be created automatically</div>
+  <div style="color: #e6edf3; margin: 4px 0;">• No manual DNS configuration needed</div>
+  </div>
+
+  <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🚨 Common Issues</div>
+  <div style="display: grid; gap: 6px; margin-left: 8px;">
+  <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">•</span><span><span style="color: #f85149;">Can't ping hostname?</span> Check A record exists</span></div>
+  <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">•</span><span><span style="color: #f85149;">CNAME not working?</span> Verify target hostname exists</span></div>
+  <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">•</span><span><span style="color: #f85149;">PTR lookup fails?</span> Check reverse lookup zone exists</span></div>
+  <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">•</span><span><span style="color: #f85149;">DNS not updating?</span> Flush DNS cache: ipconfig /flushdns</span></div>
+  </div>
+
+  <div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 12px 0; text-align: center;">
+  <div style="color: #58a6ff; font-weight: 600; margin-bottom: 8px;">💡 Pro Tip</div>
+  <div style="color: #e6edf3; font-size: 0.95em;">Always create PTR records when creating A records for complete bidirectional name resolution. This is essential for proper DNS functionality!</div>
+  </div>
+  
+  </div>
+  </details>
+
+  <details style="border: 1px solid #30363d; border-radius: 4px; background: #0d1117; margin-bottom: 10px;">
+  <summary style="background: #21262d; color: #f0f6fc; padding: 8px 12px; cursor: pointer; font-weight: 500; font-size: 0.9em; border-radius: 4px 4px 0 0; display: flex; align-items: center; gap: 6px; border: none;">
+    <span>👥</span>
+    <span>14. Creating and Managing Users, Groups, and OUs</span>
+  </summary>
+  <div style="padding: 12px; background: #161b22; color: #e6edf3; border-radius: 0 0 4px 4px;">
+
+  <div style="color: #58a6ff; font-weight: 600; margin-bottom: 8px;">Overview</div>
+  Complete guide for managing Active Directory users, groups, and organizational units. Learn how to create, configure, and organize AD objects for efficient access control and management.
+
+  <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">📁 Creating Organizational Units</div>
+  <div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+  <div style="color: #e6edf3; margin-bottom: 8px;"><span style="color: #58a6ff; font-weight: 600;">Access:</span></div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">Tools → Active Directory Users and Computers → Domain → Right-click → New → Organizational Unit</div>
+  <div style="color: #e6edf3; margin: 8px 0;"><span style="color: #58a6ff; font-weight: 600;">Important:</span> Check "Protect container from accidental deletion" → Name → Create</div>
+  <div style="color: #e6edf3; margin: 8px 0;">Example: Create "Mackonis" → Create "End Users" inside → Create "Security Groups" inside</div>
+  </div>
+
+  <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">👤 Creating Users</div>
+  <div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+  <div style="color: #e6edf3; margin-bottom: 8px;"><span style="color: #58a6ff; font-weight: 600;">Step-by-Step:</span></div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">1. Right-click OU → New → User</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">2. Enter First name & Last name</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">3. Enter User logon name (e.g., emma.johnson)</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">4. Set password & configure options</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">5. Click Next → Finish</div>
+  </div>
+
+  <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">⚙️ User Account Options</div>
+  <div style="display: grid; gap: 6px; margin-left: 8px;">
+  <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">•</span><span><span style="color: #f85149;">Account disabled</span> - Prevents user from logging in</span></div>
+  <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">•</span><span><span style="color: #f85149;">Password never expires</span> - Password never requires renewal</span></div>
+  <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">•</span><span><span style="color: #f85149;">User cannot change password</span> - Admin-only password management</span></div>
+  <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">•</span><span><span style="color: #f85149;">User must change password at next logon</span> - Force password reset on first login</span></div>
+  </div>
+
+  <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🔐 Creating Security Groups</div>
+  <div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+  <div style="color: #e6edf3; margin-bottom: 8px;"><span style="color: #58a6ff; font-weight: 600;">Step-by-Step:</span></div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">1. Right-click OU → New → Group</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">2. Enter Group name (e.g., HR-Staff)</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">3. Select Group type: Security</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">4. Select Group scope: Global</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">5. Click OK</div>
+  <div style="color: #e6edf3; margin: 8px 0;">Example groups: HR-Staff, IT-Admins, End-Users</div>
+  </div>
+
+  <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">👥 Adding Members to Groups</div>
+  <div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+  <div style="color: #e6edf3; margin-bottom: 8px;"><span style="color: #58a6ff; font-weight: 600;">Method 1: Add to Group</span></div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">1. Right-click Group → Add to Group</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">2. Click Members tab → Add</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">3. Enter name → Check Names → Apply → OK</div>
+  </div>
+  <div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+  <div style="color: #e6edf3; margin-bottom: 8px;"><span style="color: #58a6ff; font-weight: 600;">Method 2: From User Account</span></div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">1. Right-click User → Properties</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">2. Click Member of tab</div>
+  <div style="color: #f85149; font-family: monospace; margin: 4px 0;">3. Click Add → Enter group name → Check Names → Apply → OK</div>
+  </div>
+
+  <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">⚙️ User Account Details</div>
+  <div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 8px 0;">
+  <div style="color: #e6edf3; margin-bottom: 8px;"><span style="color: #58a6ff; font-weight: 600;">Additional Information:</span></div>
+  <div style="color: #e6edf3; margin: 4px 0;">• General tab: Display name, email, phone, office location</div>
+  <div style="color: #e6edf3; margin: 4px 0;">• Account tab: Account expiration date, logon hours, log on to</div>
+  <div style="color: #e6edf3; margin: 4px 0;">• Organization tab: Title, department, company, manager</div>
+  <div style="color: #e6edf3; margin: 4px 0;">• Member of tab: Group membership and permissions</div>
+  </div>
+
+  <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🎯 Best Practices</div>
+  <div style="display: grid; gap: 6px; margin-left: 8px;">
+  <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">•</span><span><span style="color: #f85149;">Organize by departments</span> - Create OUs for HR, IT, Finance, Sales, etc.</span></div>
+  <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">•</span><span><span style="color: #f85149;">Use descriptive naming</span> - Name, lastname.userlogonname format</span></div>
+  <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">•</span><span><span style="color: #f85149;">Groups for permissions</span> - Use security groups for access control</span></div>
+  <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">•</span><span><span style="color: #f85149;">Force password change</span> - Use "User must change password at next logon"</span></div>
+  <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">•</span><span><span style="color: #f85149;">Protect OUs</span> - Always check "Protect container from accidental deletion"</span></div>
+  </div>
+
+  <div style="color: #58a6ff; font-weight: 600; margin: 12px 0 8px 0;">🚨 Common Issues</div>
+  <div style="display: grid; gap: 6px; margin-left: 8px;">
+  <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">•</span><span><span style="color: #f85149;">Can't find user?</span> Check OU structure and search functionality</span></div>
+  <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">•</span><span><span style="color: #f85149;">Permission denied?</span> Verify group membership and permissions</span></div>
+  <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">•</span><span><span style="color: #f85149;">Account locked?</span> Check Account tab for account status and expiration</span></div>
+  <div style="display: flex; align-items: center; gap: 8px;"><span style="color: #7c3aed;">•</span><span><span style="color: #f85149;">Can't add to group?</span> Verify Group scope (Global, Domain Local, Universal)</span></div>
+  </div>
+
+  <div style="background: #0d1117; padding: 12px; border-radius: 6px; border: 1px solid #30363d; margin: 12px 0; text-align: center;">
+  <div style="color: #58a6ff; font-weight: 600; margin-bottom: 8px;">💡 Pro Tip</div>
+  <div style="color: #e6edf3; font-size: 0.95em;">Security Groups help you manage permissions and access control efficiently. Use groups instead of assigning permissions to individual users!</div>
+  </div>
+  
+  </div>
+  </details>
+
+  </div>
+  </details>
 
 </div>
 
